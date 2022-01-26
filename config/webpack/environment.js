@@ -1,5 +1,6 @@
+const webpack = require('webpack');
 const { environment } = require('@rails/webpacker')
 
-// Preventing Babel from transpiling NodeModules packages
-environment.loaders.delete('nodeModules');
+environment.plugins.append('ProvidePlugin-jQuery', new webpack.ProvidePlugin({jQuery: 'jquery'}));
+
 module.exports = environment
