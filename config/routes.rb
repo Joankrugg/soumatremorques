@@ -7,6 +7,16 @@ Rails.application.routes.draw do
       get :installations
       get :documents
       get :luggage
+      get :water
+      get :animals
+      get :garden
+      get :bin
+      get :moto
+      get :car
+      get :truck
+      get :trail
+      get :close
+      get :market
     end
   end
 
