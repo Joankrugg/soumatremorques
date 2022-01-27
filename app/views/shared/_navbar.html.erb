@@ -31,7 +31,9 @@
             <i class="fas fa-heart nav-link"></i>
           </li>
           <li class="nav-item">
-            <i class="fas fa-shopping-cart nav-link"></i>
+            <%= link_to current_user.cart do %>
+              <i class="fas fa-shopping-cart nav-link"></i>
+            <% end %>
           </li>
           <li class="nav-item">
             <%= link_to "Login", new_user_session_path, class: "nav-link" %>
