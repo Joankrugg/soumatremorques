@@ -1,7 +1,6 @@
 <div class="navbar category-nav d-none d-sm-block">
   <div class="container">
-    <div class= "subcategories-link" type="button" data-bs-toggle="collapse" data-bs-target="#vente" aria-expanded="false" aria-controls="vente" id="vente-link"> Vente </div>
-    <div class= "subcategories-link" type="button" data-bs-toggle="collapse" data-bs-target="#location" aria-expanded="false" aria-controls="location" id="location-link"> Location </div>
+    <div class= "subcategories-link" type="button" data-bs-toggle="collapse" data-bs-target="#remorques" aria-expanded="false" aria-controls="remorques" id="remorques-link"> Remorques </div>
     <div class= "subcategories-link" type="button" data-bs-toggle="collapse" data-bs-target="#accessoires" aria-expanded="false" aria-controls="accessoires" id="accessoires-link"> Accessoires </div>
     <div class= "subcategories-link" type="button" data-bs-toggle="collapse" data-bs-target="#entretien" aria-expanded="false" aria-controls="entretien" id="entretien-link"> Entretien </div>
     <div class= "subcategories-link" type="button" data-bs-toggle="collapse" data-bs-target="#installation" aria-expanded="false" aria-controls="installation" id="installation-link"> Installation </div>
@@ -9,17 +8,17 @@
   </div>
 </div>
 
-<div class="collapse categories" id="vente">
+<div class="collapse categories" id="remorques">
   <div class="container">
     <div class="row">
       <div class="col-lg-2 mx-auto">
         <div class="card card-body subcategory">
-          VENTE.
+          <%= link_to 'remorques', trailers_products_path %>
         </div>
       </div>
       <div class="col-lg-2 mx-auto">
         <div class="card card-body subcategory">
-          VENTE.
+          <%= link_to 'bagagères', luggage_products_path %>
         </div>
       </div>
       <div class="col-lg-2 mx-auto">
@@ -72,74 +71,6 @@
       <div class="col-lg-2 mx-auto">
         <div class="card card-body subcategory">
           VENTE.
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-<div class="collapse categories" id="location">
-  <div class="container">
-    <div class="row">
-      <div class="col-lg-2 mx-auto">
-        <div class="card card-body subcategory">
-          LOCATION.
-        </div>
-      </div>
-      <div class="col-lg-2 mx-auto">
-        <div class="card card-body subcategory">
-          LOCATION.
-        </div>
-      </div>
-      <div class="col-lg-2 mx-auto">
-        <div class="card card-body subcategory">
-          LOCATION.
-        </div>
-      </div>
-      <div class="col-lg-2 mx-auto">
-        <div class="card card-body subcategory">
-          LOCATION.
-        </div>
-      </div>
-      <div class="col-lg-2 mx-auto">
-        <div class="card card-body subcategory">
-          LOCATION.
-        </div>
-      </div>
-      <div class="col-lg-2 mx-auto">
-        <div class="card card-body subcategory">
-          LOCATION.
-        </div>
-      </div>
-    </div>
-    <div class="row">
-      <div class="col-lg-2 mx-auto">
-        <div class="card card-body subcategory">
-          LOCATION.
-        </div>
-      </div>
-      <div class="col-lg-2 mx-auto">
-        <div class="card card-body subcategory">
-          LOCATION.
-        </div>
-      </div>
-      <div class="col-lg-2 mx-auto">
-        <div class="card card-body subcategory">
-          LOCATION.
-        </div>
-      </div>
-      <div class="col-lg-2 mx-auto">
-        <div class="card card-body subcategory">
-          LOCATION.
-        </div>
-      </div>
-      <div class="col-lg-2 mx-auto">
-        <div class="card card-body subcategory">
-          LOCATION.
-        </div>
-      </div>
-      <div class="col-lg-2 mx-auto">
-        <div class="card card-body subcategory">
-          LOCATION.
         </div>
       </div>
     </div>
@@ -150,7 +81,7 @@
     <div class="row">
       <div class="col-lg-2 mx-auto">
         <div class="card card-body subcategory">
-          ACCESSOIRES.
+          <%= link_to 'accessoires', accessories_products_path %>
         </div>
       </div>
       <div class="col-lg-2 mx-auto">
@@ -218,7 +149,7 @@
     <div class="row">
       <div class="col-lg-2 mx-auto">
         <div class="card card-body subcategory">
-          ENTRETIEN.
+          <%= link_to 'maintenance', maintenance_products_path %>
         </div>
       </div>
       <div class="col-lg-2 mx-auto">
@@ -286,7 +217,7 @@
     <div class="row">
       <div class="col-lg-2 mx-auto">
         <div class="card card-body subcategory">
-          INSTALLATION.
+          <%= link_to 'installations', installations_products_path %>
         </div>
       </div>
       <div class="col-lg-2 mx-auto">
@@ -354,7 +285,7 @@
     <div class="row">
       <div class="col-lg-2 mx-auto">
         <div class="card card-body subcategory">
-          ADMINISTRATIF.
+          <%= link_to 'documents', documents_products_path %>
         </div>
       </div>
       <div class="col-lg-2 mx-auto">
@@ -421,15 +352,8 @@
 
 <script>
   $(document).ready(function(){
-    $("#vente-link").hover(function(){
-      $("#vente").show();
-    });
-  });
-</script>
-<script>
-  $(document).ready(function(){
-    $("#location-link").hover(function(){
-      $("#location").show();
+    $("#remorques-link").hover(function(){
+      $("#remorques").show();
     });
   });
 </script>
@@ -464,16 +388,7 @@
 
 <script>
   $(document).ready(function(){
-    $("#vente").on({
-      mouseleave: function(){
-        $(this).hide();
-      },
-    });
-  });
-</script>
-<script>
-  $(document).ready(function(){
-    $("#location").on({
+    $("#remorques").on({
       mouseleave: function(){
         $(this).hide();
       },
@@ -520,22 +435,15 @@
 
 <script>
   $(document).ready(function(){
-    $("#vente-link").hover(function(){
-      $("#location").hide();
+    $("#remorques-link").hover(function(){
+      $("#accessoires").hide();
     });
   });
 </script>
 <script>
   $(document).ready(function(){
     $("#accessoires-link").hover(function(){
-      $("#location").hide();
-    });
-  });
-</script>
-<script>
-  $(document).ready(function(){
-    $("#location-link").hover(function(){
-      $("#accessoires").hide();
+      $("#remorques").hide();
     });
   });
 </script>
