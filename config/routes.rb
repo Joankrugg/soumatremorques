@@ -17,6 +17,25 @@ Rails.application.routes.draw do
       get :trail
       get :close
       get :market
+      get :wires
+      get :lockers
+      get :sticks
+      get :wheels
+      get :suspensions
+      get :sheets
+      get :set
+      get :direction
+      get :reinforcements
+      get :stabilisation
+      get :wire_installation
+      get :stick_installation
+      get :reinforcements_installation
+      get :locker_installation
+      get :direction_installation
+      get :stabilisation_installation
+      get :plate
+      get :technical_control
+      get :insurrance
     end
   end
 

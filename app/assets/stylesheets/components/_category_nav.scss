@@ -1,6 +1,12 @@
+.offnav{
+  height: 76px;
+}
+
 .category-nav {
   justify-content: space-between;
   background: gray;
+  position: fixed;
+  width: 100%;
 }
 
 .categories{
