@@ -1,1 +1,112 @@
-// Specific CSS for your home-page
+.catalogue{
+  margin-top: 80px;
+}
+
+.category{
+  width: 100%;
+  background: gray;
+  height: 200px;
+  margin-bottom: 40px;
+}
+
+.title{
+  text-align: center;
+  margin-bottom: 40px;
+
+}
+
+.best-sales{
+  width: 100%;
+  background: gray;
+  height: 200px;
+  margin-bottom: 40px;
+}
+
+.box{
+  display: flex;
+  position: relative;
+  border: 1px red solid;
+  width: 100%;
+  height: 900px;
+}
+
+#first{
+  background: gray;
+  position: absolute;
+  width: 300px;
+  height: 400px;
+  left: 100px;
+  top: 0px;
+}
+
+#second{
+  background: black;
+  position: absolute;
+  width: 400px;
+  height: 300px;
+  right: 0px;
+  bottom: 450px;
+}
+
+#third{
+  background: blue;
+  position: absolute;
+  width: 300px;
+  height: 400px;
+  right: 100px;
+  bottom: 00px;
+}
+
+#fourth{
+  background: yellow;
+  position: absolute;
+  width: 400px;
+  height: 300px;
+  left: 0px;
+  bottom: 150px;
+}
+
+.box-2{
+  display: flex;
+  position: relative;
+  border: 1px red solid;
+  width: 100%;
+  height: 600px;
+}
+
+#card-text{
+  background: gray;
+  position: absolute;
+  width: 500px;
+  height: 300px;
+  left: 0px;
+  bottom: 0px;
+}
+
+#card-image{
+  background: black;
+  position: absolute;
+  width: 400px;
+  height: 400px;
+  right: 0px;
+  top: 0px;
+  z-index: 1;
+}
+
+#button{
+  border: 1px solid red;
+  position: absolute;
+  width: 300px;
+  height: 60px;
+  right: 0px;
+  bottom: 0px;
+}
+
+#button-2{
+  border: 1px solid red;
+  position: absolute;
+  width: 300px;
+  height: 60px;
+  left: 50px;
+  top: 80px;
+}
