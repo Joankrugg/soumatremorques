@@ -1,3 +1,25 @@
 .product-card{
   width: 100%;
+  box-shadow: 2px 2px 4px #000000;
+
+}
+
+.caracteristic{
+  text-align: center;
+  text-decoration: none;
+}
+
+.caracteristic-price{
+  text-align: center;
+  color: #5394a9;
+  font-size: 22px;
+}
+.card-product-title{
+  text-align: center;
+  font-size: 24px;
+  margin: 15px 0px;
+}
+
+.card-product-caracteristics .btn .btn-flat{
+  text-align: center;
 }
