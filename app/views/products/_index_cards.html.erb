@@ -7,15 +7,17 @@
     </div>
     <% @products.each do |product| %>
       <div class="col-lg-3">
-        <div class="product-card">
-          <%= cl_image_tag product.photo.key, height: 300, width: 400, crop: :fill, class: 'img-fluid' %>
-          <%= product.name %>
-          <%= product.price %>
-          <%= product.rent %>
-          <%= product.second_hand %>
-          <%= product.max_load_weight %>
-          <%= product.empty_weight %>
-        </div>
+        <%= link_to product do %>
+          <div class="product-card">
+            <%= cl_image_tag product.photo.key, height: 300, width: 400, crop: :fill, class: 'img-fluid' %>
+            <%= product.name %>
+            <%= product.price %>
+            <%= product.rent %>
+            <%= product.second_hand %>
+            <%= product.max_load_weight %>
+            <%= product.empty_weight %>
+          </div>
+        <% end %>
       </div>
     <% end %>
   </div>
