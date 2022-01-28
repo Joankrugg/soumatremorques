@@ -20,6 +20,13 @@
   margin: 15px 0px;
 }
 
-.card-product-caracteristics .btn .btn-flat{
-  text-align: center;
+.card-product-caracteristics{
+  padding-bottom: 20px;
+}
+
+.card-product-caracteristics .btn-flat{
+  display: block;
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
 }

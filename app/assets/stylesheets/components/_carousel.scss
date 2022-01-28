@@ -5,8 +5,16 @@
 .banner {
   background-size: cover;
   background-position: center;
-  padding: 200px 0;
+  padding: 150px 0;
 }
+
+#soumat{
+  font-size: 100px;
+  font-weight: bold;
+  color: white;
+  text-shadow: 2px 2px #d64043;
+}
+
 
 .banner h1 {
   margin: 0;
@@ -21,4 +29,12 @@
   color: white;
   opacity: .7;
   text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+}
+
+.fa-long-arrow-alt-right{
+  font-size: 12px;
+}
+
+.banner .btn-flat{
+  background-color: #d64043;
 }

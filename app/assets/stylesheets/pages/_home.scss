@@ -9,12 +9,6 @@
   margin-bottom: 40px;
 }
 
-.title{
-  text-align: center;
-  margin-bottom: 40px;
-
-}
-
 .favorites{
   margin-top: 100px;
 }
@@ -143,4 +137,24 @@
   width: 100%;
   height: 200px;
   border: 1px solid red;
+}
+
+.titles{
+  width: 100%;
+  margin-bottom: 120px;
+  position: relative;
+}
+
+.title{
+  position: absolute;
+  font-size: 40px;
+  left: 40%;
+  top: 30px;
+}
+
+.title-back{
+  color: white;
+  position: absolute;
+  font-size: 55px;
+  left: 36%;
 }
