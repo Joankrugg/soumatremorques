@@ -19,6 +19,7 @@
   z-index: 1000;
 }
 
+
 .subcategories-link{
   color: white;
   padding: 12px 0px;
@@ -43,7 +44,14 @@
 .fa-bars{
   font-size: 22px;
   margin-left: 20px;
+  margin-top: 4px;
 }
 .subcategory-img{
   height: 100px;
+}
+.category-nav-search{
+  width: 100%;
+  height: 30px;
+  border-radius: 4px;
+  background: white;
 }
