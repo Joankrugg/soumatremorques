@@ -5,27 +5,31 @@
 
       </div>
     </div>
-    <% @products.each do |product| %>
-      <div class="col-lg-3">
-        <div class="product-card">
-          <%= cl_image_tag product.photo.key, height: 300, width: 400, crop: :fill, class: 'img-fluid' %>
-          <h5 class="card-product-title">
-            <%= product.name %>
-          </h5>
-          <div class="card-product-caracteristics">
-            <p class='caracteristic-price'>PRIX: <%= product.price %></p>
-            <% if product.rent.present? && product.rent? %>
-              <p class="caracteristic">disponible à la location</p>
-            <% end %>
-            <% if product.second_hand.present? && product.second_hand? %>
-              <div class="caracteristic"><i class="fas fa-handshake"></i> Produit d'occasion</div>
-            <% end %>
-            <p class='caracteristic'><%= product.max_load_weight %></p>
-            <p class='caracteristic'><%= product.empty_weight %></p>
-            <div class="btn btn-flat">Ajouter au panier</div>
+    <div class="col-lg-9">
+      <div class="row">
+        <% @products.each do |product| %>
+          <div class="col-lg-4">
+            <div class="product-card">
+              <%= cl_image_tag product.photo.key, height: 300, width: 400, crop: :fill, class: 'img-fluid' %>
+              <h5 class="card-product-title">
+                <%= product.name %>
+              </h5>
+              <div class="card-product-caracteristics">
+                <p class='caracteristic-price'>PRIX: <%= product.price %></p>
+                <% if product.rent.present? && product.rent? %>
+                  <p class="caracteristic">disponible à la location</p>
+                <% end %>
+                <% if product.second_hand.present? && product.second_hand? %>
+                  <div class="caracteristic"><i class="fas fa-handshake"></i> Produit d'occasion</div>
+                <% end %>
+                <p class='caracteristic'><%= product.max_load_weight %></p>
+                <p class='caracteristic'><%= product.empty_weight %></p>
+                <div class="btn btn-flat">Ajouter au panier</div>
+              </div>
+            </div>
           </div>
-        </div>
+        <% end %>
       </div>
-    <% end %>
+    </div>
   </div>
 </div>
