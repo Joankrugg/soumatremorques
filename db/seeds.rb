@@ -6,6 +6,12 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
+
+Document.create(name: 'Permis B')
+Document.create(name: 'Permis B96')
+Document.create(name: 'Permis BE')
+Document.create(name: 'Permis C')
+
 #Category.create(name: 'Trailers')
 #Category.create(name: 'Accessories')
 #Category.create(name: 'Maintenance')
