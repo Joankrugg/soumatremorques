@@ -8,9 +8,9 @@
 
 
 
-Usage.create(name: 'Occasionnel')
-Usage.create(name: 'Régulier')
-Usage.create(name: 'Intensif')
+#Usage.create(name: 'Occasionnel')
+#Usage.create(name: 'Régulier')
+#Usage.create(name: 'Intensif')
 
 #Document.create(name: 'Permis B')
 #Document.create(name: 'Permis B96')
