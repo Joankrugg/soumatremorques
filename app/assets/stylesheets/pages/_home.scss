@@ -8,15 +8,13 @@
   height: 200px;
   margin-bottom: 40px;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
-  position: relative;
 }
 
 .category-text{
-  position: absolute;
   color: white;
   font-size: 26px;
-  top: 80px;
-  left: 30%;
+  text-align: center;
+  margin-top: -120px;
 }
 
 .favorites{
@@ -141,22 +139,19 @@
 .titles{
   width: 100%;
   margin-bottom: 120px;
-  position: relative;
 }
 
 .title{
-  position: absolute;
   font-size: 40px;
-  left: 40%;
-  top: 30px;
+  text-align: center;
+  margin-top: -55px;
 }
 
 .title-back{
   color: white;
-  position: absolute;
   text-shadow: 0 0 15px rgba(0,0,0,0.2);
   font-size: 55px;
-  left: 36%;
+  text-align: center;
 }
 
 .illustration{

@@ -7,10 +7,15 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 
-Document.create(name: 'Permis B')
-Document.create(name: 'Permis B96')
-Document.create(name: 'Permis BE')
-Document.create(name: 'Permis C')
+
+Usage.create(name: 'Occasionnel')
+Usage.create(name: 'Régulier')
+Usage.create(name: 'Intensif')
+
+#Document.create(name: 'Permis B')
+#Document.create(name: 'Permis B96')
+#Document.create(name: 'Permis BE')
+#Document.create(name: 'Permis C')
 
 #Category.create(name: 'Trailers')
 #Category.create(name: 'Accessories')

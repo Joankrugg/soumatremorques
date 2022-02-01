@@ -4,6 +4,7 @@ class Product < ApplicationRecord
   belongs_to :subcategory
   belongs_to :brand
   belongs_to :document
+  belongs_to :usage
   has_many :cart_products, dependent: :destroy
   has_many :carts, through: :cart_products
 end

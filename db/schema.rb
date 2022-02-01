@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_01_31_155001) do
+ActiveRecord::Schema.define(version: 2022_02_01_140533) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -86,13 +86,21 @@ ActiveRecord::Schema.define(version: 2022_01_31_155001) do
     t.float "width"
     t.float "heigth"
     t.bigint "document_id"
+    t.bigint "usage_id"
     t.index ["brand_id"], name: "index_products_on_brand_id"
     t.index ["category_id"], name: "index_products_on_category_id"
     t.index ["document_id"], name: "index_products_on_document_id"
     t.index ["subcategory_id"], name: "index_products_on_subcategory_id"
+    t.index ["usage_id"], name: "index_products_on_usage_id"
   end
 
   create_table "subcategories", force: :cascade do |t|
+    t.string "name"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "usages", force: :cascade do |t|
     t.string "name"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
@@ -119,4 +127,5 @@ ActiveRecord::Schema.define(version: 2022_01_31_155001) do
   add_foreign_key "products", "categories"
   add_foreign_key "products", "documents"
   add_foreign_key "products", "subcategories"
+  add_foreign_key "products", "usages"
 end
