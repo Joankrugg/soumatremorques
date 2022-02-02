@@ -23,6 +23,13 @@
 .subcategories-link{
   color: white;
   padding: 12px 0px;
+  text-align: center;
+}
+
+.subcategories-link:hover{
+  color: #2f2c2d;
+  background-color: white;
+  border-radius: 5px;
 }
 
 .subcategory{
@@ -38,6 +45,7 @@
 .subcategories-link .form-control{
   height: 33px;
 }
+
 
 .subcategory-link:hover{
   cursor: pointer;

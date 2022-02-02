@@ -10,13 +10,13 @@
         <div class= "subcategories-link d-none d-sm-block" type="button" data-bs-toggle="collapse" data-bs-target="#accessoires" aria-expanded="false" aria-controls="accessoires" id="accessoires-link"> Accessoires </div>
       </div>
       <div class="col-lg-2 col-sm-2 mx-auto">
-        <div class= "subcategories-link d-none d-sm-block" type="button" data-bs-toggle="collapse" data-bs-target="#entretien" aria-expanded="false" aria-controls="entretien" id="entretien-link"> Entretien </div>
+        <div class= "subcategories-link d-none d-sm-block" type="button" data-bs-toggle="collapse" data-bs-target="#atelier" aria-expanded="false" aria-controls="atelier" id="atelier-link"> Atelier Soumat</div>
       </div>
       <div class="col-lg-2 col-sm-2 mx-auto">
-        <div class= "subcategories-link d-none d-sm-block" type="button" data-bs-toggle="collapse" data-bs-target="#installation" aria-expanded="false" aria-controls="installation" id="installation-link"> Installation </div>
+        <div class= "subcategories-link d-none d-sm-block" type="button" data-bs-toggle="collapse" data-bs-target="#roulez-en-regle" aria-expanded="false" aria-controls="roulez-en-regle" id="roulez-en-regle-link"> Roulez en règle </div>
       </div>
       <div class="col-lg-2 col-sm-2 mx-auto">
-        <div class= "subcategories-link d-none d-sm-block" type="button" data-bs-toggle="collapse" data-bs-target="#administratif" aria-expanded="false" aria-controls="administration" id="administratif-link"> Administratif </div>
+        <div class= "subcategories-link d-none d-sm-block" type="button" data-bs-toggle="collapse" data-bs-target="#question" aria-expanded="false" aria-controls="question" id="question-link"> Une question? </div>
       </div>
       <div class="col-lg-1 d-none d-sm-block"></div>
     </div>
@@ -141,7 +141,7 @@
     </div>
   </div>
 </div>
-<div class="collapse categories" id="entretien">
+<div class="collapse categories" id="atelier">
   <div class="container">
     <div class="row">
       <div class="col-lg-2 mx-auto">
@@ -169,45 +169,39 @@
           <%= link_to 'Stabilisation', stabilisation_products_path, class: 'subcategory-link' %>
         </div>
       </div>
-    </div>
-  </div>
-</div>
-<div class="collapse categories" id="installation">
-  <div class="container">
-    <div class="row">
-      <div class="col-lg-3 mx-auto">
+      <div class="col-lg-2 mx-auto">
         <div class="card card-body subcategory">
           <%= link_to 'installations', installations_products_path, class: 'subcategory-link' %>
         </div>
       </div>
-      <div class="col-lg-3 mx-auto">
+    </div>
+    <div class="row">
+      <div class="col-lg-2 mx-auto">
         <div class="card card-body subcategory">
           <%= link_to 'installation électrique', wire_installation_products_path, class: 'subcategory-link' %>
         </div>
       </div>
-      <div class="col-lg-3 mx-auto">
+      <div class="col-lg-2 mx-auto">
         <div class="card card-body subcategory">
           <%= link_to "installations d'essieux", stick_installation_products_path, class: 'subcategory-link' %>
         </div>
       </div>
-      <div class="col-lg-3 mx-auto">
+      <div class="col-lg-2 mx-auto">
         <div class="card card-body subcategory">
           <%= link_to 'équipements de stabilité', stabilisation_installation_products_path, class: 'subcategory-link' %>
         </div>
       </div>
-    </div>
-    <div class="row">
-      <div class="col-lg-3 mx-auto">
+      <div class="col-lg-2 mx-auto">
         <div class="card card-body subcategory">
           <%= link_to 'installations de suspensions', reinforcements_installation_products_path, class: 'subcategory-link' %>
         </div>
       </div>
-      <div class="col-lg-3 mx-auto">
+      <div class="col-lg-2 mx-auto">
         <div class="card card-body subcategory">
           <%= link_to "installations d'attelages", locker_installation_products_path, class: 'subcategory-link' %>
         </div>
       </div>
-      <div class="col-lg-3 mx-auto">
+      <div class="col-lg-2 mx-auto">
         <div class="card card-body subcategory">
           <%= link_to "installations d'aide à la manoeuvre", direction_installation_products_path, class: 'subcategory-link' %>
         </div>
@@ -215,7 +209,33 @@
     </div>
   </div>
 </div>
-<div class="collapse categories" id="administratif">
+<div class="collapse categories" id="roulez-en-regle">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-3 mx-auto">
+        <div class="card card-body subcategory">
+          <%= link_to 'documents', documents_products_path, class: 'subcategory-link' %>
+        </div>
+      </div>
+      <div class="col-lg-3 mx-auto">
+        <div class="card card-body subcategory">
+          <%= link_to 'Immatriculations', plate_products_path, class: 'subcategory-link' %>
+        </div>
+      </div>
+      <div class="col-lg-3 mx-auto">
+        <div class="card card-body subcategory">
+          <%= link_to 'Contrôle technique', technical_control_products_path, class: 'subcategory-link' %>
+        </div>
+      </div>
+      <div class="col-lg-3 mx-auto">
+        <div class="card card-body subcategory">
+          <%= link_to 'Assurances', insurrance_products_path, class: 'subcategory-link' %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="collapse categories" id="question">
   <div class="container">
     <div class="row">
       <div class="col-lg-3 mx-auto">
@@ -259,22 +279,22 @@
 </script>
 <script>
   $(document).ready(function(){
-    $("#entretien-link").hover(function(){
-      $("#entretien").show();
+    $("#atelier-link").hover(function(){
+      $("#atelier").show();
     });
   });
 </script>
 <script>
   $(document).ready(function(){
-    $("#installation-link").hover(function(){
-      $("#installation").show();
+    $("#roulez-en-regle-link").hover(function(){
+      $("#roulez-en-regle").show();
     });
   });
 </script>
 <script>
   $(document).ready(function(){
-    $("#administratif-link").hover(function(){
-      $("#administratif").show();
+    $("#question-link").hover(function(){
+      $("#question").show();
     });
   });
 </script>
@@ -299,7 +319,7 @@
 </script>
 <script>
   $(document).ready(function(){
-    $("#entretien").on({
+    $("#atelier").on({
       mouseleave: function(){
         $(this).hide();
       },
@@ -308,7 +328,7 @@
 </script>
 <script>
   $(document).ready(function(){
-    $("#installation").on({
+    $("#roulez-en-regle").on({
       mouseleave: function(){
         $(this).hide();
       },
@@ -317,7 +337,7 @@
 </script>
 <script>
   $(document).ready(function(){
-    $("#administratif").on({
+    $("#question").on({
       mouseleave: function(){
         $(this).hide();
       },
@@ -342,7 +362,7 @@
 </script>
 <script>
   $(document).ready(function(){
-    $("#entretien-link").hover(function(){
+    $("#atelier-link").hover(function(){
       $("#accessoires").hide();
     });
   });
@@ -350,35 +370,35 @@
 <script>
   $(document).ready(function(){
     $("#accessoires-link").hover(function(){
-      $("#entretien").hide();
+      $("#atelier").hide();
     });
   });
 </script>
 <script>
   $(document).ready(function(){
-    $("#installation-link").hover(function(){
-      $("#entretien").hide();
+    $("#roulez-en-regle-link").hover(function(){
+      $("#atelier").hide();
     });
   });
 </script>
 <script>
   $(document).ready(function(){
-    $("#entretien-link").hover(function(){
-      $("#installation").hide();
+    $("#atelier-link").hover(function(){
+      $("#roulez-en-regle").hide();
     });
   });
 </script>
 <script>
   $(document).ready(function(){
-    $("#installation-link").hover(function(){
-      $("#administratif").hide();
+    $("#roulez-en-regle-link").hover(function(){
+      $("#question").hide();
     });
   });
 </script>
 <script>
   $(document).ready(function(){
-    $("#administratif-link").hover(function(){
-      $("#installation").hide();
+    $("#question-link").hover(function(){
+      $("#roulez-en-regle").hide();
     });
   });
 </script>
