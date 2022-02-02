@@ -1,7 +1,11 @@
 class ProductsController < ApplicationController
   skip_before_action :authenticate_user!
   def index
-    @products = Product.all
+    if params[:search].present?
+      @products = Product.global_search(params[:search])
+    else
+      @products = Product.all
+    end
   end
 
   def show

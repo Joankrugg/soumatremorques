@@ -7,4 +7,17 @@ class Product < ApplicationRecord
   belongs_to :usage
   has_many :cart_products, dependent: :destroy
   has_many :carts, through: :cart_products
+  include PgSearch::Model
+  pg_search_scope :global_search,
+    against: [ :name, :price, :rent, :second_hand, :max_load_weight ],
+    associated_against: {
+      category: [ :name],
+      document: [ :name],
+      brand: [ :name],
+      usage: [ :name],
+      subcategory: [ :name]
+    },
+    using: {
+      tsearch: { prefix: true }
+    }
 end
