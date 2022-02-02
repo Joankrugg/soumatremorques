@@ -25,7 +25,11 @@
         <div class= "subcategories-link d-block d-sm-none"> <i class="fas fa-bars"></i></div>
       </div>
       <div class="col-10 col-sm-2">
-        <div class= "subcategories-link d-block d-sm-none"><div class="category-nav-search "></div></div>
+        <div class= "subcategories-link d-block d-sm-none">
+          <%= form_tag(products_path, method: :get) do %>
+            <%= text_field_tag :search, nil, class: "form-control string required", autocomplete: 'off'%>
+          <% end %>
+        </div>
       </div>
     </div>
 
