@@ -37,6 +37,8 @@ Rails.application.routes.draw do
       get :plate
       get :technical_control
       get :insurrance
+      get :rent
+      get :service
     end
   end
 

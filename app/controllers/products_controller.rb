@@ -12,6 +12,14 @@ class ProductsController < ApplicationController
     @product = Product.find(params[:id])
   end
 
+  def rent
+    @products = Product.where(rent: true)
+  end
+
+  def service
+    @products = Product.joins(:category).where(categories: { name: 'Maintenance', name: 'Installations', name: 'Documents'})
+  end
+
   def trailers
     @products = Product.joins(:category).where(categories: { name: 'Trailers' })
   end

@@ -45,22 +45,28 @@
             <h1 class= 'title'>Catalogue</h1>
           </div>
           <div class="col-6 col-sm-6 col-md-6 col-lg-4 mx-auto">
-            <div class="category">
-              <%= image_tag 'https://res.cloudinary.com/da2krghvd/image/upload/v1643390309/Portfolio/e06dec_b6dff3cac189461183b408a733d196c9_mv2.jpg', class: 'illustration' %>
-              <div class="category-text">Ventes</div>
-            </div>
+            <%= link_to products_path do %>
+              <div class="category">
+                <%= image_tag 'https://res.cloudinary.com/da2krghvd/image/upload/v1643390309/Portfolio/e06dec_b6dff3cac189461183b408a733d196c9_mv2.jpg', class: 'illustration' %>
+                <div class="category-text">Ventes</div>
+              </div>
+            <% end %>
           </div>
           <div class="col-6 col-sm-6 col-md-6 col-lg-4 mx-auto">
-            <div class="category">
-              <%= image_tag 'https://res.cloudinary.com/da2krghvd/image/upload/v1643390202/Portfolio/Screenshot-100.png', class: 'illustration' %>
-              <div class="category-text">Locations</div>
-            </div>
+            <%= link_to rent_products_path do %>
+              <div class="category">
+                <%= image_tag 'https://res.cloudinary.com/da2krghvd/image/upload/v1643390202/Portfolio/Screenshot-100.png', class: 'illustration' %>
+                <div class="category-text">Locations</div>
+              </div>
+            <% end %>
           </div>
           <div class="col-6 col-sm-6 col-md-6 col-lg-4 mx-auto">
-            <div class="category">
-              <%= image_tag 'https://res.cloudinary.com/da2krghvd/image/upload/v1643390045/Portfolio/IMG_9850.jpg', class: 'illustration' %>
-              <div class="category-text">Services</div>
-            </div>
+            <%= link_to service_products_path do %>
+              <div class="category">
+                <%= image_tag 'https://res.cloudinary.com/da2krghvd/image/upload/v1643390045/Portfolio/IMG_9850.jpg', class: 'illustration' %>
+                <div class="category-text">Services</div>
+              </div>
+            <% end %>
           </div>
         </div>
       </div>
