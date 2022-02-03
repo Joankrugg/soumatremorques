@@ -1,7 +1,25 @@
-.product-card{
+.product-card-shape{
   width: 100%;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
   margin-bottom: 40px;
+  height: 500px;
+}
+.product-card{
+  width: 100%;
+  background-image: linear-gradient(to bottom right, #c4c4c4, white);
+  height: 150px;
+  margin-bottom: 20px;
+}
+
+.i-love-it{
+  color: white;
+  text-align: right;
+  margin: 10px;
+}
+
+.i-love-it .fa-heart{
+  font-size: 22px;
+  color: #3f8fa8;
 }
 
 .caracteristic{
@@ -10,8 +28,9 @@
 }
 
 .caracteristic-price{
-  text-align: center;
-  color: #5394a9;
+  text-align: left;
+  margin-left: 10px;
+  color: #D64043;
   font-size: 22px;
 }
 .card-product-title{
