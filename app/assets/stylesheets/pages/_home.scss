@@ -17,8 +17,8 @@
   margin-top: -120px;
 }
 
-.favorites{
-  margin-top: 100px;
+section {
+  margin-bottom: 140px;
 }
 
 .best-sales{
@@ -69,7 +69,7 @@
 
 #second{
   background: black;
-  margin-top: 100px;
+  margin-top: 60px;
   width: 100%;
   height: 300px;
   position: relative;
@@ -88,11 +88,27 @@
   height: 300px;
   position: relative;
 }
+
+
+.blog-title{
+  position: absolute;
+  bottom: 40px;
+  left: 20px;
+  color: white;
+  font-weight: bold;
+}
+
 .blog{
   position: absolute;
   bottom: 20px;
   left: 20px;
   color: white;
+}
+
+.btn-blog{
+  border: 1px solid red;
+  width: 40%;
+  height: 40px;
 }
 
 .trailers{
@@ -103,42 +119,49 @@
 #card-text{
   background: gray;
   width: 100%;
-  height: 300px;
+  height: 260px;
+  margin-top: -100px;
 }
 
-#card-image{
-  background: black;
+#card-text p{
+  color: white;
+  padding: 40px 20px;
+}
+
+.colored{
+  color: red;
+}
+
+.card-image-illustration{
   width: 100%;
   height: 400px;
 }
 
 .box{
   width: 100%;
-  height: 300px;
+  height: 160px;
   position: relative;
 }
 
 #button{
   border: 1px solid red;
   position: absolute;
-  width: 300px;
   height: 60px;
+  width: 100%;
   bottom: 0;
-  right: 0;
 }
 
 .box-2{
   width: 100%;
   height: 400px;
-  position: relative;
 }
 
 #button-2{
-  position: absolute;
   border: 1px solid red;
   width: 300px;
-  height: 60px;
-  top: 33%;
+  padding: 20px 0px;
+  margin-bottom: 60px;
+  text-align: center;
 }
 
 .situation{
@@ -163,7 +186,7 @@
 
 .titles{
   width: 100%;
-  margin-bottom: 120px;
+  margin-bottom: 70px;
 }
 
 .title{
