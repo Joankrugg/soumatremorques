@@ -344,7 +344,7 @@
   <div class="container">
     <div class="row">
       <div class="col-lg-8 mx-auto">
-        <%= image_tag 'https://res.cloudinary.com/da2krghvd/image/upload/v1643663597/Portfolio/Capture_d_e%CC%81cran_2022-01-25_a%CC%80_10.23_1.jpg', class: 'map' %>
+        <%= image_tag 'https://res.cloudinary.com/da2krghvd/image/upload/v1643887103/development/map.jpg', class: 'map' %>
       </div>
     </div>
   </div>
@@ -354,18 +354,42 @@
 <section class="witnesses">
   <div class="container">
     <div class="row">
-      <div class="col-lg-4 mx-auto">
+      <div class="col-12 col-sm-9 col-md-6 col-lg-4 mx-auto">
         <div class="witness">
+          <%= image_tag 'https://res.cloudinary.com/da2krghvd/image/upload/c_fill,g_face,h_450,w_450/v1643887780/development/visage_client_2.jpg', class: 'avatar-customers' %>
+          <div class="comments">
+            <% 4.times do %>
+              <i class="fas fa-star"></i>
+            <% end %>
+            <h4>Des besoins multiples</h4>
+            <p>Soumat m'a permis d'obtenir un chouette compromis pour les usages multiples</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-12 col-sm-9 col-md-6 col-lg-4 mx-auto">
+        <div class="witness">
+          <%= image_tag 'https://res.cloudinary.com/da2krghvd/image/upload/c_fill,g_face,h_640,w_640/v1643887802/development/Visage_cliente.jpg', class: 'avatar-customers' %>
+          <div class="comments">
+            <% 5.times do %>
+              <i class="fas fa-star"></i>
+            <% end %>
+            <h4>J'ai opté pour une location</h4>
+            <p>J'ai des besoins ponctuels dans mon métier. Soumat a trouvé une solution pour moi. </p>
+          </div>
 
         </div>
       </div>
-      <div class="col-lg-4 mx-auto">
+      <div class="col-12 col-sm-9 col-md-6 col-lg-4 mx-auto">
         <div class="witness">
-
-        </div>
-      </div>
-      <div class="col-lg-4 mx-auto">
-        <div class="witness">
+          <%= image_tag 'https://res.cloudinary.com/da2krghvd/image/upload/c_fill,g_face,h_640,w_640/v1643887794/development/visage_client3.jpg', class: 'avatar-customers' %>
+          <div class="comments">
+            <% 4.times do %>
+              <i class="fas fa-star"></i>
+            <% end %>
+            <i class="fas fa-star-half-alt"></i>
+            <h4>Un service au top</h4>
+            <p>J'ai été très bien conseillé en fonction de mon permis et mes besoins, je recommande</p>
+          </div>
 
         </div>
       </div>
