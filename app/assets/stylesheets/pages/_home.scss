@@ -135,6 +135,17 @@ section {
 .card-image-illustration{
   width: 100%;
   height: 400px;
+  position: relative;
+  z-index: -1;
+}
+
+.chevron .fa-chevron-right{
+  color: white;
+  padding: 60px 60px;
+  border: 1px red solid;
+  position: absolute;
+  top: 100px;
+  left: 33%;
 }
 
 .box{
