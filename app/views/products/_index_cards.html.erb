@@ -46,26 +46,21 @@
                   <div class="row">
                     <div class="col-lg-6">
                       <div class="product-card">
-                        <div class="row">
-                          <div class="col-12">
-                            <p class="i-love-it">
-                              <i class="far fa-heart"></i>
-                            </p>
-                          </div>
-                        </div>
                         <%= cl_image_tag product.photo.key, class: 'img-fluid' %>
                       </div>
-                      <p><%= product.price %> E</p>
+                      <p class='modal-caracteristic-subcategory'><%= product.subcategory.name %></p>
+                      <p class='modal-caracteristic-price'><%= product.price %> E</p>
                     </div>
                     <div class="col-lg-6">
-                      <%= product.subcategory.name %>
-                      <%= product.document.name %>
-                      <p>Les points forts
+                      <p>
                         <% 5.times do %>
                           <i class="fas fa-star"></i>
                         <% end %>
-                      <p>
-                      <p>convient aux usages <%=product.usage.name %>s </p>
+                      </p>
+                      <p>Réglementation: <%= product.document.name %></p>
+                      <p>Les points forts</p>
+
+                      <p><span class='colored'><i class="fas fa-check-circle"></i></span> Usages <%=product.usage.name %>s </p>
                       <% if product.rent? %>
                         <p class="caracteristic">disponible à la location</p>
                       <% else %>
