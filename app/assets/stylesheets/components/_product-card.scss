@@ -2,8 +2,12 @@
   width: 100%;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
   margin-bottom: 40px;
-  height: 500px;
 }
+
+.product-card-shape h1{
+  font-size: 16px;
+}
+
 .product-card{
   width: 100%;
   background-image: linear-gradient(to bottom right, #c4c4c4, white);
@@ -23,20 +27,27 @@
 }
 
 .caracteristic{
-  text-align: center;
+  text-align: left;
+  margin-left: 20px;
+  text-decoration: none;
+}
+.best-caracteristic{
+  text-align: left;
+  margin-left: 20px;
+  font-size: 16px;
   text-decoration: none;
 }
 
 .caracteristic-price{
-  text-align: left;
-  margin-left: 10px;
+  text-align: right;
+  margin-right: 20px;
   color: #D64043;
   font-size: 22px;
 }
 .card-product-title{
-  text-align: center;
+  text-align: left;
   font-size: 24px;
-  margin: 15px 0px;
+  margin: 20px 20px;
 }
 
 .card-product-caracteristics{
@@ -44,6 +55,16 @@
 }
 
 .card-product-caracteristics .btn-flat{
+  display: block;
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.card-product-caracteristics .btn-ghost{
+  border: 1px solid #3f8fa8;
+  margin-bottom: 20px;
+  color: #3f8fa8;
   display: block;
   width: 90%;
   margin-left: auto;
