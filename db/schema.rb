@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_02_01_140533) do
+ActiveRecord::Schema.define(version: 2022_02_05_084148) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -87,6 +87,7 @@ ActiveRecord::Schema.define(version: 2022_02_01_140533) do
     t.float "heigth"
     t.bigint "document_id"
     t.bigint "usage_id"
+    t.integer "warranty"
     t.index ["brand_id"], name: "index_products_on_brand_id"
     t.index ["category_id"], name: "index_products_on_category_id"
     t.index ["document_id"], name: "index_products_on_document_id"
