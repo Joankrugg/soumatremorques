@@ -61,6 +61,11 @@
                       <p>Les points forts</p>
 
                       <p><span class='colored'><i class="fas fa-check-circle"></i></span> Usages <%=product.usage.name %>s </p>
+                      <% if product.best_uses.present? %>
+                        <% product.best_uses.each do |b| %>
+                          <p><span class='colored'><i class="fas fa-check-circle"></span></i> <%= b.name %></p>
+                        <% end %>
+                      <% end %>
                       <% if product.rent? %>
                         <p class="caracteristic">disponible à la location</p>
                       <% else %>

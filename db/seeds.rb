@@ -18,12 +18,17 @@
 #Document.create(name: 'Permis C')
 
 
-WheelAxle.create(category: 'Simple')
-WheelAxle.create(category: 'Double')
-WheelAxle.create(category: 'Triple')
-WheelAxle.create(category: 'Simple freiné')
-WheelAxle.create(category: 'Double freiné')
-WheelAxle.create(category: 'Triple freiné')
+#WheelAxle.create(category: 'Simple')
+#WheelAxle.create(category: 'Double')
+#WheelAxle.create(category: 'Triple')
+#WheelAxle.create(category: 'Simple freiné')
+#WheelAxle.create(category: 'Double freiné')
+#WheelAxle.create(category: 'Triple freiné')
+
+BestUse.create(name: 'Alimentaire')
+BestUse.create(name: 'Charges lourdes')
+BestUse.create(name: 'Tout terrain')
+
 
 
 #Category.create(name: 'Trailers')

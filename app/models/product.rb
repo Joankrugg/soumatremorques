@@ -9,6 +9,8 @@ class Product < ApplicationRecord
   belongs_to :wheel_axle
   has_many :cart_products, dependent: :destroy
   has_many :carts, through: :cart_products
+  has_many :product_best_uses, dependent: :destroy
+  has_many :best_uses, through: :product_best_uses
   include PgSearch::Model
   pg_search_scope :global_search,
     against: [ :name, :price, :rent, :second_hand, :max_load_weight ],
