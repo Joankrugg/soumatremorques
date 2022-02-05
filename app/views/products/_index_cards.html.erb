@@ -2,54 +2,121 @@
   <div class="row">
     <div class="col-lg-3">
       <div class="filters">
+
         <div class="btn-filter" id='document-trigger'>
           Permis
         </div>
 
         <div class="filter-section-level2 collapse" id='documents'>
+
           <div class="btn-filter" id='permis-b-trigger'>
             Permis B
           </div>
+
           <div class="filter-section-level3 collapse" id='permis-b-usage'>
+
             <div class="btn-filter" id='b-casual-trigger'>
               Usage occassionnel
             </div>
-              <div class="filter-section-level4 collapse" id='b-casual'>
-                <div class="btn-filter">
-                  Utilitaire
-                </div>
-                <div class="btn-filter">
-                  Nautique
-                </div>
-                <div class="btn-filter">
-                  Transport d'animaux
-                </div>
-                <div class="btn-filter">
-                  Porte-voiture
-                </div>
-                <div class="btn-filter">
-                  Porte-moto/quad
-                </div>
-                <div class="btn-filter">
-                  Bennes
-                </div>
-                <div class="btn-filter">
-                  Fourgon
-                </div>
-                <div class="btn-filter">
-                  Plateau
-                </div>
-                <div class="btn-filter">
-                  Magasin
-                </div>
-              </div>
 
-            <div class="btn-filter" id='b-regular'>
+            <div class="filter-section-level4 collapse" id='b-casual'>
+              <div class="btn-filter">
+                Utilitaire
+              </div>
+              <div class="btn-filter">
+                Nautique
+              </div>
+              <div class="btn-filter">
+                Transport d'animaux
+              </div>
+              <div class="btn-filter">
+                Porte-voiture
+              </div>
+              <div class="btn-filter">
+                Porte-moto/quad
+              </div>
+              <div class="btn-filter">
+                Bennes
+              </div>
+              <div class="btn-filter">
+                Fourgon
+              </div>
+              <div class="btn-filter">
+                Plateau
+              </div>
+              <div class="btn-filter">
+                Magasin
+              </div>
+            </div>
+
+            <div class="btn-filter" id='b-regular-trigger'>
               Usage régulier
             </div>
-            <div class="btn-filter" id='b-often'>
+
+            <div class="filter-section-level4 collapse" id='b-regular'>
+              <div class="btn-filter">
+                Utilitaire
+              </div>
+              <div class="btn-filter">
+                Nautique
+              </div>
+              <div class="btn-filter">
+                Transport d'animaux
+              </div>
+              <div class="btn-filter">
+                Porte-voiture
+              </div>
+              <div class="btn-filter">
+                Porte-moto/quad
+              </div>
+              <div class="btn-filter">
+                Bennes
+              </div>
+              <div class="btn-filter">
+                Fourgon
+              </div>
+              <div class="btn-filter">
+                Plateau
+              </div>
+              <div class="btn-filter">
+                Magasin
+              </div>
+            </div>
+
+            <div class="btn-filter" id='b-often-trigger'>
               Usage intensif
             </div>
+
+            <div class="filter-section-level4 collapse" id='b-often'>
+              <div class="btn-filter">
+                Utilitaire
+              </div>
+              <div class="btn-filter">
+                Nautique
+              </div>
+              <div class="btn-filter">
+                Transport d'animaux
+              </div>
+              <div class="btn-filter">
+                Porte-voiture
+              </div>
+              <div class="btn-filter">
+                Porte-moto/quad
+              </div>
+              <div class="btn-filter">
+                Bennes
+              </div>
+              <div class="btn-filter">
+                Fourgon
+              </div>
+              <div class="btn-filter">
+                Plateau
+              </div>
+              <div class="btn-filter">
+                Magasin
+              </div>
+            </div>
+
           </div>
 
 
@@ -59,9 +126,11 @@
           </div>
 
           <div class="filter-section-level3 collapse" id='permis-b96-usage'>
+
             <div class="btn-filter" id='b96-casual-trigger'>
               Usage occassionnel
             </div>
+
               <div class="filter-section-level4 collapse" id='b96-casual'>
                 <div class="btn-filter">
                   Utilitaire
@@ -95,12 +164,11 @@
             <div class="btn-filter">
               Usage régulier
             </div>
+
             <div class="btn-filter">
               Usage intensif
             </div>
           </div>
-
-
 
 
           <div class="btn-filter" id='permis-be-trigger'>
@@ -212,7 +280,7 @@
     </div>
   </div>
 </div>
-
+<!-- niveau 1 -->
 <script>
   $(document).ready(function(){
     $("#document-trigger").click(function(){
@@ -220,15 +288,7 @@
     });
   });
 </script>
-
-<script>
-  $(document).ready(function(){
-    $("#caracteristic-trigger").click(function(){
-      $("#caracteristic").toggle();
-    });
-  });
-</script>
-
+<!-- niveau 2 -->
 <script>
   $(document).ready(function(){
     $("#permis-b-trigger").click(function(){
@@ -236,6 +296,21 @@
     });
   });
 </script>
+<script>
+  $(document).ready(function(){
+    $("#permis-b-trigger").click(function(){
+      $("#permis-be-trigger").toggle();
+    });
+  });
+</script>
+<script>
+  $(document).ready(function(){
+    $("#permis-b-trigger").click(function(){
+      $("#permis-b96-trigger").toggle();
+    });
+  });
+</script>
+<!-- niveau 3 -->
 
 <script>
   $(document).ready(function(){
@@ -244,21 +319,71 @@
     });
   });
 </script>
-
 <script>
   $(document).ready(function(){
     $("#b-casual-trigger").click(function(){
+      $("#b-regular-trigger").toggle();
+    });
+  });
+</script>
+<script>
+  $(document).ready(function(){
+    $("#b-casual-trigger").click(function(){
+      $("#b-often-trigger").toggle();
+    });
+  });
+</script>
+
+<script>
+  $(document).ready(function(){
+    $("#b-regular-trigger").click(function(){
       $("#b-regular").toggle();
     });
   });
 </script>
 <script>
   $(document).ready(function(){
-    $("#b-casual-trigger").click(function(){
+    $("#b-regular-trigger").click(function(){
+      $("#b-casual-trigger").toggle();
+    });
+  });
+</script>
+<script>
+  $(document).ready(function(){
+    $("#b-regular-trigger").click(function(){
+      $("#b-often-trigger").toggle();
+    });
+  });
+</script>
+
+
+<script>
+  $(document).ready(function(){
+    $("#b-often-trigger").click(function(){
       $("#b-often").toggle();
     });
   });
 </script>
+<script>
+  $(document).ready(function(){
+    $("#b-often-trigger").click(function(){
+      $("#b-casual-trigger").toggle();
+    });
+  });
+</script>
+<script>
+  $(document).ready(function(){
+    $("#b-often-trigger").click(function(){
+      $("#b-regular-trigger").toggle();
+    });
+  });
+</script>
+
+
+
+
+
+
 
 <script>
   $(document).ready(function(){
@@ -292,19 +417,12 @@
   });
 </script>
 
-
-
 <script>
   $(document).ready(function(){
-    $("#permis-b-trigger").click(function(){
-      $("#permis-be-trigger").toggle();
+    $("#caracteristic-trigger").click(function(){
+      $("#caracteristic").toggle();
     });
   });
 </script>
-<script>
-  $(document).ready(function(){
-    $("#permis-b-trigger").click(function(){
-      $("#permis-b96-trigger").toggle();
-    });
-  });
-</script>
+
+
