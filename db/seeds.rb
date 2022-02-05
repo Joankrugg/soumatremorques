@@ -25,9 +25,9 @@
 #WheelAxle.create(category: 'Double freiné')
 #WheelAxle.create(category: 'Triple freiné')
 
-BestUse.create(name: 'Alimentaire')
-BestUse.create(name: 'Charges lourdes')
-BestUse.create(name: 'Tout terrain')
+#BestUse.create(name: 'Alimentaire')
+#BestUse.create(name: 'Charges lourdes')
+#BestUse.create(name: 'Tout terrain')
 
 
 

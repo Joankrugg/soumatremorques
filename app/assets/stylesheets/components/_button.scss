@@ -40,3 +40,20 @@
   color: white;
   opacity: 1;
 }
+
+.btn-filter {
+  color: #d64043;
+  border: 1px solid white;
+  padding: 8px 24px;
+  border-radius: 5px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  margin-bottom: 10px;
+}
+
+.btn-filter:hover {
+  background-color: #d64043;
+  border: 1px solid #d64043;
+  color: white;
+  opacity: 1;
+}
+
