@@ -16,6 +16,14 @@
 #Document.create(name: 'Permis B96')
 #Document.create(name: 'Permis BE')
 #Document.create(name: 'Permis C')
+WheelSize.create(name: '10.0/75X15.3 TL10')
+WheelSize.create(name: '11.5/80X15.3 TL10')
+WheelSize.create(name: '10.0/75X15.3 TL12')
+WheelSize.create(name: '11.5/80X15.3 TL12')
+WheelSize.create(name: '10.0/75X15.3 TL14')
+WheelSize.create(name: '11.5/80X15.3 TL14')
+
+
 
 #Category.create(name: 'Trailers')
 #Category.create(name: 'Accessories')

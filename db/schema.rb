@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_02_05_085017) do
+ActiveRecord::Schema.define(version: 2022_02_05_093410) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -89,11 +89,13 @@ ActiveRecord::Schema.define(version: 2022_02_05_085017) do
     t.bigint "usage_id"
     t.integer "warranty"
     t.boolean "dump_trailer", default: false, null: false
+    t.bigint "wheel_size_id"
     t.index ["brand_id"], name: "index_products_on_brand_id"
     t.index ["category_id"], name: "index_products_on_category_id"
     t.index ["document_id"], name: "index_products_on_document_id"
     t.index ["subcategory_id"], name: "index_products_on_subcategory_id"
     t.index ["usage_id"], name: "index_products_on_usage_id"
+    t.index ["wheel_size_id"], name: "index_products_on_wheel_size_id"
   end
 
   create_table "subcategories", force: :cascade do |t|
@@ -121,6 +123,12 @@ ActiveRecord::Schema.define(version: 2022_02_05_085017) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  create_table "wheel_sizes", force: :cascade do |t|
+    t.string "name"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
   add_foreign_key "cart_products", "carts"
   add_foreign_key "cart_products", "products"
@@ -130,4 +138,5 @@ ActiveRecord::Schema.define(version: 2022_02_05_085017) do
   add_foreign_key "products", "documents"
   add_foreign_key "products", "subcategories"
   add_foreign_key "products", "usages"
+  add_foreign_key "products", "wheel_sizes"
 end
