@@ -16,13 +16,14 @@
 #Document.create(name: 'Permis B96')
 #Document.create(name: 'Permis BE')
 #Document.create(name: 'Permis C')
-WheelSize.create(name: '10.0/75X15.3 TL10')
-WheelSize.create(name: '11.5/80X15.3 TL10')
-WheelSize.create(name: '10.0/75X15.3 TL12')
-WheelSize.create(name: '11.5/80X15.3 TL12')
-WheelSize.create(name: '10.0/75X15.3 TL14')
-WheelSize.create(name: '11.5/80X15.3 TL14')
 
+
+WheelAxle.create(category: 'Simple')
+WheelAxle.create(category: 'Double')
+WheelAxle.create(category: 'Triple')
+WheelAxle.create(category: 'Simple freiné')
+WheelAxle.create(category: 'Double freiné')
+WheelAxle.create(category: 'Triple freiné')
 
 
 #Category.create(name: 'Trailers')
