@@ -2,39 +2,35 @@
 <nav class="category-nav">
   <div class="container">
     <div class="row">
-      <div class="col-lg-1 d-none d-sm-block"></div>
-      <div class="col-lg-2 col-sm-2 mx-auto">
-        <div class= "subcategories-link d-none d-sm-block" type="button" data-bs-toggle="collapse" data-bs-target="#remorques" aria-expanded="false" aria-controls="remorques" id="remorques-link"> Remorques </div>
-      </div>
-      <div class="col-lg-2 col-sm-2 mx-auto">
-        <div class= "subcategories-link d-none d-sm-block" type="button" data-bs-toggle="collapse" data-bs-target="#accessoires" aria-expanded="false" aria-controls="accessoires" id="accessoires-link"> Accessoires </div>
-      </div>
-      <div class="col-lg-2 col-sm-2 mx-auto">
-        <div class= "subcategories-link d-none d-sm-block" type="button" data-bs-toggle="collapse" data-bs-target="#atelier" aria-expanded="false" aria-controls="atelier" id="atelier-link"> Atelier Soumat</div>
-      </div>
-      <div class="col-lg-2 col-sm-2 mx-auto">
-        <div class= "subcategories-link d-none d-sm-block" type="button" data-bs-toggle="collapse" data-bs-target="#roulez-en-regle" aria-expanded="false" aria-controls="roulez-en-regle" id="roulez-en-regle-link"> Roulez en règle </div>
-      </div>
-      <div class="col-lg-2 col-sm-2 mx-auto">
-        <div class= "subcategories-link d-none d-sm-block" type="button" data-bs-toggle="collapse" data-bs-target="#question" aria-expanded="false" aria-controls="question" id="question-link"> Une question? </div>
-      </div>
-      <div class="col-lg-1 d-none d-sm-block"></div>
-    </div>
-    <div class="row">
-      <div class="col-2 col-sm-2">
-        <div class= "subcategories-link d-block d-sm-none"> <i class="fas fa-bars"></i></div>
-      </div>
-      <div class="col-10 col-sm-2">
-        <div class= "subcategories-link d-block d-sm-none">
+      <div class="col-1 col-lg-1 mx-auto" data-bs-toggle="modal" data-bs-target="#triggers"><i class="fas fa-bars always"></i></div>
+      <div class="col-10 col-sm-8 col-md-8 d-block d-lg-none">
+        <div class= "sub-nav-search ">
           <%= form_tag(products_path, method: :get) do %>
             <%= text_field_tag :search, nil, class: "form-control string required", autocomplete: 'off'%>
           <% end %>
         </div>
       </div>
-    </div>
+      <div class="col-lg-2 col-sm-2 d-none d-lg-block mx-auto">
+        <div class= "subcategories-link " type="button" data-bs-toggle="collapse" data-bs-target="#remorques" aria-expanded="false" aria-controls="remorques" id="remorques-link"> Remorques </div>
+      </div>
+      <div class="col-lg-2 col-sm-2 d-none d-lg-block mx-auto">
+        <div class= "subcategories-link" type="button" data-bs-toggle="collapse" data-bs-target="#accessoires" aria-expanded="false" aria-controls="accessoires" id="accessoires-link"> Accessoires </div>
+      </div>
+      <div class="col-lg-2 col-sm-2 d-none d-lg-block mx-auto">
+        <div class= "subcategories-link" type="button" data-bs-toggle="collapse" data-bs-target="#atelier" aria-expanded="false" aria-controls="atelier" id="atelier-link"> Atelier Soumat</div>
+      </div>
+      <div class="col-lg-2 col-sm-2 d-none d-lg-block mx-auto">
+        <div class= "subcategories-link" type="button" data-bs-toggle="collapse" data-bs-target="#roulez-en-regle" aria-expanded="false" aria-controls="roulez-en-regle" id="roulez-en-regle-link"> Roulez en règle </div>
+      </div>
+      <div class="col-lg-2 col-sm-2 d-none d-lg-block mx-auto">
+        <div class= "subcategories-link" type="button" data-bs-toggle="collapse" data-bs-target="#question" aria-expanded="false" aria-controls="question" id="question-link"> Une question? </div>
+      </div>
+      <div class="col-lg-1 d-none d-lg-block"></div>
 
+    </div>
   </div>
 </nav>
+
 
 <div class="collapse categories" id="remorques">
   <div class="container">
@@ -404,6 +400,18 @@
 </script>
 
 
-
+<div class="modal fade" id="triggers" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Filtres</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <%= render 'shared/filter' %>
+      </div>
+    </div>
+  </div>
+</div>
 
 
