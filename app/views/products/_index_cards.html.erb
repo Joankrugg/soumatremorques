@@ -43,7 +43,7 @@
                   <div class="row">
                     <div class="col-lg-6">
                       <div class="row">
-                        <div class="col-lg-10">
+                        <div class="col-10 col-sm-10 col-md-10 col-lg-10">
                           <div class="product-card-details">
                             <% if product.length.present? %>
                               <p class="product-card-detail">Longueur: <%= product.length %> mètres</p>
@@ -55,7 +55,7 @@
                             <%= cl_image_tag product.photo.key, class: 'img-fluid center' %>
                           </div>
                         </div>
-                        <div class="col-lg-1">
+                        <div class="col-1 col-sm-1 col-md-1 col-lg-1">
                           <% if product.heigth.present? %>
                             <div class='trailer-height'>
                               <i class="fas fa-chevron-up arrow-top"></i>
@@ -65,7 +65,7 @@
                         </div>
                       </div>
                       <div class="row">
-                        <div class="col-lg-10">
+                        <div class="col-10 col-sm-10 col-md-10 col-lg-10">
                           <div class="product-card-details">
                             <% if product.length.present? %>
                               <p class="product-card-detail">Largeur: <%= product.width %> mètres</p>
@@ -126,39 +126,71 @@
                           <% end %>
                         </div>
                       </div>
-
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-lg-4 mx-auto">
+                      <div class="btn btn-flat call-to-action">Acheter</div>
                     </div>
                   </div>
 
                   <div class="row">
-                    <ul class="nav nav-tabs" id="myTab-<%= product.id %>" role="tablist">
-                      <li class="nav-item" role="presentation">
-                        <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home-<%= product.id %>" type="button" role="tab" aria-controls="home" aria-selected="true">Home</button>
+                    <ul class="col-lg-12 nav nav-tabs" id="myTab-<%= product.id %>" role="tablist">
+                      <li class="col-lg-4 mx-auto nav-item" role="presentation">
+                        <button class="nav-link active" id="informations-tab" data-bs-toggle="tab" data-bs-target="#informations-<%= product.id %>" type="button" role="tab" aria-controls="informations" aria-selected="true">Informations</button>
                       </li>
-                      <li class="nav-item" role="presentation">
-                        <button class="nav-link" id="profile-tab-<%= product.id %>" data-bs-toggle="tab" data-bs-target="#profile-<%= product.id %>" type="button" role="tab" aria-controls="profile" aria-selected="false">Profile</button>
+                      <li class="col-lg-4 mx-auto nav-item" role="presentation">
+                        <button class="nav-link" id="pensez-y-tab-<%= product.id %>" data-bs-toggle="tab" data-bs-target="#pensez-y-<%= product.id %>" type="button" role="tab" aria-controls="pensez-y" aria-selected="false">Pensez-y</button>
                       </li>
-                      <li class="nav-item" role="presentation">
-                        <button class="nav-link" id="messages-tab-<%= product.id %>" data-bs-toggle="tab" data-bs-target="#messages-<%= product.id %>" type="button" role="tab" aria-controls="messages" aria-selected="false">Messages</button>
-                      </li>
-                      <li class="nav-item" role="presentation">
-                        <button class="nav-link" id="settings-tab-<%= product.id %>" data-bs-toggle="tab" data-bs-target="#settings-<%= product.id %>" type="button" role="tab" aria-controls="settings" aria-selected="false">Settings</button>
+                      <li class="col-lg-4 mx-auto nav-item" role="presentation">
+                        <button class="nav-link" id="description-tab-<%= product.id %>" data-bs-toggle="tab" data-bs-target="#description-<%= product.id %>" type="button" role="tab" aria-controls="description" aria-selected="false">Description</button>
                       </li>
                     </ul>
 
                     <div class="tab-content">
-                      <div class="tab-pane active" id="home-<%= product.id %>" role="tabpanel" aria-labelledby="home-tab">...</div>
-                      <div class="tab-pane" id="profile-<%= product.id %>" role="tabpanel" aria-labelledby="profile-tab">bla</div>
-                      <div class="tab-pane" id="messages-<%= product.id %>" role="tabpanel" aria-labelledby="messages-tab">...</div>
-                      <div class="tab-pane" id="settings-<%= product.id %>" role="tabpanel" aria-labelledby="settings-tab">...</div>
+                      <div class="tab-pane active" id="informations-<%= product.id %>" role="tabpanel" aria-labelledby="informations-tab">
+                        <div class="row">
+                          <div class="col-lg-6 ">
+                            <% if product.max_load_weight.present? %>
+                              <p class="information-background">PTAC: <%= product.max_load_weight %> kg</p>
+                            <% end %>
+                          </div>
+                          <div class="col-lg-6">
+                            <% if product.brand.present? %>
+                              <p class="information-background">MARQUE: <%= product.brand.name %></p>
+                            <% end %>
+                          </div>
+                        </div>
+                        <div class="row">
+                          <div class="col-lg-6">
+                            <% if product.subcategory.present? %>
+                              <p class="information-background">TYPE: <%= product.subcategory.name %></p>
+                            <% end %>
+                          </div>
+                          <div class="col-lg-6">
+                            <% if product.document.present? %>
+                              <p class="information-background">RÉGLEMENTATION: <%= product.document.name %></p>
+                            <% end %>
+                          </div>
+                        </div>
+                        <div class="row">
+                          <div class="col-lg-6">
+                            <% if product.wheel_size.present? %>
+                              <p class="information-background">TYPE DE ROUES: <%= product.wheel_size.name %></p>
+                            <% end %>
+                          </div>
+                          <div class="col-lg-6">
+                            <% if product.wheel_axle.present? %>
+                              <p class="information-background">TYPE D'ESSIEUX: <%= product.wheel_axle.category %></p>
+                            <% end %>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="tab-pane" id="pensez-y-<%= product.id %>" role="tabpanel" aria-labelledby="pensez-y-tab">bla</div>
+                      <div class="tab-pane" id="description-<%= product.id %>" role="tabpanel" aria-labelledby="description-tab">...</div>
                     </div>
 
-                    <script>
-                      var firstTabEl = document.querySelector('#myTab li:last-child button')
-                      var firstTab = new bootstrap.Tab(firstTabEl)
 
-                      firstTab.show()
-                    </script>
                   </div>
 
                 </div>
