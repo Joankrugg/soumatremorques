@@ -17,5 +17,26 @@
     <%= render 'shared/flashes' %>
     <%= yield %>
     <%= render 'shared/footer' %>
+    <script>
+      $(document).ready(function(){
+        $("#informations-trigger").click(function(){
+          $("#informations").toggle();
+        });
+      });
+    </script>
+    <script>
+      $(document).ready(function(){
+        $("#advice-trigger").click(function(){
+          $("#advice").toggle();
+        });
+      });
+    </script>
+    <script>
+      $(document).ready(function(){
+        $("#description-trigger").click(function(){
+          $("#description").toggle();
+        });
+      });
+    </script>
   </body>
 </html>
