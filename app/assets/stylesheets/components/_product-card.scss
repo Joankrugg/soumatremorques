@@ -11,19 +11,39 @@
 .product-card{
   width: 100%;
   background-image: linear-gradient(to bottom right, #c4c4c4, white);
-  height: 150px;
+  height: 180px;
   margin-bottom: 20px;
 }
 
-.i-love-it{
+#flag {
+  width: 40px;
+  height: 50px;
+  box-sizing: content-box;
+  padding-top: 15px;
+  position: relative;
+  background: $red;
   color: white;
-  text-align: right;
-  margin: 10px;
+  font-size: 11px;
+  letter-spacing: 0.2em;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+#flag:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 0;
+  border-bottom: 20px solid #eee;
+  border-left: 20px solid transparent;
+  border-right: 20px solid transparent;
 }
 
 .i-love-it .fa-heart{
   font-size: 22px;
-  color: #3f8fa8;
+  color: white;
 }
 
 .caracteristic{
