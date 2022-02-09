@@ -1,68 +1,162 @@
-<div class="product-details">
-  <div class="container">
-    <div class="row">
-      <div class="col-lg-8 mx-auto">
-        <h4 class='hook'>Cette <strong><%= @product.category.name %></strong> n'attend que vous</h4>
-        <div class="row">
-          <div class="col-lg-6">
-            <div class="main-image">
-              <div class="row">
-                <div class="col-lg-12">
-                  <i class="fas fa-chevron-left"></i>
-                  <%= cl_image_tag @product.photo.key, height: 230, width: 300, crop: :fill, class: 'img-fluid product-image' %>
-                  <i class="fas fa-chevron-right"></i>
-                </div>
+<div class="offnav"></div>
+<div class="container">
+  <div class="row">
+    <div class="col-lg-6">
+      <div class="row">
+        <div class="col-10 col-sm-10 col-md-10 col-lg-10">
+          <div class="product-card-details">
+            <% if @product.length.present? %>
+              <p class="product-card-detail">Longueur: <%= @product.length %> Centimètres</p>
+              <div class='trailer-length'>
+                <i class="fas fa-chevron-left arrow-left"></i>
+                <i class="fas fa-chevron-right arrow-right"></i>
               </div>
-              <div class="row">
-                <div class="col-lg-6">
-                  <%= cl_image_tag @product.photo.key, height: 100, width: 133, crop: :fill, class: 'img-fluid product-image-side' %>
-                </div>
-                <div class="col-lg-6">
-                  <%= cl_image_tag @product.photo.key, height: 100, width: 133, crop: :fill, class: 'img-fluid product-image-side' %>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-6">
-            <div class="description-group">
-              <p class="product-description"><%= @product.name %></p>
-              <p class="product-description-price"><%= @product.price %> euros</p>
-              <p class="product-description">ref number: 455468584604</p>
-              <% if @product.rent.present? && @product.rent? %>
-                <p class="product-description">disponible à la location</p>
-              <% end %>
-              <div class="btn btn-flat">Ajouter au panier</div>
-              <div class="btn btn-ghost">Produits similaires</div>
-            </div>
+            <% end %>
+            <%= cl_image_tag @product.photo.key, class: 'img-fluid center' %>
           </div>
         </div>
-        <div class="row">
-          <div class="col-lg-6">
-            <div class="options">
-              <h4 class='hook'>Informations</h4>
-              <div class="description-group">
-                <div class="product-description"><i class="fas fa-weight-hanging"></i> <%= @product.max_load_weight %> KG PTC</div>
-                <% if @product.second_hand.present? && @product.second_hand? %>
-                  <div class="product-description"><i class="fas fa-handshake"></i> Produit d'occasion</div>
-                <% end %>
-              </div>
+        <div class="col-1 col-sm-1 col-md-1 col-lg-1">
+          <% if @product.heigth.present? %>
+            <div class='trailer-height'>
+              <i class="fas fa-chevron-up arrow-top"></i>
+              <i class="fas fa-chevron-down arrow-down"></i>
             </div>
-          </div>
-          <div class="col-lg-6">
-            <div class="options">
-              <h4 class='hook'>Options du modèle</h4>
-              <div class="description-group">
-                <% if @product.second_hand.present? && @product.second_hand? %>
-                  <p class="product-description">produit d'occasion</p>
-                <% end %>
-                <p class="product-description"><%= @product.max_load_weight %> KG PTC</p>
-                <p class="product-description"><%= @product.empty_weight %> KG à vide</p>
+          <% end %>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-10 col-sm-10 col-md-10 col-lg-10">
+          <div class="product-card-details">
+            <% if @product.length.present? %>
+              <p class="product-card-detail">Largeur: <%= @product.width %> Centimètres</p>
+              <div class='trailer-width'>
+                <i class="fas fa-chevron-left arrow-left"></i>
+                <i class="fas fa-chevron-right arrow-right"></i>
               </div>
-            </div>
+            <% end %>
+            <%= cl_image_tag @product.photo.key, class: 'img-fluid center' %>
           </div>
+          <p class= "product-card-detail"><%= @product.name %></p>
+          <p class= "product-card-detail">
+            <% 5.times do %>
+              <i class="fas fa-star"></i>
+            <% end %>
+          </p>
+          <p class='modal-caracteristic-subcategory'><%= @product.subcategory.name %></p>
+          <p class='modal-caracteristic-price'><%= @product.price %> E</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-lg-6">
+      <div class="row product-detailled">
+        <div class="col-lg-8 mx-auto">
+          <div class="product-card-details">
+            <%= cl_image_tag @product.photo.key, class: 'img-fluid center' %>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-8 mx-auto">
+          <div class="product-card-details">
+            <%= cl_image_tag @product.photo.key, class: 'img-fluid center' %>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-8 mx-auto">
+          <div class="product-card-details">
+            <%= cl_image_tag @product.photo.key, class: 'img-fluid center' %>
+          </div>
+        </div>
+      </div>
+
+      <p class='product-card-detail'>Réglementation: <%= @product.document.name %></p>
+      <p class='product-card-detail'>Les points forts</p>
+      <div class="row">
+        <div class="col-lg-6 mx-auto">
+          <p><span class='colored'><i class="fas fa-check-circle"></i></span> Usages <%=@product.usage.name %>s </p>
+          <% if @product.best_uses.present? %>
+            <% @product.best_uses.each do |b| %>
+              <p><span class='colored'><i class="fas fa-check-circle"></i></span> <%= b.name %></p>
+            <% end %>
+          <% end %>
+          <% if @product.warranty.present? %>
+            <p><span class='colored'><i class="fas fa-check-circle"></i></span> Garantie <%= @product.warranty %> ans</p>
+          <% end %>
         </div>
       </div>
     </div>
   </div>
+  <div class="row">
+    <div class="col-lg-4 mx-auto">
+      <div class="btn btn-flat call-to-action">Acheter</div>
+    </div>
+  </div>
+
+  <div class="row">
+    <ul class="col-lg-12 nav nav-tabs" id="myTab-<%= @product.id %>" role="tablist">
+      <li class="col-lg-4 mx-auto nav-item" role="presentation">
+        <button class="nav-link active" id="informations-tab" data-bs-toggle="tab" data-bs-target="#informations-<%= @product.id %>" type="button" role="tab" aria-controls="informations" aria-selected="true">Informations</button>
+      </li>
+      <li class="col-lg-4 mx-auto nav-item" role="presentation">
+        <button class="nav-link" id="pensez-y-tab-<%= @product.id %>" data-bs-toggle="tab" data-bs-target="#pensez-y-<%= @product.id %>" type="button" role="tab" aria-controls="pensez-y" aria-selected="false">Pensez-y</button>
+      </li>
+      <li class="col-lg-4 mx-auto nav-item" role="presentation">
+        <button class="nav-link" id="description-tab-<%= @product.id %>" data-bs-toggle="tab" data-bs-target="#description-<%= @product.id %>" type="button" role="tab" aria-controls="description" aria-selected="false">Description</button>
+      </li>
+    </ul>
+
+    <div class="tab-content">
+      <div class="tab-pane active" id="informations-<%= @product.id %>" role="tabpanel" aria-labelledby="informations-tab">
+        <div class="row">
+          <div class="col-lg-6 ">
+            <% if @product.max_load_weight.present? %>
+              <p class="information-background">PTAC: <%= @product.max_load_weight %> kg</p>
+            <% end %>
+          </div>
+          <div class="col-lg-6">
+            <% if @product.brand.present? %>
+              <p class="information-background">MARQUE: <%= @product.brand.name %></p>
+            <% end %>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-6">
+            <% if @product.subcategory.present? %>
+              <p class="information-background">TYPE: <%= @product.subcategory.name %></p>
+            <% end %>
+          </div>
+          <div class="col-lg-6">
+            <% if @product.document.present? %>
+              <p class="information-background">RÉGLEMENTATION: <%= @product.document.name %></p>
+            <% end %>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-6">
+            <% if @product.wheel_size.present? %>
+              <p class="information-background">TYPE DE ROUES: <%= @product.wheel_size.name %></p>
+            <% end %>
+          </div>
+          <div class="col-lg-6">
+            <% if @product.wheel_axle.present? %>
+              <p class="information-background">TYPE D'ESSIEUX: <%= @product.wheel_axle.category %></p>
+            <% end %>
+          </div>
+        </div>
+      </div>
+      <div class="tab-pane" id="pensez-y-<%= @product.id %>" role="tabpanel" aria-labelledby="pensez-y-tab">bla</div>
+      <div class="tab-pane" id="description-<%= @product.id %>" role="tabpanel" aria-labelledby="description-tab">...</div>
+    </div>
+
+
+  </div>
 </div>
+
+
+
+
+
+
 
