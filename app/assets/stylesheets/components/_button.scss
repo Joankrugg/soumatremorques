@@ -51,13 +51,18 @@
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
   margin-bottom: 10px;
 }
-
+.btn-filter a {
+  color: $red;
+}
 .btn-filter:hover {
   background-color: #d64043;
   border: 1px solid #d64043;
   color: white;
   cursor: pointer;
   opacity: 1;
+}
+.btn-filter:hover a {
+  color: white
 }
 
 .btn-filter-section {

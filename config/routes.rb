@@ -39,6 +39,9 @@ Rails.application.routes.draw do
       get :insurrance
       get :rent
       get :service
+      get :trailers_permisb_casual_luggage
+      get :trailers_permisb_casual_water
+      get :trailers_permisb_casual_animal
     end
   end
 
