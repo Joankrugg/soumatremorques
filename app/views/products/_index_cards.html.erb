@@ -10,8 +10,10 @@
                 <div class="row">
                   <div class=" col-7 col-sm-6 col-md-6 col-lg-7"></div>
                   <div class="col-2 col-sm-2 col-md-2 col-lg-2 mx-auto">
-                    <div class="i-love-it" id='flag'>
-                      <i class="far fa-heart"></i>
+                    <div class="all">
+                      <div class="i-love-it" id='flag'>
+                        <i class="far fa-heart"></i>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -46,7 +48,7 @@
                         <div class="col-10 col-sm-10 col-md-10 col-lg-10">
                           <div class="product-card-details">
                             <% if product.length.present? %>
-                              <p class="product-card-detail">Longueur: <%= product.length %> mètres</p>
+                              <p class="product-card-detail">Longueur: <%= product.length %> Centimètres</p>
                               <div class='trailer-length'>
                                 <i class="fas fa-chevron-left arrow-left"></i>
                                 <i class="fas fa-chevron-right arrow-right"></i>
@@ -68,7 +70,7 @@
                         <div class="col-10 col-sm-10 col-md-10 col-lg-10">
                           <div class="product-card-details">
                             <% if product.length.present? %>
-                              <p class="product-card-detail">Largeur: <%= product.width %> mètres</p>
+                              <p class="product-card-detail">Largeur: <%= product.width %> Centimètres</p>
                               <div class='trailer-width'>
                                 <i class="fas fa-chevron-left arrow-left"></i>
                                 <i class="fas fa-chevron-right arrow-right"></i>
