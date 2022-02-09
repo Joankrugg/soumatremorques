@@ -26,8 +26,10 @@
                   <%= product.name %>
                 </h1>
                 <p class='caracteristic'><%= product.subcategory.name %></p>
-                <p class='caracteristic'>PTAC: <%= product.empty_weight %> kg</p>
-                <p class='best-caracteristic'>Idéal pour: product.caracteristic</p>
+                <p class='caracteristic'>PTAC: <%= product.max_load_weight %> kg</p>
+                <% if product.best_uses.present? %>
+                  <p class='best-caracteristic'>Idéal pour: <%= product.best_uses.first.name%></p>
+                <% end %>
                 <div class="btn btn-ghost" data-bs-toggle="modal" data-bs-target="#modal-<%= product.id %>">aperçu rapide</div>
                 <div class="btn btn-flat">Acheter</div>
               </div>
