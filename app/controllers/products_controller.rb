@@ -172,4 +172,16 @@ class ProductsController < ApplicationController
     @products = Product.joins(:category, :subcategory, :document, :usage).where(categories: { name: 'Trailers' }, subcategories: { name: 'Transports animaliers' }, documents: { name: 'Permis B' }, usages: { name: 'Occasionnel' })
   end
 
+  def trailers_permisb_casual_moto
+    @products = Product.joins(:category, :subcategory, :document, :usage).where(categories: { name: 'Trailers' }, subcategories: { name: 'Porte-moto' }, documents: { name: 'Permis B' }, usages: { name: 'Occasionnel' })
+  end
+
+  def trailers_permisb_casual_garden
+    @products = Product.joins(:category, :subcategory, :document, :usage).where(categories: { name: 'Trailers' }, subcategories: { name: 'Espaces verts' }, documents: { name: 'Permis B' }, usages: { name: 'Occasionnel' })
+  end
+
+  def trailers_permisb_casual_close
+    @products = Product.joins(:category, :subcategory, :document, :usage).where(categories: { name: 'Trailers' }, subcategories: { name: 'Bennes' }, documents: { name: 'Permis B' }, usages: { name: 'Occasionnel' })
+  end
+
 end

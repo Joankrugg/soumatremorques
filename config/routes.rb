@@ -42,6 +42,9 @@ Rails.application.routes.draw do
       get :trailers_permisb_casual_luggage
       get :trailers_permisb_casual_water
       get :trailers_permisb_casual_animal
+      get :trailers_permisb_casual_garden
+      get :trailers_permisb_casual_moto
+      get :trailers_permisb_casual_close
     end
   end
 
