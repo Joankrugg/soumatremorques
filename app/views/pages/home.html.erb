@@ -5,7 +5,7 @@
         <h1 id="soumat">SOUMAT</h1>
         <h1>ARC REMORQUES AQUITAINES</h1>
         <p>Remorques utilitaires, de tourismes, attelages...</p>
-        <a class="btn btn-flat" href="#">En savoir plus <i class="fas fa-long-arrow-alt-right"></i></a>
+        <a class="btn btn-flat" href="#catalogue">En savoir plus <i class="fas fa-long-arrow-alt-right"></i></a>
       </div>
     </div>
     <div class="carousel-item banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://res.cloudinary.com/da2krghvd/image/upload/v1643390045/Portfolio/IMG_9850.jpg);">
@@ -13,7 +13,7 @@
         <h1 id="soumat">SOUMAT</h1>
         <h1>ARC REMORQUES AQUITAINES</h1>
         <p>Entretien, installations, accessoires.</p>
-        <a class="btn btn-flat" href="#">En savoir plus <i class="fas fa-long-arrow-alt-right"></i></a>
+        <a class="btn btn-flat" href="#catalogue">En savoir plus <i class="fas fa-long-arrow-alt-right"></i></a>
       </div>
     </div>
     <div class="carousel-item banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://res.cloudinary.com/da2krghvd/image/upload/v1643390309/Portfolio/e06dec_b6dff3cac189461183b408a733d196c9_mv2.jpg">
@@ -21,7 +21,7 @@
         <h1 id="soumat">SOUMAT</h1>
         <h1>ARC REMORQUES AQUITAINES</h1>
         <p>Services administratifs, conseils.</p>
-        <a class="btn btn-flat" href="#">En savoir plus <i class="fas fa-long-arrow-alt-right"></i></a>
+        <a class="btn btn-flat" href="#catalogue">En savoir plus <i class="fas fa-long-arrow-alt-right"></i></a>
       </div>
     </div>
   </div>
@@ -35,14 +35,14 @@
   </button>
 </header>
 
-<section class="catalogue">
+<section class="catalogue" id='catalogue'>
   <div class="container">
     <div class="row">
       <div class="col-md-12 col-lg-9 mx-auto">
         <div class="row">
           <div class="titles">
-            <div class="title-back">Catalogue</div>
-            <h1 class= 'title'>Catalogue</h1>
+            <div class="title-back">Notre catalogue</div>
+            <h1 class= 'title'>Notre catalogue</h1>
           </div>
           <div class="col-6 col-sm-6 col-md-6 col-lg-4 mx-auto">
             <%= link_to products_path do %>
@@ -78,8 +78,8 @@
   <div class="container">
     <div class="row">
       <div class="titles">
-        <div class="title-back">Les plus vendues</div>
-        <h1 class= 'title'>Les plus vendues</h1>
+        <div class="title-back">Nos favorites</div>
+        <h1 class= 'title'>Nos favorites</h1>
       </div>
       <div class="col-12 col-sm-12 col-md-12 col-lg-9 mx-auto">
         <div class="row">
@@ -160,6 +160,15 @@
   <div class="container">
     <div class="row">
       <div class="col-12 col-md-6 col-lg-4 mx-auto">
+        <h4 class= 'mini-title'>Nos activités</h4>
+      </div>
+      <div class="col-12 col-md-6 col-lg-4 mx-auto">
+      </div>
+    </div>
+    <div class="row">
+
+      <div class="col-12 col-md-6 col-lg-4 mx-auto">
+
         <div class="activity">
           <p class='proposition'><strong>Installer</strong> un accessoire sur votre voiture</p>
           <%= image_tag 'https://res.cloudinary.com/da2krghvd/image/upload/v1643834038/development/Rectangle_19.jpg', class: 'activity-img' %>
@@ -167,7 +176,7 @@
       </div>
       <div class="col-12 col-md-6 col-lg-4 mx-auto">
         <div class="activity">
-          <p class='proposition'><strong>Louer</strong> une remorque</p>
+          <p class='proposition'><strong>Louer</strong> votre remorque</p>
           <%= image_tag 'https://res.cloudinary.com/da2krghvd/image/upload/v1643834045/development/Rectangle_20.jpg', class: 'activity-img' %>
         </div>
       </div>
@@ -180,16 +189,14 @@
   <div class="container">
     <div class="row">
       <div class="titles">
-        <div class="title-back">Nos remorques</div>
-        <h1 class= 'title'>Nos remorques</h1>
+        <div class="title-back">Nous connaître</div>
+        <h1 class= 'title'>Nous connaître</h1>
       </div>
       <div class="col-12 col-sm-12 col-md-12 col-lg-8 mx-auto">
         <div class="row">
           <div class="col-12 col-md-6 col-lg-6">
             <div class="box-2">
-              <div id="button-2">Guide d'achat</div>
-              <p>Une question? Un projet?</p>
-              <p><span class="colored">Consultez notre guide d'achat</span> </p>
+              <div id="button-2">Notre parc</div>
             </div>
           </div>
           <div class="col-12 col-md-6 col-lg-6">
@@ -207,7 +214,7 @@
           </div>
           <div class="col-12 col-md-6 col-lg-5">
             <div class="box">
-              <div id="button"></div>
+              <div id="button">Une question? Un projet?</div>
             </div>
           </div>
         </div>
@@ -231,6 +238,13 @@
 
 <section class="witnesses">
   <div class="container">
+    <div class="row">
+      <div class="col-12 col-md-6 col-lg-4 mx-auto">
+        <h4 class= 'mini-title'>Vos retours</h4>
+      </div>
+      <div class="col-12 col-md-6 col-lg-4 mx-auto">
+      </div>
+    </div>
     <div class="row">
       <div class="col-12 col-sm-9 col-md-6 col-lg-4 mx-auto">
         <div class="witness">

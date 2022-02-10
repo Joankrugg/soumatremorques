@@ -37,4 +37,11 @@
 
 .banner .btn-flat{
   background-color: #d64043;
+  margin-left: 240px;
+}
+
+.banner .btn-flat:hover{
+  background-color: white;
+  color: $red;
+  margin-left: 240px;
 }

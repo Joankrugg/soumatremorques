@@ -17,10 +17,10 @@
       <div class="col-6 col-sm-3 col-md-10 col-lg-3">
         <% if user_signed_in? %>
           <div class="user-area">
-            <i class="fas fa-comment-alt" data-bs-toggle="modal" data-bs-target="#conseil"></i>
+            <i class="fas fa-exclamation-triangle" data-bs-toggle="modal" data-bs-target="#conseil"></i>
             <i class="fas fa-heart"></i>
             <i class="fas fa-shopping-cart"></i>
-            <%= image_tag "https://kitt.lewagon.com/placeholder/users/ssaunier", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { bs_toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
+            <%= image_tag "https://res.cloudinary.com/da2krghvd/image/upload/c_fill,g_face,h_2440,w_2440/v1642098043/Portfolio/Avatar_noir.jpg", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { bs_toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
 
             <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
               <%= link_to "Action", "#", class: "dropdown-item" %>
@@ -30,7 +30,7 @@
           </div>
         <% else %>
           <div class="user-area">
-            <i class="fas fa-comment-alt" data-bs-toggle="modal" data-bs-target="#conseil"></i>
+            <i class="fas fa-exclamation-triangle" data-bs-toggle="modal" data-bs-target="#conseil"></i>
             <i class="fas fa-heart"></i>
             <i class="fas fa-shopping-cart"></i>
             <%= link_to "Login", new_user_session_path, class: "login" %>
