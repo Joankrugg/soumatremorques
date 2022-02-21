@@ -1,11 +1,11 @@
 .carousel{
-  margin-top: 40px;
+  margin-top: 50px;
 }
 
 .banner {
   background-size: cover;
   background-position: center;
-  padding: 150px 0;
+  padding: 180px 0;
 }
 
 #soumat{
@@ -36,12 +36,13 @@
 }
 
 .banner .btn-flat{
-  background-color: #d64043;
+  color: #4A4A4A;
+  background-color: white;
   margin-left: 240px;
 }
 
 .banner .btn-flat:hover{
-  background-color: white;
-  color: $red;
+  background-color: $blue;
+  color: white;
   margin-left: 240px;
 }

@@ -38,13 +38,13 @@
 <section class="catalogue" id='catalogue'>
   <div class="container">
     <div class="row">
-      <div class="col-md-12 col-lg-9 mx-auto">
+      <div class="col-12 mx-auto">
         <div class="row">
           <div class="titles">
             <div class="title-back">Notre catalogue</div>
             <h1 class= 'title'>Notre catalogue</h1>
           </div>
-          <div class="col-6 col-sm-6 col-md-6 col-lg-4 mx-auto">
+          <div class="col-6 col-sm-6 col-md-4 col-lg-3 mx-auto">
             <%= link_to products_path do %>
               <div class="category">
                 <%= image_tag 'https://res.cloudinary.com/da2krghvd/image/upload/v1643390309/Portfolio/e06dec_b6dff3cac189461183b408a733d196c9_mv2.jpg', class: 'illustration' %>
@@ -52,7 +52,7 @@
               </div>
             <% end %>
           </div>
-          <div class="col-6 col-sm-6 col-md-6 col-lg-4 mx-auto">
+          <div class="col-6 col-sm-6 col-md-4 col-lg-3 mx-auto">
             <%= link_to rent_products_path do %>
               <div class="category">
                 <%= image_tag 'https://res.cloudinary.com/da2krghvd/image/upload/v1643390202/Portfolio/Screenshot-100.png', class: 'illustration' %>
@@ -60,7 +60,15 @@
               </div>
             <% end %>
           </div>
-          <div class="col-6 col-sm-6 col-md-6 col-lg-4 mx-auto">
+          <div class="col-6 col-sm-6 col-md-4 col-lg-3 mx-auto">
+            <%= link_to maintenance_products_path do %>
+              <div class="category">
+                <%= image_tag 'https://res.cloudinary.com/da2krghvd/image/upload/v1643834038/development/Rectangle_19.jpg', class: 'illustration' %>
+                <div class="category-text">Atelier</div>
+              </div>
+            <% end %>
+          </div>
+          <div class="col-6 col-sm-6 col-md-4 col-lg-3 mx-auto">
             <%= link_to service_products_path do %>
               <div class="category">
                 <%= image_tag 'https://res.cloudinary.com/da2krghvd/image/upload/v1643390045/Portfolio/IMG_9850.jpg', class: 'illustration' %>
@@ -74,6 +82,14 @@
   </div>
 </section>
 
+<section class='white-book'>
+  <div class="container">
+    <h4>Choisissez en toute confiance</h4>
+    <p>Téléchargez notre guide de choix</p>
+    <div class="btn btn-flat">Téléchargez</div>
+  </div>
+</section>
+
 <section class="favorites">
   <div class="container">
     <div class="row">
@@ -81,30 +97,128 @@
         <div class="title-back">Nos favorites</div>
         <h1 class= 'title'>Nos favorites</h1>
       </div>
-      <div class="col-12 col-sm-12 col-md-12 col-lg-9 mx-auto">
+      <div class="col-12 col-sm-12 col-md-12 col-lg-10 mx-auto">
         <div class="row">
-          <% @products.sample(8).each do |product| %>
-            <div class="col-6 col-sm-6 col-md-4 col-lg-3 mx-auto">
-              <div class="best-sales">
-                <div class="best-sale-card">
-                  <div class="row">
-                    <div class="col-12">
-                      <p class='availaibility'>
-                        11 produits disponibles
-                        <i class="fas fa-heart"></i>
-                        <i class="fas fa-shopping-cart"></i>
-                      </p>
-                      <p class='best-sales-price'><%= product.price %> E</p>
-                    </div>
+          <div class="col-6 col-sm-6 col-md-4 col-lg-4 mx-auto">
+            <div class="best-sales">
+              <div class="best-sale-card">
+                <div class="row">
+                  <div class="col-12">
+                    <p class='availaibility'>
+                      11 produits disponibles
+                      <i class="fas fa-heart"></i>
+                      <i class="fas fa-shopping-cart"></i>
+                    </p>
+                    <p class='best-sales-price'><%= @products[0].price %> E</p>
                   </div>
-                  <%= cl_image_tag product.photo.key, class: 'img-fluid best-sales-image' %>
                 </div>
-                <%= link_to product_path(product) do %>
-                  <div class="btn btn-brand">Découvrir</div>
-                <% end %>
+                <%= cl_image_tag @products[0].photo.key, class: 'img-fluid best-sales-image' %>
               </div>
+              <%= link_to product_path(@products[0]) do %>
+                <div class="btn btn-brand">Découvrir</div>
+              <% end %>
             </div>
-          <% end %>
+          </div>
+          <div class="col-6 col-sm-6 col-md-4 col-lg-4 mx-auto">
+            <div class="best-sales">
+              <div class="best-sale-card-green">
+                <div class="row">
+                  <div class="col-12">
+                    <p class='availaibility'>
+                      11 produits disponibles
+                      <i class="fas fa-heart"></i>
+                      <i class="fas fa-shopping-cart"></i>
+                    </p>
+                    <p class='best-sales-price'><%= @products[1].price %> E</p>
+                  </div>
+                </div>
+                <%= cl_image_tag @products[1].photo.key, class: 'img-fluid best-sales-image' %>
+              </div>
+              <%= link_to product_path(@products[1]) do %>
+                <div class="btn btn-brand">Découvrir</div>
+              <% end %>
+            </div>
+          </div>
+          <div class="col-6 col-sm-6 col-md-4 col-lg-4 mx-auto">
+            <div class="best-sales">
+              <div class="best-sale-card-brown">
+                <div class="row">
+                  <div class="col-12">
+                    <p class='availaibility'>
+                      11 produits disponibles
+                      <i class="fas fa-heart"></i>
+                      <i class="fas fa-shopping-cart"></i>
+                    </p>
+                    <p class='best-sales-price'><%= @products[2].price %> E</p>
+                  </div>
+                </div>
+                <%= cl_image_tag @products[2].photo.key, class: 'img-fluid best-sales-image' %>
+              </div>
+              <%= link_to product_path(@products[2]) do %>
+                <div class="btn btn-brand">Découvrir</div>
+              <% end %>
+            </div>
+          </div>
+          <div class="col-6 col-sm-6 col-md-4 col-lg-4 mx-auto">
+            <div class="best-sales">
+              <div class="best-sale-card-brown">
+                <div class="row">
+                  <div class="col-12">
+                    <p class='availaibility'>
+                      11 produits disponibles
+                      <i class="fas fa-heart"></i>
+                      <i class="fas fa-shopping-cart"></i>
+                    </p>
+                    <p class='best-sales-price'><%= @products[3].price %> E</p>
+                  </div>
+                </div>
+                <%= cl_image_tag @products[3].photo.key, class: 'img-fluid best-sales-image' %>
+              </div>
+              <%= link_to product_path(@products[3]) do %>
+                <div class="btn btn-brand">Découvrir</div>
+              <% end %>
+            </div>
+          </div>
+          <div class="col-6 col-sm-6 col-md-4 col-lg-4 mx-auto">
+            <div class="best-sales">
+              <div class="best-sale-card">
+                <div class="row">
+                  <div class="col-12">
+                    <p class='availaibility'>
+                      11 produits disponibles
+                      <i class="fas fa-heart"></i>
+                      <i class="fas fa-shopping-cart"></i>
+                    </p>
+                    <p class='best-sales-price'><%= @products[4].price %> E</p>
+                  </div>
+                </div>
+                <%= cl_image_tag @products[4].photo.key, class: 'img-fluid best-sales-image' %>
+              </div>
+              <%= link_to product_path(@products[4]) do %>
+                <div class="btn btn-brand">Découvrir</div>
+              <% end %>
+            </div>
+          </div>
+          <div class="col-6 col-sm-6 col-md-4 col-lg-4 mx-auto">
+            <div class="best-sales">
+              <div class="best-sale-card-green">
+                <div class="row">
+                  <div class="col-12">
+                    <p class='availaibility'>
+                      11 produits disponibles
+                      <i class="fas fa-heart"></i>
+                      <i class="fas fa-shopping-cart"></i>
+                    </p>
+                    <p class='best-sales-price'><%= @products[5].price %> E</p>
+                  </div>
+                </div>
+                <%= cl_image_tag @products[5].photo.key, class: 'img-fluid best-sales-image' %>
+              </div>
+              <%= link_to product_path(@products[5]) do %>
+                <div class="btn btn-brand">Découvrir</div>
+              <% end %>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -155,35 +269,13 @@
   </div>
 </section>
 
-
-<section class="trailers">
+<section class='white-book'>
   <div class="container">
-    <div class="row">
-      <div class="col-12 col-md-6 col-lg-4 mx-auto">
-        <h4 class= 'mini-title'>Nos activités</h4>
-      </div>
-      <div class="col-12 col-md-6 col-lg-4 mx-auto">
-      </div>
-    </div>
-    <div class="row">
-
-      <div class="col-12 col-md-6 col-lg-4 mx-auto">
-
-        <div class="activity">
-          <p class='proposition'><strong>Installer</strong> un accessoire sur votre voiture</p>
-          <%= image_tag 'https://res.cloudinary.com/da2krghvd/image/upload/v1643834038/development/Rectangle_19.jpg', class: 'activity-img' %>
-        </div>
-      </div>
-      <div class="col-12 col-md-6 col-lg-4 mx-auto">
-        <div class="activity">
-          <p class='proposition'><strong>Louer</strong> votre remorque</p>
-          <%= image_tag 'https://res.cloudinary.com/da2krghvd/image/upload/v1643834045/development/Rectangle_20.jpg', class: 'activity-img' %>
-        </div>
-      </div>
-    </div>
+    <h4>Choisissez en toute confiance</h4>
+    <p>Téléchargez notre guide de choix</p>
+    <div class="btn btn-flat">Téléchargez</div>
   </div>
 </section>
-
 
 <section class="trailers">
   <div class="container">
@@ -223,17 +315,6 @@
   </div>
 </section>
 
-
-
-<section class="situation">
-  <div class="container">
-    <div class="row">
-      <div class="col-lg-8 mx-auto">
-        <%= image_tag 'https://res.cloudinary.com/da2krghvd/image/upload/v1643887103/development/map.jpg', class: 'map' %>
-      </div>
-    </div>
-  </div>
-</section>
 
 
 <section class="witnesses">
