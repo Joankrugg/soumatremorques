@@ -101,121 +101,115 @@
         <div class="row">
           <div class="col-6 col-sm-6 col-md-4 col-lg-4 mx-auto">
             <div class="best-sales">
-              <div class="best-sale-card">
-                <div class="row">
-                  <div class="col-12">
-                    <p class='availaibility'>
-                      11 produits disponibles
-                      <i class="fas fa-heart"></i>
-                      <i class="fas fa-shopping-cart"></i>
-                    </p>
-                    <p class='best-sales-price'><%= @products[0].price %> E</p>
-                  </div>
-                </div>
-                <%= cl_image_tag @products[0].photo.key, class: 'img-fluid best-sales-image' %>
-              </div>
               <%= link_to product_path(@products[0]) do %>
-                <div class="btn btn-brand">Découvrir</div>
+                <div class="best-sale-card">
+                  <div class="row">
+                    <div class="col-12">
+                      <p class='availaibility'>
+                        11 produits disponibles
+                        <i class="fas fa-heart"></i>
+                        <i class="fas fa-shopping-cart"></i>
+                      </p>
+                      <p class='best-sales-price'><%= @products[0].price %> E</p>
+                    </div>
+                  </div>
+                  <%= cl_image_tag @products[0].photo.key, class: 'img-fluid best-sales-image' %>
+                </div>
               <% end %>
             </div>
           </div>
           <div class="col-6 col-sm-6 col-md-4 col-lg-4 mx-auto">
             <div class="best-sales">
-              <div class="best-sale-card-green">
-                <div class="row">
-                  <div class="col-12">
-                    <p class='availaibility'>
-                      11 produits disponibles
-                      <i class="fas fa-heart"></i>
-                      <i class="fas fa-shopping-cart"></i>
-                    </p>
-                    <p class='best-sales-price'><%= @products[1].price %> E</p>
-                  </div>
-                </div>
-                <%= cl_image_tag @products[1].photo.key, class: 'img-fluid best-sales-image' %>
-              </div>
               <%= link_to product_path(@products[1]) do %>
-                <div class="btn btn-brand">Découvrir</div>
+                <div class="best-sale-card-green">
+                  <div class="row">
+                    <div class="col-12">
+                      <p class='availaibility'>
+                        11 produits disponibles
+                        <i class="fas fa-heart"></i>
+                        <i class="fas fa-shopping-cart"></i>
+                      </p>
+                      <p class='best-sales-price'><%= @products[1].price %> E</p>
+                    </div>
+                  </div>
+                  <%= cl_image_tag @products[1].photo.key, class: 'img-fluid best-sales-image' %>
+                </div>
               <% end %>
             </div>
           </div>
           <div class="col-6 col-sm-6 col-md-4 col-lg-4 mx-auto">
             <div class="best-sales">
-              <div class="best-sale-card-brown">
-                <div class="row">
-                  <div class="col-12">
-                    <p class='availaibility'>
-                      11 produits disponibles
-                      <i class="fas fa-heart"></i>
-                      <i class="fas fa-shopping-cart"></i>
-                    </p>
-                    <p class='best-sales-price'><%= @products[2].price %> E</p>
-                  </div>
-                </div>
-                <%= cl_image_tag @products[2].photo.key, class: 'img-fluid best-sales-image' %>
-              </div>
               <%= link_to product_path(@products[2]) do %>
-                <div class="btn btn-brand">Découvrir</div>
+                <div class="best-sale-card-brown">
+                  <div class="row">
+                    <div class="col-12">
+                      <p class='availaibility'>
+                        11 produits disponibles
+                        <i class="fas fa-heart"></i>
+                        <i class="fas fa-shopping-cart"></i>
+                      </p>
+                      <p class='best-sales-price'><%= @products[2].price %> E</p>
+                    </div>
+                  </div>
+                  <%= cl_image_tag @products[2].photo.key, class: 'img-fluid best-sales-image' %>
+                </div>
               <% end %>
             </div>
           </div>
           <div class="col-6 col-sm-6 col-md-4 col-lg-4 mx-auto">
             <div class="best-sales">
-              <div class="best-sale-card-brown">
-                <div class="row">
-                  <div class="col-12">
-                    <p class='availaibility'>
-                      11 produits disponibles
-                      <i class="fas fa-heart"></i>
-                      <i class="fas fa-shopping-cart"></i>
-                    </p>
-                    <p class='best-sales-price'><%= @products[3].price %> E</p>
-                  </div>
-                </div>
-                <%= cl_image_tag @products[3].photo.key, class: 'img-fluid best-sales-image' %>
-              </div>
               <%= link_to product_path(@products[3]) do %>
-                <div class="btn btn-brand">Découvrir</div>
+                <div class="best-sale-card-brown">
+                  <div class="row">
+                    <div class="col-12">
+                      <p class='availaibility'>
+                        11 produits disponibles
+                        <i class="fas fa-heart"></i>
+                        <i class="fas fa-shopping-cart"></i>
+                      </p>
+                      <p class='best-sales-price'><%= @products[3].price %> E</p>
+                    </div>
+                  </div>
+                  <%= cl_image_tag @products[3].photo.key, class: 'img-fluid best-sales-image' %>
+                </div>
               <% end %>
             </div>
           </div>
           <div class="col-6 col-sm-6 col-md-4 col-lg-4 mx-auto">
             <div class="best-sales">
-              <div class="best-sale-card">
-                <div class="row">
-                  <div class="col-12">
-                    <p class='availaibility'>
-                      11 produits disponibles
-                      <i class="fas fa-heart"></i>
-                      <i class="fas fa-shopping-cart"></i>
-                    </p>
-                    <p class='best-sales-price'><%= @products[4].price %> E</p>
-                  </div>
-                </div>
-                <%= cl_image_tag @products[4].photo.key, class: 'img-fluid best-sales-image' %>
-              </div>
               <%= link_to product_path(@products[4]) do %>
-                <div class="btn btn-brand">Découvrir</div>
+                <div class="best-sale-card">
+                  <div class="row">
+                    <div class="col-12">
+                      <p class='availaibility'>
+                        11 produits disponibles
+                        <i class="fas fa-heart"></i>
+                        <i class="fas fa-shopping-cart"></i>
+                      </p>
+                      <p class='best-sales-price'><%= @products[4].price %> E</p>
+                    </div>
+                  </div>
+                  <%= cl_image_tag @products[4].photo.key, class: 'img-fluid best-sales-image' %>
+                </div>
               <% end %>
             </div>
           </div>
           <div class="col-6 col-sm-6 col-md-4 col-lg-4 mx-auto">
             <div class="best-sales">
-              <div class="best-sale-card-green">
-                <div class="row">
-                  <div class="col-12">
-                    <p class='availaibility'>
-                      11 produits disponibles
-                      <i class="fas fa-heart"></i>
-                      <i class="fas fa-shopping-cart"></i>
-                    </p>
-                    <p class='best-sales-price'><%= @products[5].price %> E</p>
-                  </div>
-                </div>
-                <%= cl_image_tag @products[5].photo.key, class: 'img-fluid best-sales-image' %>
-              </div>
               <%= link_to product_path(@products[5]) do %>
-                <div class="btn btn-brand">Découvrir</div>
+                <div class="best-sale-card-green">
+                  <div class="row">
+                    <div class="col-12">
+                      <p class='availaibility'>
+                        11 produits disponibles
+                        <i class="fas fa-heart"></i>
+                        <i class="fas fa-shopping-cart"></i>
+                      </p>
+                      <p class='best-sales-price'><%= @products[5].price %> E</p>
+                    </div>
+                  </div>
+                  <%= cl_image_tag @products[5].photo.key, class: 'img-fluid best-sales-image' %>
+                </div>
               <% end %>
             </div>
           </div>

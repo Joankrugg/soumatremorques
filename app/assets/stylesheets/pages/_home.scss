@@ -23,11 +23,13 @@ section {
 
 .white-book{
   background-image: linear-gradient(to bottom right, #7d7479, #000000);
-  padding: 80px 0px;
+  padding: 150px 0px;
 }
 .white-book h4{
   color: white;
   text-align: center;
+  font-size: 30px;
+  font-weight: bold;
 }
 .white-book p{
   color: white;
@@ -71,7 +73,8 @@ section {
 
 .best-sale-card{
   width: 100%;
-  background-image: linear-gradient(to bottom right, #d64043, #533f42);
+  border: solid 1px #3C3C3C;
+  background-image: linear-gradient(to bottom, #3C3C3C, white);
   height: 300px;
   margin-bottom: 20px;
 }
@@ -85,7 +88,7 @@ section {
 
 .best-sale-card-brown{
   width: 100%;
-  background-image: linear-gradient(to bottom right, #9C6A5A, #292525);
+  background-image: linear-gradient(to bottom right, #2c515b, #292525);
   height: 300px;
   margin-bottom: 20px;
 }
@@ -144,7 +147,8 @@ section {
   position: absolute;
   bottom: 20px;
   left: 20px;
-  color: white;
+  color: $red;
+  text-shadow: 0 0 15px rgba(0,0,0,0.4);
 }
 
 .btn-blog{
@@ -154,7 +158,10 @@ section {
   height: 40px;
   border-radius: 5px;
 }
-
+.btn-blog:hover{
+  background-color: $blue;
+  color: white;
+}
 .trailers{
   margin-top: 100px;
 }
