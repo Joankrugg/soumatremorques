@@ -11,19 +11,19 @@
         </div>
       </div>
       <div class="col-lg-2 col-sm-2 d-none d-lg-block mx-auto">
-        <div class= "subcategories-link " type="button" data-bs-toggle="collapse" data-bs-target="#remorques" aria-expanded="false" aria-controls="remorques" id="remorques-link"> Remorques </div>
+        <div class= "subcategories-link " type="button" data-bs-toggle="collapse" data-bs-target="#sales" aria-expanded="false" aria-controls="sales" id="sales-link"> Ventes </div>
       </div>
       <div class="col-lg-2 col-sm-2 d-none d-lg-block mx-auto">
-        <div class= "subcategories-link" type="button" data-bs-toggle="collapse" data-bs-target="#accessoires" aria-expanded="false" aria-controls="accessoires" id="accessoires-link"> Accessoires </div>
+        <div class= "subcategories-link" type="button" data-bs-toggle="collapse" data-bs-target="#rent" aria-expanded="false" aria-controls="rent" id="rent-link"> Locations </div>
       </div>
       <div class="col-lg-2 col-sm-2 d-none d-lg-block mx-auto">
         <div class= "subcategories-link" type="button" data-bs-toggle="collapse" data-bs-target="#atelier" aria-expanded="false" aria-controls="atelier" id="atelier-link"> Atelier Soumat</div>
       </div>
       <div class="col-lg-2 col-sm-2 d-none d-lg-block mx-auto">
-        <div class= "subcategories-link" type="button" data-bs-toggle="collapse" data-bs-target="#roulez-en-regle" aria-expanded="false" aria-controls="roulez-en-regle" id="roulez-en-regle-link"> Roulez en règle </div>
+        <div class= "subcategories-link" type="button" data-bs-toggle="collapse" data-bs-target="#accessoires" aria-expanded="false" aria-controls="accessoires" id="accessoires-link"> Accessoires </div>
       </div>
       <div class="col-lg-2 col-sm-2 d-none d-lg-block mx-auto">
-        <div class= "subcategories-link" type="button" data-bs-toggle="collapse" data-bs-target="#question" aria-expanded="false" aria-controls="question" id="question-link"> Une question? </div>
+        <div class= "subcategories-link" type="button" data-bs-toggle="collapse" data-bs-target="#roulez-en-règle" aria-expanded="false" aria-controls="roulez-en-règle" id="roulez-en-règle-link"> Roulez en règle </div>
       </div>
       <div class="col-1 col-lg-1 d-none d-lg-block"></div>
     </div>
@@ -31,7 +31,7 @@
 </nav>
 
 
-<div class="collapse categories" id="remorques">
+<div class="collapse categories" id="sales">
   <div class="container">
     <div class="row">
       <div class="col-lg-2 mx-auto">
@@ -100,37 +100,70 @@
     </div>
   </div>
 </div>
-<div class="collapse categories" id="accessoires">
+<div class="collapse categories" id="rent">
   <div class="container">
     <div class="row">
       <div class="col-lg-2 mx-auto">
         <div class="card card-body subcategory">
-          <%= link_to 'Électricité', wires_products_path, class: 'subcategory-link' %>
+          <%= link_to 'Notre parc', rent_products_path, class: 'subcategory-link'%>
         </div>
       </div>
       <div class="col-lg-2 mx-auto">
         <div class="card card-body subcategory">
-          <%= link_to 'Attelages', lockers_products_path, class: 'subcategory-link' %>
+          <%= link_to 'Bagagères', luggage_rent_products_path, class: 'subcategory-link' %>
         </div>
       </div>
       <div class="col-lg-2 mx-auto">
         <div class="card card-body subcategory">
-          <%= link_to 'Essieux', sticks_products_path, class: 'subcategory-link' %>
+          <%= link_to 'Nautiques', water_rent_products_path, class: 'subcategory-link' %>
         </div>
       </div>
       <div class="col-lg-2 mx-auto">
         <div class="card card-body subcategory">
-          <%= link_to 'Roues', wheels_products_path, class: 'subcategory-link' %>
+          <%= link_to "Transport d'animaux", animals_rent_products_path, class: 'subcategory-link' %>
         </div>
       </div>
       <div class="col-lg-2 mx-auto">
         <div class="card card-body subcategory">
-          <%= link_to 'Suspensions / renforts', suspensions_products_path, class: 'subcategory-link' %>
+          <%= link_to 'Espaces verts', garden_rent_products_path, class: 'subcategory-link' %>
         </div>
       </div>
       <div class="col-lg-2 mx-auto">
         <div class="card card-body subcategory">
-          <%= link_to 'Bâches', sheets_products_path, class: 'subcategory-link' %>
+          <%= link_to 'Bennes', bin_rent_products_path, class: 'subcategory-link' %>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-lg-2 mx-auto">
+        <div class="card card-body subcategory">
+          <%= link_to 'Porte-moto', moto_rent_products_path, class: 'subcategory-link' %>
+        </div>
+      </div>
+      <div class="col-lg-2 mx-auto">
+        <div class="card card-body subcategory">
+          <%= link_to 'Porte-voiture', car_rent_products_path, class: 'subcategory-link' %>
+        </div>
+      </div>
+      <div class="col-lg-2 mx-auto">
+        <div class="card card-body subcategory">
+          <%= link_to 'Porte-engin', truck_rent_products_path, class: 'subcategory-link' %>
+        </div>
+      </div>
+      <div class="col-lg-2 mx-auto">
+        <div class="card card-body subcategory">
+          <%= link_to 'Remorques plateau', trail_rent_products_path, class: 'subcategory-link' %>
+        </div>
+      </div>
+      <div class="col-lg-2 mx-auto">
+        <div class="card card-body subcategory">
+          <%= link_to 'Remorques fourgon', close_rent_products_path, class: 'subcategory-link' %>
+        </div>
+      </div>
+      <div class="col-lg-2 mx-auto">
+        <div class="card card-body subcategory">
+          <%= link_to 'Remorques magasin', market_rent_products_path, class: 'subcategory-link' %>
         </div>
       </div>
     </div>
@@ -204,33 +237,43 @@
     </div>
   </div>
 </div>
-<div class="collapse categories" id="roulez-en-regle">
+<div class="collapse categories" id="accessoires">
   <div class="container">
     <div class="row">
-      <div class="col-lg-3 mx-auto">
+      <div class="col-lg-2 mx-auto">
         <div class="card card-body subcategory">
-          <%= link_to 'documents', documents_products_path, class: 'subcategory-link' %>
+          <%= link_to 'Électricité', wires_products_path, class: 'subcategory-link' %>
         </div>
       </div>
-      <div class="col-lg-3 mx-auto">
+      <div class="col-lg-2 mx-auto">
         <div class="card card-body subcategory">
-          <%= link_to 'Immatriculations', plate_products_path, class: 'subcategory-link' %>
+          <%= link_to 'Attelages', lockers_products_path, class: 'subcategory-link' %>
         </div>
       </div>
-      <div class="col-lg-3 mx-auto">
+      <div class="col-lg-2 mx-auto">
         <div class="card card-body subcategory">
-          <%= link_to 'Contrôle technique', technical_control_products_path, class: 'subcategory-link' %>
+          <%= link_to 'Essieux', sticks_products_path, class: 'subcategory-link' %>
         </div>
       </div>
-      <div class="col-lg-3 mx-auto">
+      <div class="col-lg-2 mx-auto">
         <div class="card card-body subcategory">
-          <%= link_to 'Assurances', insurrance_products_path, class: 'subcategory-link' %>
+          <%= link_to 'Roues', wheels_products_path, class: 'subcategory-link' %>
+        </div>
+      </div>
+      <div class="col-lg-2 mx-auto">
+        <div class="card card-body subcategory">
+          <%= link_to 'Suspensions / renforts', suspensions_products_path, class: 'subcategory-link' %>
+        </div>
+      </div>
+      <div class="col-lg-2 mx-auto">
+        <div class="card card-body subcategory">
+          <%= link_to 'Bâches', sheets_products_path, class: 'subcategory-link' %>
         </div>
       </div>
     </div>
   </div>
 </div>
-<div class="collapse categories" id="question">
+<div class="collapse categories" id="roulez-en-règle">
   <div class="container">
     <div class="row">
       <div class="col-lg-3 mx-auto">
@@ -260,15 +303,15 @@
 
 <script>
   $(document).ready(function(){
-    $("#remorques-link").hover(function(){
-      $("#remorques").show();
+    $("#sales-link").hover(function(){
+      $("#sales").show();
     });
   });
 </script>
 <script>
   $(document).ready(function(){
-    $("#accessoires-link").hover(function(){
-      $("#accessoires").show();
+    $("#rent-link").hover(function(){
+      $("#rent").show();
     });
   });
 </script>
@@ -281,22 +324,22 @@
 </script>
 <script>
   $(document).ready(function(){
-    $("#roulez-en-regle-link").hover(function(){
-      $("#roulez-en-regle").show();
+    $("#accessoires-link").hover(function(){
+      $("#accessoires").show();
     });
   });
 </script>
 <script>
   $(document).ready(function(){
-    $("#question-link").hover(function(){
-      $("#question").show();
+    $("#roulez-en-règle-link").hover(function(){
+      $("#roulez-en-règle").show();
     });
   });
 </script>
 
 <script>
   $(document).ready(function(){
-    $("#remorques").on({
+    $("#sales").on({
       mouseleave: function(){
         $(this).hide();
       },
@@ -305,7 +348,7 @@
 </script>
 <script>
   $(document).ready(function(){
-    $("#accessoires").on({
+    $("#rent").on({
       mouseleave: function(){
         $(this).hide();
       },
@@ -323,7 +366,7 @@
 </script>
 <script>
   $(document).ready(function(){
-    $("#roulez-en-regle").on({
+    $("#accessoires").on({
       mouseleave: function(){
         $(this).hide();
       },
@@ -332,7 +375,7 @@
 </script>
 <script>
   $(document).ready(function(){
-    $("#question").on({
+    $("#roulez-en-règle").on({
       mouseleave: function(){
         $(this).hide();
       },
@@ -343,15 +386,36 @@
 
 <script>
   $(document).ready(function(){
-    $("#remorques-link").hover(function(){
-      $("#accessoires").hide();
+    $("#sales-link").hover(function(){
+      $("#rent").hide();
+    });
+  });
+</script>
+<script>
+  $(document).ready(function(){
+    $("#rent-link").hover(function(){
+      $("#sales").hide();
+    });
+  });
+</script>
+<script>
+  $(document).ready(function(){
+    $("#atelier-link").hover(function(){
+      $("#rent").hide();
+    });
+  });
+</script>
+<script>
+  $(document).ready(function(){
+    $("#rent-link").hover(function(){
+      $("#atelier").hide();
     });
   });
 </script>
 <script>
   $(document).ready(function(){
     $("#accessoires-link").hover(function(){
-      $("#remorques").hide();
+      $("#atelier").hide();
     });
   });
 </script>
@@ -365,35 +429,14 @@
 <script>
   $(document).ready(function(){
     $("#accessoires-link").hover(function(){
-      $("#atelier").hide();
+      $("#roulez-en-règle").hide();
     });
   });
 </script>
 <script>
   $(document).ready(function(){
-    $("#roulez-en-regle-link").hover(function(){
-      $("#atelier").hide();
-    });
-  });
-</script>
-<script>
-  $(document).ready(function(){
-    $("#atelier-link").hover(function(){
-      $("#roulez-en-regle").hide();
-    });
-  });
-</script>
-<script>
-  $(document).ready(function(){
-    $("#roulez-en-regle-link").hover(function(){
-      $("#question").hide();
-    });
-  });
-</script>
-<script>
-  $(document).ready(function(){
-    $("#question-link").hover(function(){
-      $("#roulez-en-regle").hide();
+    $("#roulez-en-règle-link").hover(function(){
+      $("#accessoires").hide();
     });
   });
 </script>

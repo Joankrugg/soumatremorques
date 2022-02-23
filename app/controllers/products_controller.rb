@@ -68,6 +68,56 @@ class ProductsController < ApplicationController
     @products = Product.joins(:category, :subcategory).where(categories: { name: 'Trailers' }, subcategories: { name: 'Remorques magasin' })
   end
 
+
+
+  def trailers_rent
+    @products = Product.joins(:category).where(categories: { name: 'Trailers' }, rent: true)
+  end
+
+  def luggage_rent
+    @products = Product.joins(:category, :subcategory).where(categories: { name: 'Trailers' }, subcategories: { name: 'Bagagères / Utilitaires' }, rent: true)
+  end
+
+  def water_rent
+    @products = Product.joins(:category, :subcategory).where(categories: { name: 'Trailers' }, subcategories: { name: 'Nautiques' }, rent: true)
+  end
+
+  def animals_rent
+    @products = Product.joins(:category, :subcategory).where(categories: { name: 'Trailers' }, subcategories: { name: 'Transports animaliers' }, rent: true)
+  end
+
+  def garden_rent
+    @products = Product.joins(:category, :subcategory).where(categories: { name: 'Trailers' }, subcategories: { name: 'Espaces verts' }, rent: true)
+  end
+
+  def bin_rent
+    @products = Product.joins(:category, :subcategory).where(categories: { name: 'Trailers' }, subcategories: { name: 'Bennes' }, rent: true)
+  end
+
+  def moto_rent
+    @products = Product.joins(:category, :subcategory).where(categories: { name: 'Trailers' }, subcategories: { name: 'Porte-moto/quad' }, rent: true)
+  end
+
+  def car_rent
+    @products = Product.joins(:category, :subcategory).where(categories: { name: 'Trailers' }, subcategories: { name: 'Porte-voiture' }, rent: true)
+  end
+
+  def truck_rent
+    @products = Product.joins(:category, :subcategory).where(categories: { name: 'Trailers' }, subcategories: { name: 'Porte-engins' }, rent: true)
+  end
+
+  def trail_rent
+    @products = Product.joins(:category, :subcategory).where(categories: { name: 'Trailers' }, subcategories: { name: 'Remorques plateau' }, rent: true)
+  end
+
+  def close_rent
+    @products = Product.joins(:category, :subcategory).where(categories: { name: 'Trailers' }, subcategories: { name: 'Remorques fourgon' }, rent: true)
+  end
+
+  def market_rent
+    @products = Product.joins(:category, :subcategory).where(categories: { name: 'Trailers' }, subcategories: { name: 'Remorques magasin' }, rent: true)
+  end
+
   def accessories
     @products = Product.joins(:category).where(categories: { name: 'Accessories' })
   end

@@ -1,0 +1,233 @@
+<%= render 'shared/slogan' %>
+<div class="container product-index">
+  <div class="row">
+    <div class="col-12 col-sm-12 col-md-12 col-lg-8 mx-auto">
+      <div class="row">
+        <% @products.each do |product| %>
+          <div class="col-12 col-sm-6 col-md-6 col-lg-4 mx-auto">
+            <div class="product-card-shape">
+              <div class="product-card">
+                <div class="row">
+                  <div class=" col-7 col-sm-6 col-md-6 col-lg-7"></div>
+                  <div class="col-2 col-sm-2 col-md-2 col-lg-2 mx-auto">
+                    <div class="all">
+                      <div class="i-love-it" id='flag'>
+                        <i class="far fa-heart"></i>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <%= cl_image_tag product.photo.key, class: 'img-fluid' %>
+              </div>
+              <% if product.rental_price.present? %>
+                <p class='caracteristic-price'><%= product.rental_price %> E/semaine</p>
+              <% else %>
+                <p class='caracteristic-price'>Contactez-nous</p>
+              <% end %>
+
+              <div class="card-product-caracteristics">
+                <h1 class="card-product-title">
+                  <%= product.name %>
+                </h1>
+                <p class='caracteristic'><%= product.subcategory.name %></p>
+                <p class='caracteristic'>PTAC: <%= product.max_load_weight %> kg</p>
+                <% if product.best_uses.present? %>
+                  <p class='best-caracteristic'>Idéal pour: <%= product.best_uses.first.name%></p>
+                <% end %>
+                <div class="btn btn-ghost" data-bs-toggle="modal" data-bs-target="#modal-<%= product.id %>">aperçu rapide</div>
+                <div class="btn btn-flat">Réserver</div>
+              </div>
+            </div>
+          </div>
+          <!-- Modal -->
+          <div class="modal fade" id="modal-<%= product.id %>" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalLabel"><%= product.name %></h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                  <div class="row">
+                    <div class="col-lg-6">
+                      <div class="row">
+                        <div class="col-10 col-sm-10 col-md-10 col-lg-10">
+                          <div class="product-card-details">
+                            <% if product.length.present? %>
+                              <p class="product-card-detail">Longueur: <%= product.length %> Centimètres</p>
+                              <div class='trailer-length'>
+                                <i class="fas fa-chevron-left arrow-left"></i>
+                                <i class="fas fa-chevron-right arrow-right"></i>
+                              </div>
+                            <% end %>
+                            <%= cl_image_tag product.photo.key, class: 'img-fluid center' %>
+                          </div>
+                        </div>
+                        <div class="col-1 col-sm-1 col-md-1 col-lg-1">
+                          <% if product.heigth.present? %>
+                            <div class='trailer-height'>
+                              <i class="fas fa-chevron-up arrow-top"></i>
+                              <i class="fas fa-chevron-down arrow-down"></i>
+                            </div>
+                          <% end %>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-10 col-sm-10 col-md-10 col-lg-10">
+                          <div class="product-card-details">
+                            <% if product.length.present? %>
+                              <p class="product-card-detail">Largeur: <%= product.width %> Centimètres</p>
+                              <div class='trailer-width'>
+                                <i class="fas fa-chevron-left arrow-left"></i>
+                                <i class="fas fa-chevron-right arrow-right"></i>
+                              </div>
+                            <% end %>
+                            <%= cl_image_tag product.photo.key, class: 'img-fluid center' %>
+                          </div>
+                          <p class= "product-card-detail"><%= product.name %></p>
+                          <p class= "product-card-detail">
+                            <% 5.times do %>
+                              <i class="fas fa-star"></i>
+                            <% end %>
+                          </p>
+                          <p class='modal-caracteristic-subcategory'><%= product.subcategory.name %></p>
+                          <p class='modal-caracteristic-price'><%= product.price %> E</p>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="col-lg-6">
+                      <div class="row product-detailled">
+                        <div class="col-lg-8 mx-auto">
+                          <div class="product-card-details">
+                            <%= cl_image_tag product.photo.key, class: 'img-fluid center' %>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-lg-8 mx-auto">
+                          <div class="product-card-details">
+                            <%= cl_image_tag product.photo.key, class: 'img-fluid center' %>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-lg-8 mx-auto">
+                          <div class="product-card-details">
+                            <%= cl_image_tag product.photo.key, class: 'img-fluid center' %>
+                          </div>
+                        </div>
+                      </div>
+
+                      <p class='product-card-detail'>Réglementation: <%= product.document.name %></p>
+                      <p class='product-card-detail'>Les points forts</p>
+                      <div class="row">
+                        <div class="col-lg-6 mx-auto">
+                          <p><span class='colored'><i class="fas fa-check-circle"></i></span> Usages <%=product.usage.name %>s </p>
+                          <% if product.best_uses.present? %>
+                            <% product.best_uses.each do |b| %>
+                              <p><span class='colored'><i class="fas fa-check-circle"></i></span> <%= b.name %></p>
+                            <% end %>
+                          <% end %>
+                          <% if product.warranty.present? %>
+                            <p><span class='colored'><i class="fas fa-check-circle"></i></span> Garantie <%= product.warranty %> ans</p>
+                          <% end %>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+
+                  <div class="row">
+                    <ul class="col-lg-12 nav nav-tabs" id="myTab-<%= product.id %>" role="tablist">
+                      <li class="col-lg-4 mx-auto nav-item" role="presentation">
+                        <button class="nav-link active" id="informations-tab" data-bs-toggle="tab" data-bs-target="#informations-<%= product.id %>" type="button" role="tab" aria-controls="informations" aria-selected="true">Informations</button>
+                      </li>
+                      <li class="col-lg-4 mx-auto nav-item" role="presentation">
+                        <button class="nav-link" id="pensez-y-tab-<%= product.id %>" data-bs-toggle="tab" data-bs-target="#pensez-y-<%= product.id %>" type="button" role="tab" aria-controls="pensez-y" aria-selected="false">Pensez-y</button>
+                      </li>
+                      <li class="col-lg-4 mx-auto nav-item" role="presentation">
+                        <button class="nav-link" id="description-tab-<%= product.id %>" data-bs-toggle="tab" data-bs-target="#description-<%= product.id %>" type="button" role="tab" aria-controls="description" aria-selected="false">Description</button>
+                      </li>
+                    </ul>
+
+                    <div class="tab-content">
+                      <div class="tab-pane active" id="informations-<%= product.id %>" role="tabpanel" aria-labelledby="informations-tab">
+                        <div class="row">
+                          <div class="col-lg-6 ">
+                            <% if product.max_load_weight.present? %>
+                              <p class="information-background">PTAC: <%= product.max_load_weight %> kg</p>
+                            <% end %>
+                          </div>
+                          <div class="col-lg-6">
+                            <% if product.brand.present? %>
+                              <p class="information-background">MARQUE: <%= product.brand.name %></p>
+                            <% end %>
+                          </div>
+                        </div>
+                        <div class="row">
+                          <div class="col-lg-6">
+                            <% if product.subcategory.present? %>
+                              <p class="information-background">TYPE: <%= product.subcategory.name %></p>
+                            <% end %>
+                          </div>
+                          <div class="col-lg-6">
+                            <% if product.document.present? %>
+                              <p class="information-background">RÉGLEMENTATION: <%= product.document.name %></p>
+                            <% end %>
+                          </div>
+                        </div>
+                        <div class="row">
+                          <div class="col-lg-6">
+                            <% if product.wheel_size.present? %>
+                              <p class="information-background">TYPE DE ROUES: <%= product.wheel_size.name %></p>
+                            <% end %>
+                          </div>
+                          <div class="col-lg-6">
+                            <% if product.wheel_axle.present? %>
+                              <p class="information-background">TYPE D'ESSIEUX: <%= product.wheel_axle.category %></p>
+                            <% end %>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="tab-pane" id="pensez-y-<%= product.id %>" role="tabpanel" aria-labelledby="pensez-y-tab">
+                        <div class="row">
+                          <div class="col-12">
+                            <p class="information-background">Immatriculation</p>
+                          </div>
+                          <div class="col-12">
+                            <p class="information-background">Assurances</p>
+                          </div>
+                          <div class="col-12">
+                            <p class="information-background">Attelage</p>
+                          </div>
+                          <div class="col-12">
+                            <p class="information-background">Bâche</p>
+                          </div>
+                        </div>
+
+                      </div>
+                      <div class="tab-pane" id="description-<%= product.id %>" role="tabpanel" aria-labelledby="description-tab">
+                        <p class='description'>
+                          Cette remorque routière est un modèle fonctionnel et robuste avec sa caisse renforcée et 4 ridelles doublées, dont les ridelles avant et arrière amovibles. Essieu galvanisé renforcé avec bras matricé et roulement à cartouche issus de la technologie automobile.Sa caisse basculante facilite le déchargement et le rangement à la verticale pour un gain de place lors de son stockage. Ses 2 amortisseurs hydrauliques lui permettent de s'adapter à tous les terrains
+                        </p>
+                      </div>
+                    </div>
+
+
+                  </div>
+                  <div class="row">
+                    <div class="col-lg-4 mx-auto">
+                      <div class="btn btn-flat call-to-action">Réserver</div>
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+          </div>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>

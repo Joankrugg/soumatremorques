@@ -18,6 +18,21 @@ Rails.application.routes.draw do
       get :trail
       get :close
       get :market
+
+      get :trailers_rent
+      get :luggage_rent
+      get :water_rent
+      get :animals_rent
+      get :garden_rent
+      get :bin_rent
+      get :moto_rent
+      get :car_rent
+      get :truck_rent
+      get :trail_rent
+      get :close_rent
+      get :market_rent
+
+
       get :wires
       get :lockers
       get :sticks

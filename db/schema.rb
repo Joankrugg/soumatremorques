@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_02_05_104225) do
+ActiveRecord::Schema.define(version: 2022_02_23_130535) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -106,6 +106,7 @@ ActiveRecord::Schema.define(version: 2022_02_05_104225) do
     t.boolean "dump_trailer", default: false, null: false
     t.bigint "wheel_size_id"
     t.bigint "wheel_axle_id"
+    t.integer "rental_price"
     t.index ["brand_id"], name: "index_products_on_brand_id"
     t.index ["category_id"], name: "index_products_on_category_id"
     t.index ["document_id"], name: "index_products_on_document_id"
