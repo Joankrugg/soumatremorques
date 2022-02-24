@@ -7,7 +7,6 @@ class VipLeadMailer < ApplicationMailer
   #
   def creation(vip_lead)
     @vip_lead = vip_lead  # Instance variable => available in view
-
-    mail(to: @vip_lead.email, subject: 'Vous souhaitez Être recontacter')
+    mail(to: @vip_lead.email, subject: 'Vous souhaitez Être recontacté')
   end
 end
