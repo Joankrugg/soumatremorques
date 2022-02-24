@@ -73,24 +73,26 @@ section {
 
 .best-sale-card{
   width: 100%;
-  border: solid 1px #3C3C3C;
-  background-image: linear-gradient(to bottom, #3C3C3C, white);
+  background-image: linear-gradient(to bottom right, #2f2c2d, white);
   height: 300px;
   margin-bottom: 20px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
 }
 
 .best-sale-card-green{
   width: 100%;
-  background-image: linear-gradient(to bottom right, #0A313C, #2c515b);
+  background-image: linear-gradient(to bottom right, $red, #2f2c2d);
   height: 300px;
   margin-bottom: 20px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
 }
 
 .best-sale-card-brown{
   width: 100%;
-  background-image: linear-gradient(to bottom right, #2c515b, #292525);
+  background-image: linear-gradient(to bottom right, white, #2f2c2d);
   height: 300px;
   margin-bottom: 20px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
 }
 
 .best-sales .btn-brand{

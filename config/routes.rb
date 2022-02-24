@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :vip_leads, only: [:index, :new, :create, :destroy]
   get 'carts/show'
   resources :products, only: [:index, :show] do
     collection do
