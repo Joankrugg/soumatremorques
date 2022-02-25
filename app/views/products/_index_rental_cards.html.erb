@@ -269,8 +269,9 @@
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
-        <%= simple_form_for @compatibility_lead do |f| %>
+        <%= simple_form_for @criteria_lead do |f| %>
           <%= f.input :email %>
+          <div class="mb-3 string optional criteria_lead_link"><input class="form-control string optional" type="hidden" name="criteria_lead[link]" id="criteria_lead_link" value= "<%= request.url %>"></div>
           <%= f.button :submit, class: 'btn btn-flat' %>
         <% end %>
       </div>
