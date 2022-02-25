@@ -1,4 +1,5 @@
 class CriteriaLeadsController < ApplicationController
+  skip_before_action :authenticate_user!
   def index
     @criteria_leads = CriteriaLead.all
   end

@@ -1,4 +1,5 @@
 class VipLeadsController < ApplicationController
+  skip_before_action :authenticate_user!
   def index
     @vip_leads = VipLead.all
   end

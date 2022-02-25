@@ -1,4 +1,5 @@
 class CompatibilityLeadsController < ApplicationController
+  skip_before_action :authenticate_user!
   def index
     @compatibility_leads = CompatibilityLead.all
   end
