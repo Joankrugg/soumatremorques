@@ -41,49 +41,79 @@
             <div class="title-back">Notre catalogue</div>
             <h1 class= 'title'>Notre catalogue</h1>
           </div>
-          <div class="col-6 col-sm-6 col-md-4 col-lg-3 mx-auto">
-            <%= link_to products_path do %>
-              <div class="category">
-                <%= image_tag 'https://res.cloudinary.com/da2krghvd/image/upload/v1643390309/Portfolio/e06dec_b6dff3cac189461183b408a733d196c9_mv2.jpg', class: 'illustration' %>
-                <div class="category-text">Ventes</div>
+        </div>
+        <div class="row">
+          <div class="col-12 col-sm-12 col-md-12 col-lg-10 mx-auto">
+            <div class="row">
+              <div class="col-6 col-sm-6 col-md-6 col-lg-3 mx-auto shew">
+                <%= link_to products_path do %>
+                  <div class="category">
+                    <%= image_tag 'https://res.cloudinary.com/da2krghvd/image/upload/c_fill,g_center,h_789,w_544/v1643389443/Portfolio/fabien-bazanegue-ttitlm7NGpQ-unsplash_1.jpg', class: 'illustration' %>
+                    <div class="layer"></div>
+                    <div class="category-text">Ventes</div>
+                  </div>
+                <% end %>
               </div>
-            <% end %>
-          </div>
-          <div class="col-6 col-sm-6 col-md-4 col-lg-3 mx-auto">
-            <%= link_to rent_products_path do %>
-              <div class="category">
-                <%= image_tag 'https://res.cloudinary.com/da2krghvd/image/upload/v1643390202/Portfolio/Screenshot-100.png', class: 'illustration' %>
-                <div class="category-text">Locations</div>
+              <div class="col-6 col-sm-6 col-md-6 col-lg-3 mx-auto">
+                <%= link_to rent_products_path do %>
+                  <div class="category">
+                    <%= image_tag 'https://res.cloudinary.com/da2krghvd/image/upload/c_fill,g_xy_center,h_1278,w_878,x_1528/v1643390202/Portfolio/Screenshot-100.png', class: 'illustration' %>
+                    <div class="layer"></div>
+                    <div class="category-text">Locations</div>
+                  </div>
+                <% end %>
               </div>
-            <% end %>
-          </div>
-          <div class="col-6 col-sm-6 col-md-4 col-lg-3 mx-auto">
-            <%= link_to maintenance_products_path do %>
-              <div class="category">
-                <%= image_tag 'https://res.cloudinary.com/da2krghvd/image/upload/v1643834038/development/Rectangle_19.jpg', class: 'illustration' %>
-                <div class="category-text">Atelier</div>
+              <div class="col-6 col-sm-6 col-md-6 col-lg-3 mx-auto">
+                <%= link_to maintenance_products_path do %>
+                  <div class="category">
+                    <%= image_tag 'https://res.cloudinary.com/da2krghvd/image/upload/c_fill,g_center,h_320,w_220/v1643834038/development/Rectangle_19.jpg', class: 'illustration' %>
+                    <div class="layer"></div>
+                    <div class="category-text">Atelier</div>
+                  </div>
+                <% end %>
               </div>
-            <% end %>
-          </div>
-          <div class="col-6 col-sm-6 col-md-4 col-lg-3 mx-auto">
-            <%= link_to service_products_path do %>
-              <div class="category">
-                <%= image_tag 'https://res.cloudinary.com/da2krghvd/image/upload/v1643390045/Portfolio/IMG_9850.jpg', class: 'illustration' %>
-                <div class="category-text">Services</div>
+              <div class="col-6 col-sm-6 col-md-6 col-lg-3 mx-auto">
+                <%= link_to service_products_path do %>
+                  <div class="category">
+                    <%= image_tag 'https://res.cloudinary.com/da2krghvd/image/upload/c_fill,g_xy_center,h_1460,w_1003,x_1060/v1643390309/Portfolio/e06dec_b6dff3cac189461183b408a733d196c9_mv2.jpg', class: 'illustration' %>
+                    <div class="layer"></div>
+                    <div class="category-text">Services</div>
+                  </div>
+                <% end %>
               </div>
-            <% end %>
+            </div>
           </div>
         </div>
       </div>
     </div>
   </div>
 </section>
-
-<section class='white-book'>
+<section class="trailers">
   <div class="container">
-    <h4>Choisissez en toute confiance</h4>
-    <p>Téléchargez notre guide de choix</p>
-    <div class="btn btn-flat">Téléchargez</div>
+    <div class="row">
+      <div class="titles">
+        <div class="title-back">Nos Activités</div>
+        <h1 class= 'title'>Nos Activités</h1>
+      </div>
+    </div>
+    <div class="row">
+      <div id="carouselExampleSlidesOnly" class="col-lg-6 mx-auto carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <div class="activity d-block w-100">
+              <p class='proposition'><strong>Installer</strong> un accessoire sur votre voiture</p>
+              <%= image_tag 'https://res.cloudinary.com/da2krghvd/image/upload/v1643834038/development/Rectangle_19.jpg', class: 'activity-img' %>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="activity d-block w-100">
+              <p class='proposition'><strong>Louer</strong> une remorque</p>
+              <%= image_tag 'https://res.cloudinary.com/da2krghvd/image/upload/v1643834045/development/Rectangle_20.jpg', class: 'activity-img' %>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 </section>
 
@@ -105,7 +135,6 @@
                       <p class='availaibility'>
                         11 produits disponibles
                         <i class="fas fa-heart"></i>
-                        <i class="fas fa-shopping-cart"></i>
                       </p>
                       <p class='best-sales-price'><%= @products[0].price %> E</p>
                     </div>
@@ -124,7 +153,6 @@
                       <p class='availaibility'>
                         11 produits disponibles
                         <i class="fas fa-heart"></i>
-                        <i class="fas fa-shopping-cart"></i>
                       </p>
                       <p class='best-sales-price'><%= @products[1].price %> E</p>
                     </div>
@@ -143,7 +171,6 @@
                       <p class='availaibility'>
                         11 produits disponibles
                         <i class="fas fa-heart"></i>
-                        <i class="fas fa-shopping-cart"></i>
                       </p>
                       <p class='best-sales-price'><%= @products[2].price %> E</p>
                     </div>
@@ -162,7 +189,6 @@
                       <p class='availaibility'>
                         11 produits disponibles
                         <i class="fas fa-heart"></i>
-                        <i class="fas fa-shopping-cart"></i>
                       </p>
                       <p class='best-sales-price'><%= @products[3].price %> E</p>
                     </div>
@@ -181,7 +207,6 @@
                       <p class='availaibility'>
                         11 produits disponibles
                         <i class="fas fa-heart"></i>
-                        <i class="fas fa-shopping-cart"></i>
                       </p>
                       <p class='best-sales-price'><%= @products[4].price %> E</p>
                     </div>
@@ -200,7 +225,6 @@
                       <p class='availaibility'>
                         11 produits disponibles
                         <i class="fas fa-heart"></i>
-                        <i class="fas fa-shopping-cart"></i>
                       </p>
                       <p class='best-sales-price'><%= @products[5].price %> E</p>
                     </div>
@@ -216,7 +240,13 @@
   </div>
 </section>
 
-
+<section class='white-book'>
+  <div class="container">
+    <h4>Choisissez en toute confiance</h4>
+    <p>Téléchargez notre guide de choix</p>
+    <div class="btn btn-flat">Téléchargez</div>
+  </div>
+</section>
 
 <section class="advices">
   <div class="container">

@@ -9,7 +9,7 @@
   position: fixed;
   width: 100%;
   z-index: 1;
-  height: 50px;
+  height: 52px;
 }
 
 .categories{
@@ -22,8 +22,10 @@
 }
 
 .subcategories-link{
+  margin-top: 4px;
   color: white;
-  padding: 12px 0px;
+  padding: 11px 0px;
+  font-size: 16px;
   text-align: center;
 }
 
