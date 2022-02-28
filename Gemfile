@@ -33,6 +33,7 @@ gem 'bootsnap', '>= 1.4.2', require: false
 gem 'faker', :git => 'https://github.com/faker-ruby/faker.git', :branch => 'master'
 
 gem 'devise'
+gem 'premailer-rails'
 
 gem 'autoprefixer-rails', '10.2.5'
 gem 'font-awesome-sass'
