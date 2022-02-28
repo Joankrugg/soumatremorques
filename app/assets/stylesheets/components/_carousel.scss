@@ -8,20 +8,13 @@
   padding: 180px 0;
 }
 
-#soumat{
-  font-size: 100px;
-  font-weight: bold;
-  color: white;
-  text-shadow: 2px 2px #d64043;
-}
-
-
 .banner h1 {
   margin: 0;
   color: white;
   text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+  margin-bottom: 30px;
   font-size: 32px;
-  font-weight: bold;
+  text-align: center
 }
 
 .banner p {
@@ -35,14 +28,19 @@
   font-size: 12px;
 }
 
-.banner .btn-flat{
+.banner .btn-action{
+  border-radius: 4px;
   color: white;
-  background-image: linear-gradient(to bottom right, $red, #2f2c2d);
-  margin-left: 240px;
+  background-color: $red;
+  display: block;
+  width: 180px;
+  margin-left: auto;
+  margin-right: auto;
+  transition: all .4s ease-in-out;
 }
 
-.banner .btn-flat:hover{
-  background-color: $blue;
+.banner .btn-action:hover{
   color: white;
-  margin-left: 240px;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+  transform: scale(1.2);
 }
