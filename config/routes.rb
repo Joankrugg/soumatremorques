@@ -3,68 +3,69 @@ Rails.application.routes.draw do
   resources :compatibility_leads, only: [:index, :new, :create, :destroy]
   resources :vip_leads, only: [:index, :new, :create, :destroy]
   get 'carts/show'
-  resources :products, only: [:index, :show] do
+  resources :products, path: 'produits', only: [:index, :show] do
     collection do
-      get :trailers
-      get :accessories
-      get :maintenance
-      get :installations
-      get :documents
-      get :luggage
-      get :water
-      get :animals
-      get :garden
-      get :bin
-      get :moto
-      get :car
-      get :truck
-      get :trail
-      get :close
-      get :market
+      get :trailers, path: '/remorques'
+      get :accessories, path: '/accessoires'
+      get :maintenance, path: '/entretien'
+      get :installations, path: '/installations'
+      get :documents, path: '/services'
+      get :luggage, path: '/remorques/bagageres/utilitaires'
+      get :water, path: '/remorques/nautiques'
+      get :animals, path: "/remorques/transport-d-animaux/vans"
+      get :garden, path: '/remorques/espaces-verts/jardin'
+      get :bin, path: '/remorques/bennes'
+      get :moto, path: '/remorques/porte-moto'
+      get :car, path: '/remorques/porte-voiture'
+      get :truck, path: '/remorques/porte-engin'
+      get :trail, path: '/remorques/plateaux'
+      get :close, path: '/remorques/fourgons'
+      get :market, path: '/remorques/magasins'
 
-      get :trailers_rent
-      get :luggage_rent
-      get :water_rent
-      get :animals_rent
-      get :garden_rent
-      get :bin_rent
-      get :moto_rent
-      get :car_rent
-      get :truck_rent
-      get :trail_rent
-      get :close_rent
-      get :market_rent
+      get :trailers_rent, path: 'location/remorques'
+      get :luggage_rent, path: 'location/remorques/bagageres/utilitaires'
+      get :water_rent, path: 'location/remorques/nautiques'
+      get :animals_rent, path: "location/remorques/transport-d-animaux/van"
+      get :garden_rent, path: 'location/remorques/espaces-verts/jardin'
+      get :bin_rent, path: 'location/remorques/bennes'
+      get :moto_rent, path: 'location/remorques/porte-moto'
+      get :car_rent, path: 'location/remorques/porte-voiture'
+      get :truck_rent, path: 'location/remorques/porte-engin'
+      get :trail_rent, path: 'location/remorques/plateaux'
+      get :close_rent, path: 'location/remorques/fourgons'
+      get :market_rent, path: 'location/remorques/magasins'
 
 
-      get :wires
-      get :lockers
-      get :sticks
-      get :wheels
-      get :suspensions
-      get :sheets
-      get :set
-      get :direction
-      get :reinforcements
-      get :stabilisation
-      get :wire_installation
-      get :stick_installation
-      get :reinforcements_installation
-      get :locker_installation
-      get :direction_installation
-      get :stabilisation_installation
-      get :plate
-      get :technical_control
-      get :insurrance
-      get :rent
-      get :service
-      get :trailers_permisb_casual_luggage
-      get :trailers_permisb_casual_water
-      get :trailers_permisb_casual_animal
-      get :trailers_permisb_casual_garden
-      get :trailers_permisb_casual_moto
-      get :trailers_permisb_casual_close
+      get :wires, path: 'accessoires/equipement-electrique'
+      get :lockers, path: 'accessoires/attelage'
+      get :sticks, path: 'accessoires/essieux'
+      get :wheels, path: 'accessoires/roues'
+      get :suspensions, path: 'accessoires/suspensions'
+      get :sheets, path: 'accessoires/baches'
+      get :set, path: 'atelier/entretien/réglages'
+      get :direction, path: 'atelier/entretien/direction'
+      get :reinforcements, path: 'atelier/entretien/suspensions-renforts'
+      get :stabilisation, path: 'atelier/entretien/aide-a-la-manoeuvre'
+      get :wire_installation, path: 'atelier/installation/equipement-electrique'
+      get :stick_installation, path: 'atelier/installation/essieux'
+      get :reinforcements_installation, path: 'atelier/installation/suspensions-renforts'
+      get :locker_installation, path: 'atelier/installation/attelage'
+      get :direction_installation, path: 'atelier/installation/direction'
+      get :stabilisation_installation, path: 'atelier/installation/aide-à-la-manoeuvre'
+      get :plate, path: 'service/immatriculation'
+      get :technical_control, path: 'service/controle-technique'
+      get :insurrance, path: 'service/assurance'
+      get :rent, path: 'service/location'
+      get :service, path: 'services'
+      get :trailers_permisb_casual_luggage, path: '/remorques/bagageres/usage-occasionnel/permisb'
+      get :trailers_permisb_casual_water, path: '/remorques/nautiques/usage-occasionnel/permisb'
+      get :trailers_permisb_casual_animal, path: '/remorques/tranport-d-animaux/usage-occasionnel/permisb'
+      get :trailers_permisb_casual_garden, path: '/remorques/jardinage/usage-occasionnel/permisb'
+      get :trailers_permisb_casual_moto, path: '/remorques/porte-moto/usage-occasionnel/permisb'
+      get :trailers_permisb_casual_close, path: '/remorques/fourgon/usage-occasionnel/permisb'
     end
   end
+  get '/sitemap.xml' => 'sitemaps#index', defaults: { format: 'xml' }
   match "/404", to: "errors#not_found", via: :all
   match "/422", to: "errors#unacceptable", via: :all
   match "/500", to: "errors#internal_server_error", via: :all

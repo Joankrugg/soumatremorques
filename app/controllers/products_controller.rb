@@ -10,6 +10,7 @@ class ProductsController < ApplicationController
 
   def show
     @product = Product.find(params[:id])
+    add_breadcrumb @product, product_path(@product)
     @vip_lead = VipLead.new
   end
 

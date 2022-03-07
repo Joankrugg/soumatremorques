@@ -34,7 +34,7 @@ gem 'faker', :git => 'https://github.com/faker-ruby/faker.git', :branch => 'mast
 
 gem 'devise'
 gem 'premailer-rails'
-
+gem "breadcrumbs_on_rails"
 gem 'autoprefixer-rails', '10.2.5'
 gem 'font-awesome-sass'
 gem 'simple_form'
