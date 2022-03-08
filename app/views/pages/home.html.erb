@@ -3,13 +3,17 @@
     <div class="carousel-item banner active" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://res.cloudinary.com/da2krghvd/image/upload/s--cIRuKiQ5--/q_jpegmini/v1643390045/Portfolio/IMG_9850.jpg);">
       <div class="container">
         <h1>Vente et location de remorques.</h1>
-        <div class="btn btn-action" href="#catalogue">En savoir plus <i class="fas fa-long-arrow-alt-right"></i></div>
+        <%= link_to trailers_products_path do %>
+          <div class="btn btn-action" >En savoir plus <i class="fas fa-long-arrow-alt-right"></i></div>
+        <% end %>
       </div>
     </div>
     <div class="carousel-item banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://res.cloudinary.com/da2krghvd/image/upload/v1646751949/development/nina-mercado-Y_t0n-T4H5M-unsplash.jpg);">
       <div class="container">
         <h1>Atelier d'entretien et installation d'accessoires.</h1>
-        <a class="btn btn-action" href="#catalogue">En savoir plus <i class="fas fa-long-arrow-alt-right"></i></a>
+        <%= link_to maintenance_products_path do %>
+          <div class="btn btn-action">En savoir plus <i class="fas fa-long-arrow-alt-right"></i></div>
+        <% end %>
       </div>
     </div>
   </div>

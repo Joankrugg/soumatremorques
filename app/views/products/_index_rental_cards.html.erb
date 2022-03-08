@@ -7,7 +7,7 @@
   </div>
   <div class="row">
     <div class="col-lg-4 mx-auto">
-      <div class="btn btn-flat call-to-action" data-bs-toggle="modal" data-bs-target="#next-visit">retrouvez cette page à votre prochaine visite</div>
+      <div class="btn btn-flat call-to-action" data-bs-toggle="modal" data-bs-target="#next-visit">Retrouvez cette page à votre prochaine visite</div>
     </div>
   </div>
   <div class="row">
@@ -246,18 +246,14 @@
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+        <h5 class="modal-title" id="exampleModalLabel">Je verifie la compatibilité avec mon véhicule</h5>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
-      <div class="modal-body">
+      <div class="modal-body lead">
         <%= simple_form_for @compatibility_lead do |f| %>
-          <%= f.input :email %>
-          <%= f.button :submit, class: 'btn btn-flat' %>
+          <%= f.input :email, required: false %>
+          <%= f.button :submit, 'valider', class: 'btn btn-flat right' %>
         <% end %>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Save changes</button>
       </div>
     </div>
   </div>
@@ -266,19 +262,15 @@
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+        <h5 class="modal-title" id="exampleModalLabel">Retrouvez cette page dans votre email</h5>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
-      <div class="modal-body">
+      <div class="modal-body lead">
         <%= simple_form_for @criteria_lead do |f| %>
-          <%= f.input :email %>
+          <%= f.input :email, required: false %>
           <div class="mb-3 string optional criteria_lead_link"><input class="form-control string optional" type="hidden" name="criteria_lead[link]" id="criteria_lead_link" value= "<%= request.url %>"></div>
-          <%= f.button :submit, class: 'btn btn-flat' %>
+          <%= f.button :submit, 'valider', class: 'btn btn-flat right' %>
         <% end %>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Save changes</button>
       </div>
     </div>
   </div>

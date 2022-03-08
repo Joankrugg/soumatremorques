@@ -4,7 +4,7 @@
   </div>
   <div class="row">
     <%= simple_form_for @compatibility_lead do |f| %>
-      <%= f.input :email %>
+      <%= f.input :email, class: 'lead-mail'%>
       <%= f.button :submit, 'valider', class: 'btn-flat' %>
     <% end %>
   </div>

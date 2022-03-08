@@ -44,9 +44,8 @@
 section {
   margin-bottom: 30px;
 }
-
 .white-book{
-  background-image: linear-gradient(to bottom right, #7d7479, #000000);
+  background-image: linear-gradient(to bottom right, #c4c0c2, #726a6f);
   padding: 150px 0px;
 }
 .white-book h4{
@@ -65,8 +64,6 @@ section {
   margin-right: auto;
   margin-left: auto;
 }
-
-
 .best-sales{
   width: 100%;
   height: 400px;
@@ -84,7 +81,6 @@ section {
   color: white;
   border-radius: 5px;
 }
-
 .best-sales-image{
   display: block;
   width: 80%;
@@ -148,32 +144,40 @@ section {
 }
 
 #first{
-  background: white;
+  background-image: linear-gradient(to bottom right, white, #2f2c2d);
   width: 100%;
   height: 400px;
   position: relative;
+  border: 1px solid white;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
 }
 
 #second{
-  background: white;
+  background-image: linear-gradient(to bottom right, white, #2f2c2d);
   margin-top: 60px;
   width: 100%;
-  height: 300px;
+  height: 272px;
   position: relative;
+  border: 1px solid white;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
 }
 
 #third{
-  background: white;
+  background-image: linear-gradient(to bottom right, white, #2f2c2d);
   width: 100%;
   height: 400px;
   position: relative;
+  border: 1px solid white;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
 }
 
 #fourth{
-  background: white;
+  background-image: linear-gradient(to bottom right, white, #2f2c2d);
   width: 100%;
   height: 300px;
   position: relative;
+  border: 1px solid white;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
 }
 
 
@@ -194,12 +198,12 @@ section {
 }
 
 .btn-blog{
-  padding-top: 5px;
+  padding-top: 18px;
   background-image: linear-gradient(to bottom right, $red, #2f2c2d);
   color: white;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
-  width: 50%;
-  height: 38px;
+  width: 300px;
+  height: 66px;
   border-radius: 5px;
   border: 1px solid white;
   transition: all .4s ease-in-out;
@@ -211,7 +215,7 @@ section {
 }
 
 #card-text{
-  background: #2f2c2d;
+  background-image: linear-gradient(to bottom right, #7d7479, #000000);
   width: 100%;
   height: 260px;
   margin-top: -100px;
@@ -292,12 +296,14 @@ section {
 }
 
 .witness{
+  background-image: linear-gradient(to bottom right, white, #2f2c2d);
   margin-top:40px;
   width: 100%;
   height: 260px;
   position: relative;
-  border: 1px solid red;
+  border: 1px solid white;
   margin-bottom: 30px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
 }
 
 .witness .avatar-customers{
@@ -345,7 +351,7 @@ section {
 .second{
   opacity: 0.8;
   width: 100%;
-  height: 300px;
+  height: 272px;
   transition: all .4s ease-in-out;
 }
 
@@ -364,26 +370,26 @@ section {
 }
 
 .first:hover{
-  transform: scale(1.1);
   opacity: 1;
+  transform: scale(1.1);
   cursor: pointer;
 }
 
 .second:hover{
-  transform: scale(1.1);
   opacity: 1;
+  transform: scale(1.1);
   cursor: pointer;
 }
 
 .third:hover{
-  transform: scale(1.1);
   opacity: 1;
+  transform: scale(1.1);
   cursor: pointer;
 }
 
 .fourth:hover{
-  transform: scale(1.1);
   opacity: 1;
+  transform: scale(1.1);
   cursor: pointer;
 }
 
@@ -393,7 +399,7 @@ a{
 
 .activity{
   height: 250px;
-  background: #2f2c2d;
+  background-image: linear-gradient(to bottom right, #7d7479, #000000);
   position: relative;
 }
 

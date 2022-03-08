@@ -38,11 +38,13 @@
 }
 
 .banner .btn-action{
+  padding-top: 9px;
   border-radius: 4px;
   color: white;
   background-image: linear-gradient(to bottom right, $red, #2f2c2d);
   display: block;
-  width: 180px;
+  width: 250px;
+  height: 48px;
   margin-left: auto;
   margin-right: auto;
   transition: all .4s ease-in-out;
@@ -50,6 +52,6 @@
 }
 
 .banner .btn-action:hover{
+  transform: scale(1.1);
   color: white;
-  transform: scale(1.2);
 }
