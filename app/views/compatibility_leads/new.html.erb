@@ -1,2 +1,11 @@
-<h1>CompatibilyLeads#new</h1>
-<p>Find me in app/views/compatibily_leads/new.html.erb</p>
+<div class="container compatibility-lead-form">
+  <div class="row">
+    <h1>Rentrez votre email pour savoir si votre véhicule est compatible avec votre choix de remorque</h1>
+  </div>
+  <div class="row">
+    <%= simple_form_for @compatibility_lead do |f| %>
+      <%= f.input :email %>
+      <%= f.button :submit, 'valider', class: 'btn-flat' %>
+    <% end %>
+  </div>
+</div>

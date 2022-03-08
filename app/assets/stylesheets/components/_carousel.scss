@@ -40,16 +40,16 @@
 .banner .btn-action{
   border-radius: 4px;
   color: white;
-  background-color: $red;
+  background-image: linear-gradient(to bottom right, $red, #2f2c2d);
   display: block;
   width: 180px;
   margin-left: auto;
   margin-right: auto;
   transition: all .4s ease-in-out;
+  border: none;
 }
 
 .banner .btn-action:hover{
   color: white;
-  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
   transform: scale(1.2);
 }
