@@ -36,8 +36,6 @@
 }
 
 .category-text{
-  border-radius: 4px;
-  border: 1px white solid;
   width: 120px;
   bottom: 50px;
   padding: 4px 12px;
@@ -46,10 +44,10 @@
   left: 0;
   right: 0;
   position: absolute;
-  background-image: linear-gradient(to bottom right, $red, black);
   opacity: 0.8;
   color: white;
-  font-size: 20px;
+  font-size: 24px;
+  font-weight: bold;
   text-align: center;
 }
 
