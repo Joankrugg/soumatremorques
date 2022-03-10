@@ -30,13 +30,11 @@
                 </div>
                 <%= cl_image_tag product.photo.key, class: 'img-fluid' %>
               </div>
-              <% if product.rental_price.present? %>
-                <p class='caracteristic-price'><%= product.rental_price %> E/semaine</p>
-              <% else %>
-                <p class='caracteristic-price'>Contactez-nous</p>
-              <% end %>
+
 
               <div class="card-product-caracteristics">
+                <div class="btn btn-ghost" data-bs-toggle="modal" data-bs-target="#modal-<%= product.id %>">aperçu rapide</div>
+
                 <h1 class="card-product-title">
                   <%= product.name %>
                 </h1>
@@ -45,8 +43,12 @@
                 <% if product.best_uses.present? %>
                   <p class='best-caracteristic'>Idéal pour: <%= product.best_uses.first.name%></p>
                 <% end %>
-                <div class="btn btn-ghost" data-bs-toggle="modal" data-bs-target="#modal-<%= product.id %>">aperçu rapide</div>
-                <div class="btn btn-flat">Réserver</div>
+                <% if product.rental_price.present? %>
+                  <p class='caracteristic-price'><%= product.rental_price %> E/semaine</p>
+                <% else %>
+                  <div class="btn btn-flat">Obtenir un devis</div>
+                <% end %>
+                <div class="btn btn-flat">Réservez <br><i class="fas fa-phone"></i> 05.56.36.01.01</div>
               </div>
             </div>
           </div>

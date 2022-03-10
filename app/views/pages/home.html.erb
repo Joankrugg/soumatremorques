@@ -219,7 +219,7 @@
     </div>
     <p>Téléchargez notre guide de choix</p>
 
-    <div class="btn btn-flat">Téléchargez</div>
+    <div class="btn btn-flat">Téléchargez <i class="fas fa-long-arrow-alt-right"></i></div>
   </div>
 </section>
 
@@ -319,33 +319,42 @@
       </div>
       <div class="col-12 col-sm-12 col-md-12 col-lg-8 mx-auto">
         <div class="row top">
-          <div class="col-6 col-sm-6 col-md-5 col-lg-5">
-            <div id="first"><%= image_tag 'https://res.cloudinary.com/da2krghvd/image/upload/v1643830609/development/unsplash_rzTEsx2tcjQ.jpg', class: 'first' %>
-              <p class='blog-title'>Loisirs</p>
-              <p class='blog'>Partir en vacances</p>
-            </div>
-          </div>
           <div class="col-6 col-sm-6 col-md-6 col-lg-6">
             <%= link_to pages_articles_path do %>
-              <div class="btn btn-blog">Livre blanc <i class="fas fa-long-arrow-alt-right"></i></div>
+              <div class="btn btn-blog">Articles <i class="fas fa-long-arrow-alt-right"></i></div>
             <% end %>
             <div id="second"><%= image_tag 'https://res.cloudinary.com/da2krghvd/image/upload/v1643830602/development/unsplash_iAkrGOkBaco.jpg', class: 'second' %>
-              <p class='blog-title'>Vivre sa passion</p>
-              <p class='blog'>Concours hippiques</p>
+              <div class="second-layer">
+                <p class='blog-title'>Vivre sa passion</p>
+                <p class='blog'>Concours hippiques</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-6 col-sm-6 col-md-5 col-lg-5">
+            <div id="first"><%= image_tag 'https://res.cloudinary.com/da2krghvd/image/upload/v1643830609/development/unsplash_rzTEsx2tcjQ.jpg', class: 'first' %>
+
+              <div class="first-layer">
+                <p class='blog-title'>Loisirs</p>
+                <p class='blog'>Partir en vacances</p>
+              </div>
             </div>
           </div>
         </div>
         <div class="row">
-          <div class="col-6 col-sm-6 col-md-6 col-lg-6">
-            <div id="fourth"><%= image_tag 'https://res.cloudinary.com/da2krghvd/image/upload/v1643830595/development/unsplash_CfhtS2nj95c.jpg', class: 'fourth' %>
-              <p class='blog-title'>Pratique</p>
-              <p class='blog'>La cale sèche</p>
-            </div>
-          </div>
           <div class="col-6 col-sm-6 col-md-5 col-lg-5">
             <div id="third"><%= image_tag 'https://res.cloudinary.com/da2krghvd/image/upload/v1643830589/development/unsplash_BnXGBpGy-bQ.png', class: 'third' %>
-              <p class='blog-title'>Indispensable</p>
-              <p class='blog'>Entretenir son jardin</p>
+              <div class="third-layer">
+                <p class='blog-title'>Indispensable</p>
+                <p class='blog'>Entretenir son jardin</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-6 col-sm-6 col-md-6 col-lg-6">
+            <div id="fourth"><%= image_tag 'https://res.cloudinary.com/da2krghvd/image/upload/v1643830595/development/unsplash_CfhtS2nj95c.jpg', class: 'fourth' %>
+              <div class="fourth-layer">
+                <p class='blog-title'>Pratique</p>
+                <p class='blog'>La cale sèche</p>
+              </div>
             </div>
           </div>
         </div>
