@@ -2,6 +2,7 @@
   margin-top: 40px;
 }
 .category{
+  position: relative;
   display: block;
   margin-left: auto;
   margin-right: auto;
@@ -24,29 +25,57 @@
   opacity: 0.5;
 }
 .layer{
-  background-color: black;
+  background: black;
   width: 100%;
   height: 100%;
-  opacity: 0.3;
+  opacity: 0.8;
   margin-top: -344px;
 }
 .layer:hover{
   opacity: 0;
 }
+
 .category-text{
+  border-radius: 4px;
+  border: 1px white solid;
+  width: 120px;
+  bottom: 50px;
+  padding: 4px 12px;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+  position: absolute;
+  background-image: linear-gradient(to bottom right, $red, black);
+  opacity: 0.8;
   color: white;
-  font-size: 26px;
-  font-weight: bold;
+  font-size: 20px;
   text-align: center;
-  margin-top: -300px;
 }
 
 section {
   margin-bottom: 30px;
 }
+
+.activities{
+  margin-bottom: 130px;
+}
+
+.activity{
+  height: 250px;
+  background-image: linear-gradient(to bottom right, #4c474a, #000000);
+  position: relative;
+}
+
+.activity-img{
+  height: 230px;
+  position: absolute;
+  left: 39%;
+  top: 10px;
+}
+
 .white-book{
-  background-image: linear-gradient(to bottom right, #c4c0c2, #726a6f);
-  padding: 150px 0px;
+  padding: 100px 0px;
 }
 .white-book h4{
   color: white;
@@ -66,24 +95,30 @@ section {
 }
 .best-sales{
   width: 100%;
-  height: 400px;
+  height: 420px;
   transition: all .4s ease-in-out;
 }
 .best-sales:hover{
   transform: scale(1.1);
 }
-.best-sales-price{
-  width: 70px;
-  margin-top: 10px;
-  margin-bottom: 30px;
-  padding: 10px 10px;
-  background-color: black;
+.best-sales-name{
+  text-align: center;
+  width: 100%;
   color: white;
-  border-radius: 5px;
+  font-weight: bold;
 }
+
+.best-sales-category-name{
+  text-align: center;
+  width: 100%;
+  color: white;
+  font-weight: bold;
+}
+
 .best-sales-image{
   display: block;
-  width: 80%;
+  height: 200px;
+  width: 100%;
   margin-top: -20px;
   margin-right: auto;
   margin-left: auto;
@@ -92,9 +127,9 @@ section {
 .layer-2{
   background-color: black;
   width: 100%;
-  height: 300px;
+  height: 320px;
   opacity: 0.4;
-  margin-top: -320px;
+  margin-top: -340px;
 }
 
 .layer-2:hover{
@@ -102,31 +137,21 @@ section {
   cursor: pointer;
 }
 
-.availaibility{
+.availability{
+  font-size: 22px;
   color: white;
-  text-align: center;
+  text-align: right;
+  margin: 16px;
 }
 
-.best-sale-card{
-  width: 100%;
-  background-image: linear-gradient(to bottom right, #2f2c2d, white);
-  height: 300px;
-  margin-bottom: 20px;
-  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+.favorites{
+  background-image: linear-gradient(to bottom right, #2f2c2d, #000000);
+  padding: 70px 0px;
 }
-
-.best-sale-card-green{
+.best-sale-card-red{
   width: 100%;
   background-image: linear-gradient(to bottom right, $red, #2f2c2d);
-  height: 300px;
-  margin-bottom: 20px;
-  box-shadow: 0 0 15px rgba(0,0,0,0.2);
-}
-
-.best-sale-card-brown{
-  width: 100%;
-  background-image: linear-gradient(to bottom right, white, #2f2c2d);
-  height: 300px;
+  height: 320px;
   margin-bottom: 20px;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
 }
@@ -397,18 +422,6 @@ a{
   text-decoration: none;
 }
 
-.activity{
-  height: 250px;
-  background-image: linear-gradient(to bottom right, #7d7479, #000000);
-  position: relative;
-}
-
-.activity-img{
-  height: 230px;
-  position: absolute;
-  left: 50px;
-  top: 10px;
-}
 
 .proposition{
   color: white;
