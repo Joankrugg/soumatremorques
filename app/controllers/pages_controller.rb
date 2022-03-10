@@ -3,6 +3,7 @@ class PagesController < ApplicationController
 
   def home
     @products = Product.all
+    @vip_lead = VipLead.new
   end
 
   def articles

@@ -76,7 +76,7 @@ section {
 }
 
 .white-book{
-  padding: 100px 0px;
+  padding: 30px 0px 100px 0px;
 }
 .white-book h4{
   color: white;
@@ -151,22 +151,38 @@ section {
 }
 .best-sale-card-red{
   width: 100%;
-  opacity: 0.7;
+  opacity: 0.8;
   background-image: linear-gradient(to bottom right, $red, #2f2c2d);
   height: 320px;
   margin-bottom: 20px;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
   transition: all 0.4 ease-in-out;
 }
-
 .best-sale-card-red:hover{
   opacity: 1;
 }
+.best-sale-card-grey{
+  width: 100%;
+  opacity: 0.8;
+  background-image: linear-gradient(to bottom right, #2f2c2d, $red);
+  height: 320px;
+  margin-bottom: 20px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  transition: all 0.4 ease-in-out;
+}
+.best-sale-card-grey:hover{
+  opacity: 1;
+}
+
 
 .best-sales .btn-brand{
   width: 100%;
 }
-
+.brand{
+  width: 400px;
+  display: block;
+  margin: 0px auto 20px auto;
+}
 .advices{
   margin-top: 100px;
 }
@@ -259,7 +275,7 @@ section {
 }
 
 .colored{
-  color: red;
+  color: $blue;
 }
 
 .card-image-illustration{
@@ -274,7 +290,7 @@ section {
 }
 
 #button{
-  background-image: linear-gradient(to bottom right, $red, #2f2c2d);
+  background: $blue;
   color: white;
   border: 1px solid white;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
@@ -297,7 +313,7 @@ section {
 }
 
 #button-2{
-  background-image: linear-gradient(to bottom right, $red, #2f2c2d);
+  background: $blue;
   color: white;
   border: 1px solid white;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
@@ -350,10 +366,12 @@ section {
   height: 100%;
 }
 
-.comments i .fa-star .fa-star-half-alt{
-  color: yellow;
+.fa-star{
+  color: $blue;
 }
-
+.fa-star-half-alt{
+  color: $blue;
+}
 .titles{
   width: 100%;
   margin-bottom: 30px;
@@ -367,6 +385,19 @@ section {
 
 .title-back{
   color: white;
+  text-shadow: 0 0 15px rgba(0,0,0,0.2);
+  font-size: 55px;
+  text-align: center;
+}
+
+.title-inverted{
+  font-size: 40px;
+  text-align: center;
+  margin-top: -55px;
+  color: white;
+}
+
+.title-back-inverted{
   text-shadow: 0 0 15px rgba(0,0,0,0.2);
   font-size: 55px;
   text-align: center;

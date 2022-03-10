@@ -1,11 +1,6 @@
 <%= render 'shared/slogan' %>
 <div class="container product-index">
   <div class="row">
-    <div class="col-lg-4 mx-auto">
-      <div class="btn btn-flat call-to-action" data-bs-toggle="modal" data-bs-target="#compatibility">Vérifiez la compatibilité de votre véhicule</div>
-    </div>
-  </div>
-  <div class="row">
     <div class="col-12 col-sm-12 col-md-12 col-lg-8 mx-auto">
       <div class="row">
         <% @products.each do |product| %>
@@ -25,9 +20,11 @@
                 </div>
                 <%= cl_image_tag product.photo.key, class: 'img-fluid' %>
               </div>
-              <p class='caracteristic-price'><%= product.price %> E</p>
 
               <div class="card-product-caracteristics">
+                <div class="btn btn-ghost" data-bs-toggle="modal" data-bs-target="#modal-<%= product.id %>">aperçu rapide</div>
+                <div class="btn btn-flat" data-bs-toggle="modal" data-bs-target="#compatibility">compatibilité véhicules</div>
+                <p class='caracteristic-price'><%= product.price %> E</p>
                 <h1 class="card-product-title">
                   <%= product.name %>
                 </h1>
@@ -36,8 +33,7 @@
                 <% if product.best_uses.present? %>
                   <p class='best-caracteristic'>Idéal pour: <%= product.best_uses.first.name%></p>
                 <% end %>
-                <div class="btn btn-ghost" data-bs-toggle="modal" data-bs-target="#modal-<%= product.id %>">aperçu rapide</div>
-                <div class="btn btn-flat">Réserver</div>
+                <div class="btn btn-flat">Réservez au 05.56.36.01.01</div>
               </div>
             </div>
           </div>
@@ -220,7 +216,7 @@
                   </div>
                   <div class="row">
                     <div class="col-lg-4 mx-auto">
-                      <div class="btn btn-flat call-to-action">Réserver</div>
+                      <div class="btn btn-flat call-to-action">Réservez au 05.56.36.01.01</div>
                     </div>
                   </div>
 

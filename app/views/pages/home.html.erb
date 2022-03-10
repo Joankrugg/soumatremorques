@@ -98,13 +98,13 @@
           <div class="carousel-inner">
             <div class="carousel-item active">
               <div class="activity d-block w-100">
-                <p class='proposition'><strong><span class='colored'>Installer</span></strong> un accessoire sur votre voiture</p>
+                <p class='proposition'><span class='colored'>Installer</span> un accessoire sur votre voiture</p>
                 <%= image_tag 'https://res.cloudinary.com/da2krghvd/image/upload/v1643834038/development/Rectangle_19.jpg', class: 'activity-img' %>
               </div>
             </div>
             <div class="carousel-item">
               <div class="activity d-block w-100">
-                <p class='proposition'><strong><span class='colored'>Louer</span></strong> une remorque</p>
+                <p class='proposition'><span class='colored'>Louer</span> une remorque</p>
                 <%= image_tag 'https://res.cloudinary.com/da2krghvd/image/upload/v1643834045/development/Rectangle_20.jpg', class: 'activity-img' %>
               </div>
             </div>
@@ -119,15 +119,15 @@
   <div class="container">
     <div class="row">
       <div class="titles">
-        <div class="title-back"><span class='colored'>Nos favorites</span></div>
-        <h1 class= 'title'>Nos favorites</h1>
+        <div class="title-back-inverted">Nos favorites</div>
+        <h1 class= 'title-inverted'>Nos favorites</h1>
       </div>
       <div class="col-12 col-sm-12 col-md-12 col-lg-10 mx-auto">
         <div class="row">
           <div class="col-6 col-sm-6 col-md-6 col-lg-3 mx-auto">
             <div class="best-sales">
               <%= link_to product_path(@products[0]) do %>
-                <div class="best-sale-card-red">
+                <div class="best-sale-card-grey">
                   <div class="row">
                     <div class="col-12">
                       <p class='availability'>
@@ -168,7 +168,7 @@
           <div class="col-6 col-sm-6 col-md-6 col-lg-3 mx-auto">
             <div class="best-sales">
               <%= link_to product_path(@products[2]) do %>
-                <div class="best-sale-card-red">
+                <div class="best-sale-card-grey">
                   <div class="row">
                     <div class="col-12">
                       <p class='availability'>
@@ -210,8 +210,15 @@
     </div>
   </div>
   <div class="white-book container">
-    <h4>Choisissez en toute confiance</h4>
+    <h4> Spécialistes de la remorque en Aquitaine</h4>
+    <div class="col-12 col-lg-8 mx-auto">
+      <p>Nous disposons de remorques porte-quads, porte-motos, porte-bateaux et porte-voitures. <br>Achetez ou louez vos remorques chez Soumat Remorques.<br>
+
+      Notre équipe vous assure ses conseils et répond à vos attentes et besoins spécifiques.<br> Grâce à notre atelier nous disposons de tout l'outillage nécessaire à la pose d'attelages, à l'entretien et la réparation.<br>
+    </p>
+    </div>
     <p>Téléchargez notre guide de choix</p>
+
     <div class="btn btn-flat">Téléchargez</div>
   </div>
   <div class="container">
@@ -224,7 +231,7 @@
         <div class="row">
           <div class="col-12 col-md-6 col-lg-6">
             <div class="box-2">
-              <div id="button-2">Notre parc <i class="fas fa-long-arrow-alt-right"></i></div>
+              <div id="button-2">Inscrivez-vous à notre newsletter <i class="fas fa-long-arrow-alt-right"></i></div>
             </div>
           </div>
           <div class="col-12 col-md-6 col-lg-6">
@@ -241,7 +248,7 @@
           </div>
           <div class="col-12 col-md-6 col-lg-5">
             <div class="box">
-              <div id="button">Vous avez un projet <i class="fas fa-long-arrow-alt-right"></i></div>
+              <div id="button" data-bs-toggle="modal" data-bs-target="#contactez-moi">Contactez-moi <i class="fas fa-long-arrow-alt-right"></i></div>
             </div>
           </div>
         </div>
@@ -269,7 +276,7 @@
           </div>
           <div class="col-6 col-sm-6 col-md-6 col-lg-6">
             <%= link_to pages_articles_path do %>
-              <div class="btn btn-blog">Articles <i class="fas fa-long-arrow-alt-right"></i></div>
+              <div class="btn btn-blog">Livre blanc <i class="fas fa-long-arrow-alt-right"></i></div>
             <% end %>
             <div id="second"><%= image_tag 'https://res.cloudinary.com/da2krghvd/image/upload/v1643830602/development/unsplash_iAkrGOkBaco.jpg', class: 'second' %>
               <p class='blog-title'>Vivre sa passion</p>
@@ -348,3 +355,19 @@
     </div>
   </div>
 </section>
+<div class="modal fade" id="contactez-moi" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Formulaire de contact</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <%= simple_form_for @vip_lead do |f| %>
+          <%= f.input :email, required: false %>
+          <%= f.button :submit,'valider', class: 'btn btn-flat' %>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>
