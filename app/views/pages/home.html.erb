@@ -185,6 +185,26 @@
               <% end %>
             </div>
           </div>
+          <div class="col-6 col-sm-6 col-md-6 col-lg-3 mx-auto">
+            <div class="best-sales">
+              <%= link_to product_path(@products[3]) do %>
+                <div class="best-sale-card-red">
+                  <div class="row">
+                    <div class="col-12">
+                      <p class='availability'>
+                        <i class="fas fa-heart"></i>
+                      </p>
+                      <div class='best-sales-image'>
+                        <%= cl_image_tag @products[3].photo.key, height: 200, crop: :fill, class: 'img-fluid' %>
+                      </div>
+                      <p class='best-sales-name'><%= @products[3].name %></p>
+                      <p class='best-sales-category-name'><%= @products[3].subcategory.name %></p>
+                    </div>
+                  </div>
+                </div>
+              <% end %>
+            </div>
+          </div>
         </div>
       </div>
     </div>

@@ -151,10 +151,16 @@ section {
 }
 .best-sale-card-red{
   width: 100%;
+  opacity: 0.7;
   background-image: linear-gradient(to bottom right, $red, #2f2c2d);
   height: 320px;
   margin-bottom: 20px;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  transition: all 0.4 ease-in-out;
+}
+
+.best-sale-card-red:hover{
+  opacity: 1;
 }
 
 .best-sales .btn-brand{
