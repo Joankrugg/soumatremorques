@@ -217,46 +217,63 @@
       Notre équipe vous assure ses conseils et répond à vos attentes et besoins spécifiques.<br> Grâce à notre atelier nous disposons de tout l'outillage nécessaire à la pose d'attelages, à l'entretien et la réparation.<br>
     </p>
     </div>
-    <p>Téléchargez notre guide de choix</p>
+    <p>Vous avez un projet ?</p>
 
-    <div class="btn btn-flat">Téléchargez <i class="fas fa-long-arrow-alt-right"></i></div>
+    <div class="btn btn-flat" data-bs-toggle="modal" data-bs-target="#contactez-moi">Contactez-moi <i class="fas fa-long-arrow-alt-right"></i></div>
   </div>
 </section>
 
-<div class="container">
-  <div class="row">
-    <div class="titles">
-      <div class="title-back">Nous connaître</div>
-      <h1 class= 'title'>Nous connaître</h1>
-    </div>
-    <div class="col-12 col-sm-12 col-md-12 col-lg-8 mx-auto">
-      <div class="row">
-        <div class="col-12 col-md-6 col-lg-6">
-          <div class="box-2">
-            <div id="button-2">Inscrivez-vous à notre newsletter <i class="fas fa-long-arrow-alt-right"></i></div>
-          </div>
-        </div>
-        <div class="col-12 col-md-6 col-lg-6">
-          <div class="card-image-illustration">
-            <iframe width="460" height="460" class='img-fluid' src="https://www.youtube.com/embed/sp79xE41Q7U" frameborder="0" allowfullscreen></iframe>
-          </div>
-        </div>
+<section class="advices">
+  <div class="container">
+    <div class="row">
+      <div class="titles">
+        <div class="title-back">Bien choisir</div>
+        <h1 class='title'>Bien choisir</h1>
       </div>
-      <div class="row">
-        <div class="col-12 col-md-6 col-lg-7">
-          <div id="card-text">
-            <p><span class="colored">Spécialistes</span> de la remorque depuis <span class="colored">plus de 45 ans</span>. Des gammes complètes neuves et d'occasion sont à votre disposition sur <span class="colored">notre parc d'exposition.</span> Spécialistes de la pose d'attelage sur voitures et utilitaires. Découvrez toute notre <span class="colored">large gamme de pièces détachées</span> de grandes marques.</p>
+      <div class="col-12 col-sm-12 col-md-12 col-lg-8 mx-auto">
+        <div class="row top">
+          <div class="col-6 col-sm-6 col-md-6 col-lg-6">
+            <div class="btn btn-blog">Guide de choix <i class="fas fa-long-arrow-alt-right"></i></div>
+            <div id="second"><%= image_tag 'https://res.cloudinary.com/da2krghvd/image/upload/v1643830602/development/unsplash_iAkrGOkBaco.jpg', class: 'second' %>
+              <div class="second-layer">
+                <p class='blog-title'>Vivre sa passion</p>
+                <p class='blog'>Concours hippiques</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-6 col-sm-6 col-md-5 col-lg-5">
+            <div id="first"><%= image_tag 'https://res.cloudinary.com/da2krghvd/image/upload/v1643830609/development/unsplash_rzTEsx2tcjQ.jpg', class: 'first' %>
+              <div class="first-layer">
+                <p class='blog-title'>Loisirs</p>
+                <p class='blog'>Partir en vacances</p>
+              </div>
+            </div>
           </div>
         </div>
-        <div class="col-12 col-md-6 col-lg-5">
-          <div class="box">
-            <div id="button" data-bs-toggle="modal" data-bs-target="#contactez-moi">Contactez-moi <i class="fas fa-long-arrow-alt-right"></i></div>
+        <div class="row">
+          <div class="col-6 col-sm-6 col-md-5 col-lg-5">
+            <div id="third"><%= image_tag 'https://res.cloudinary.com/da2krghvd/image/upload/v1643830589/development/unsplash_BnXGBpGy-bQ.png', class: 'third' %>
+              <div class="third-layer">
+                <p class='blog-title'>Indispensable</p>
+                <p class='blog'>Entretenir son jardin</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-6 col-sm-6 col-md-6 col-lg-6">
+            <div id="fourth"><%= image_tag 'https://res.cloudinary.com/da2krghvd/image/upload/v1643830595/development/unsplash_CfhtS2nj95c.jpg', class: 'fourth' %>
+              <div class="fourth-layer">
+                <p class='blog-title'>Pratique</p>
+                <p class='blog'>La cale sèche</p>
+              </div>
+            </div>
+            <div class="btn btn-blog-2">Inscrivez-vous à notre newsletter <i class="fas fa-long-arrow-alt-right"></i></div>
           </div>
         </div>
       </div>
     </div>
   </div>
-</div>
+</section>
+
 
 <section class="witnesses">
   <div class="container">
@@ -310,58 +327,7 @@
     </div>
   </div>
 </section>
-<section class="advices">
-  <div class="container">
-    <div class="row">
-      <div class="titles">
-        <div class="title-back">Bien choisir</div>
-        <h1 class='title'>Bien choisir</h1>
-      </div>
-      <div class="col-12 col-sm-12 col-md-12 col-lg-8 mx-auto">
-        <div class="row top">
-          <div class="col-6 col-sm-6 col-md-6 col-lg-6">
-            <%= link_to pages_articles_path do %>
-              <div class="btn btn-blog">Articles <i class="fas fa-long-arrow-alt-right"></i></div>
-            <% end %>
-            <div id="second"><%= image_tag 'https://res.cloudinary.com/da2krghvd/image/upload/v1643830602/development/unsplash_iAkrGOkBaco.jpg', class: 'second' %>
-              <div class="second-layer">
-                <p class='blog-title'>Vivre sa passion</p>
-                <p class='blog'>Concours hippiques</p>
-              </div>
-            </div>
-          </div>
-          <div class="col-6 col-sm-6 col-md-5 col-lg-5">
-            <div id="first"><%= image_tag 'https://res.cloudinary.com/da2krghvd/image/upload/v1643830609/development/unsplash_rzTEsx2tcjQ.jpg', class: 'first' %>
 
-              <div class="first-layer">
-                <p class='blog-title'>Loisirs</p>
-                <p class='blog'>Partir en vacances</p>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-6 col-sm-6 col-md-5 col-lg-5">
-            <div id="third"><%= image_tag 'https://res.cloudinary.com/da2krghvd/image/upload/v1643830589/development/unsplash_BnXGBpGy-bQ.png', class: 'third' %>
-              <div class="third-layer">
-                <p class='blog-title'>Indispensable</p>
-                <p class='blog'>Entretenir son jardin</p>
-              </div>
-            </div>
-          </div>
-          <div class="col-6 col-sm-6 col-md-6 col-lg-6">
-            <div id="fourth"><%= image_tag 'https://res.cloudinary.com/da2krghvd/image/upload/v1643830595/development/unsplash_CfhtS2nj95c.jpg', class: 'fourth' %>
-              <div class="fourth-layer">
-                <p class='blog-title'>Pratique</p>
-                <p class='blog'>La cale sèche</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
 
 <div class="modal fade" id="contactez-moi" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog">
