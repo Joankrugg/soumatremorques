@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_03_12_202006) do
+ActiveRecord::Schema.define(version: 2022_03_12_211443) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -141,6 +141,12 @@ ActiveRecord::Schema.define(version: 2022_03_12_202006) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
+  create_table "titles", force: :cascade do |t|
+    t.string "name"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
   create_table "usages", force: :cascade do |t|
     t.string "name"
     t.datetime "created_at", precision: 6, null: false
@@ -164,6 +170,10 @@ ActiveRecord::Schema.define(version: 2022_03_12_202006) do
     t.string "email"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.string "name"
+    t.string "surname"
+    t.bigint "title_id"
+    t.index ["title_id"], name: "index_vip_leads_on_title_id"
   end
 
   create_table "wheel_axles", force: :cascade do |t|
@@ -191,4 +201,5 @@ ActiveRecord::Schema.define(version: 2022_03_12_202006) do
   add_foreign_key "products", "usages"
   add_foreign_key "products", "wheel_axles"
   add_foreign_key "products", "wheel_sizes"
+  add_foreign_key "vip_leads", "titles"
 end

@@ -7,6 +7,8 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 
+Title.create(name: 'Mr')
+Title.create(name: 'Mme')
 
 #Usage.create(name: 'Occasionnel')
 #Usage.create(name: 'Régulier')

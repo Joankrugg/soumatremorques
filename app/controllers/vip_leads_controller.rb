@@ -25,6 +25,6 @@ class VipLeadsController < ApplicationController
   private
 
   def vip_lead_params
-    params.require(:vip_lead).permit(:email)
+    params.require(:vip_lead).permit(:email, :name, :surname, :title_id)
   end
 end

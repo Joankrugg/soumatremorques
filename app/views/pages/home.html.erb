@@ -330,8 +330,19 @@
         <h5 class="modal-title" id="exampleModalLabel">Formulaire de contact</h5>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
-      <div class="modal-body lead">
+      <div class="modal-body vip_lead">
         <%= simple_form_for @vip_lead do |f| %>
+          <div class="row">
+            <div class="col-2">
+              <%= f.association :title, label: 'Titre', required: false, class: 'vip_title' %>
+            </div>
+            <div class="col-5">
+              <%= f.input :name, label: 'Nom', required: false %>
+            </div>
+            <div class="col-5">
+              <%= f.input :surname, label: 'Prénom', required: false %>
+            </div>
+          </div>
           <%= f.input :email, required: false %>
           <%= f.button :submit,'valider', class: 'btn btn-flat right' %>
         <% end %>
