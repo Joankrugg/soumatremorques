@@ -1,5 +1,5 @@
 .catalogue{
-  margin-top: 40px;
+  padding: 40px 0px;
 }
 .category{
   position: relative;
@@ -51,12 +51,8 @@
   text-align: center;
 }
 
-section {
-  margin-bottom: 30px;
-}
-
-.activities{
-  margin-bottom: 130px;
+.back{
+  padding: 40px 0px;
 }
 
 .activity{
@@ -80,9 +76,26 @@ section {
 .news p {
   text-align: center;
 }
+.btn-newsletter{
+  padding-top: 10px;
+  background: $blue;
+  color: white;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  width: 100%;
+  height: 50px;
+  border-radius: 5px;
+  border: 1px solid white;
+  transition: all .4s ease-in-out;
+  margin-top: 50px;
+}
+
+.btn-newsletter:hover{
+  transform: scale(1.1);
+  color: white;
+}
 
 .white-book{
-  padding: 30px 0px 100px 0px;
+  padding: 30px 0px 0px 0px;
 }
 .white-book h4{
   text-align: center;
@@ -98,6 +111,10 @@ section {
   display: block;
   margin-right: auto;
   margin-left: auto;
+}
+
+.favorites{
+  padding: 30px 0px;
 }
 .best-sales{
   width: 100%;
@@ -171,7 +188,7 @@ section {
   margin: 0px auto 20px auto;
 }
 .advices{
-  margin-top: 100px;
+  padding: 30px 0px;
 }
 
 .top{
@@ -214,7 +231,6 @@ section {
   border: 1px solid white;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
 }
-
 
 .blog-title{
   position: absolute;

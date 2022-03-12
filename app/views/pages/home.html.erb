@@ -93,135 +93,130 @@
     </div>
   </div>
 </section>
-
-<div class="back" style="background-image: url(https://res.cloudinary.com/da2krghvd/image/upload/v1645876752/production/nordwood-themes-KcsKWw77Ovw-unsplash.jpg); background-size: cover;">
-  <section class="activities">
-    <div class="container">
-      <div class="row">
-        <div class="titles">
-          <div class="title-back">Nos Nouveautés</div>
-          <h1 class= 'title'>Nos Nouveautés</h1>
-        </div>
+<section class="activities">
+  <div class="container">
+    <div class="row">
+      <div class="titles">
+        <div class="title-back">Nos Nouveautés</div>
+        <h1 class= 'title'>Nos Nouveautés</h1>
       </div>
-      <div class="row">
-        <div id="carouselExampleSlidesOnly" class="col-lg-6 mx-auto carousel slide" data-bs-ride="carousel">
-          <div class="carousel-inner">
-            <div class="carousel-item active">
-              <div class="activity d-block w-100">
-                <p class='proposition'><span class='colored'>Installer</span> un accessoire sur votre voiture</p>
-                <%= image_tag 'https://res.cloudinary.com/da2krghvd/image/upload/v1643834038/development/Rectangle_19.jpg', class: 'activity-img' %>
-              </div>
-            </div>
-            <div class="carousel-item">
-              <div class="activity d-block w-100">
-                <p class='proposition'><span class='colored'>Louer</span> une remorque</p>
-                <%= image_tag 'https://res.cloudinary.com/da2krghvd/image/upload/v1643834045/development/Rectangle_20.jpg', class: 'activity-img' %>
-              </div>
+    </div>
+    <div class="row">
+      <div id="carouselExampleSlidesOnly" class="col-lg-6 mx-auto carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <div class="activity d-block w-100">
+              <p class='proposition'><span class='colored'>Installer</span> un accessoire sur votre voiture</p>
+              <%= image_tag 'https://res.cloudinary.com/da2krghvd/image/upload/v1643834038/development/Rectangle_19.jpg', class: 'activity-img' %>
             </div>
           </div>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-12 col-lg-6 mx-auto news">
-          <p>Le développement du parc automobile électrique est une bonne chose pour le climat. La puissance de ces nouveaux véhicules impose au secteur une toute nouvelle vision du remorquage, avec  notamment des produits motorisés, faits de matériaux durables, solides et légers</p>
-          <div class="col-7 col-sm-6 col-md-7 col-lg-6 mx-auto">
-            <div class="btn btn-blog-2">Recevez notre newsletter <i class="fas fa-long-arrow-alt-right"></i></div>
+          <div class="carousel-item">
+            <div class="activity d-block w-100">
+              <p class='proposition'><span class='colored'>Louer</span> une remorque</p>
+              <%= image_tag 'https://res.cloudinary.com/da2krghvd/image/upload/v1643834045/development/Rectangle_20.jpg', class: 'activity-img' %>
+            </div>
           </div>
         </div>
       </div>
     </div>
-  </section>
-</div>
-
-<section class="favorites">
-  <div class="container">
     <div class="row">
-      <div class="titles">
-        <div class="title-back">Nos favorites</div>
-        <h1 class= 'title'>Nos favorites</h1>
-      </div>
-      <div class="col-12 col-sm-12 col-md-12 col-lg-10 mx-auto">
-        <div class="row">
-          <div class="col-6 col-sm-6 col-md-6 col-lg-4 mx-auto">
-            <div class="best-sales">
-              <%= link_to product_path(@products[0]) do %>
-                <div class="best-sale-card-red">
-                  <div class="row">
-                    <div class="col-12">
-                      <p class='availability'>
-                        <i class="fas fa-heart"></i>
-                      </p>
-                      <div class='best-sales-image'>
-                        <%= cl_image_tag @products[0].photo.key, height: 200, crop: :fit, class: 'img-fluid' %>
-                      </div>
-                      <p class='best-sales-name'><%= @products[0].name %></p>
-                      <p class='best-sales-category-name'><%= @products[0].subcategory.name %></p>
-                    </div>
-                  </div>
-
-                </div>
-              <% end %>
-            </div>
-          </div>
-          <div class="col-6 col-sm-6 col-md-6 col-lg-4 mx-auto">
-            <div class="best-sales">
-              <%= link_to product_path(@products[1]) do %>
-                <div class="best-sale-card-red">
-                  <div class="row">
-                    <div class="col-12">
-                      <p class='availability'>
-                        <i class="fas fa-heart"></i>
-                      </p>
-                      <div class='best-sales-image'>
-                        <%= cl_image_tag @products[1].photo.key, height: 200, crop: :fill, class: 'img-fluid' %>
-                      </div>
-                      <p class='best-sales-name'><%= @products[1].name %></p>
-                      <p class='best-sales-category-name'><%= @products[1].subcategory.name %></p>
-                    </div>
-                  </div>
-                </div>
-              <% end %>
-            </div>
-          </div>
-          <div class="col-6 col-sm-6 col-md-6 col-lg-4 mx-auto">
-            <div class="best-sales">
-              <%= link_to product_path(@products[2]) do %>
-                <div class="best-sale-card-red">
-                  <div class="row">
-                    <div class="col-12">
-                      <p class='availability'>
-                        <i class="fas fa-heart"></i>
-                      </p>
-                      <div class='best-sales-image'>
-                        <%= cl_image_tag @products[2].photo.key, height: 200, crop: :fill, class: 'img-fluid' %>
-                      </div>
-                      <p class='best-sales-name'><%= @products[2].name %></p>
-                      <p class='best-sales-category-name'><%= @products[2].subcategory.name %></p>
-                    </div>
-                  </div>
-                </div>
-              <% end %>
-            </div>
-          </div>
+      <div class="col-12 col-lg-6 mx-auto news">
+        <p>Le développement du parc automobile électrique est une bonne chose pour le climat. La puissance de ces nouveaux véhicules impose au secteur une toute nouvelle vision du remorquage, avec  notamment des produits motorisés, faits de matériaux durables, solides et légers</p>
+        <div class="col-7 col-sm-6 col-md-7 col-lg-6 mx-auto">
+          <div class="btn btn-newsletter">Recevez notre newsletter <i class="fas fa-long-arrow-alt-right"></i></div>
         </div>
       </div>
     </div>
   </div>
-  <div class="white-book container">
-    <h4> Spécialistes de la remorque en Aquitaine</h4>
-    <div class="col-12 col-lg-8 mx-auto">
-      <p>Nous disposons de remorques porte-quads, porte-motos, porte-bateaux et porte-voitures. <br>Achetez ou louez vos remorques chez Soumat Remorques.<br>
+</section>
 
-      Notre équipe vous assure ses conseils et répond à vos attentes et besoins spécifiques.<br> Grâce à notre atelier nous disposons de tout l'outillage nécessaire à la pose d'attelages, à l'entretien et la réparation.<br>
-      </p>
-      <p>Vous avez un projet ?</p>
-
-
+<section class="favorites">
+  <div class="back" style="background-image: url(https://res.cloudinary.com/da2krghvd/image/upload/v1645876752/production/nordwood-themes-KcsKWw77Ovw-unsplash.jpg); background-size: cover;">
+    <div class="container">
+      <div class="row">
+        <div class="titles">
+          <div class="title-back">Nos favorites</div>
+          <h1 class= 'title'>Nos favorites</h1>
+        </div>
+        <div class="col-12 col-sm-12 col-md-12 col-lg-10 mx-auto">
+          <div class="row">
+            <div class="col-6 col-sm-6 col-md-6 col-lg-4 mx-auto">
+              <div class="best-sales">
+                <%= link_to product_path(@products[0]) do %>
+                  <div class="best-sale-card-red">
+                    <div class="row">
+                      <div class="col-12">
+                        <p class='availability'>
+                          <i class="fas fa-heart"></i>
+                        </p>
+                        <div class='best-sales-image'>
+                          <%= cl_image_tag @products[0].photo.key, height: 200, crop: :fit, class: 'img-fluid' %>
+                        </div>
+                        <p class='best-sales-name'><%= @products[0].name %></p>
+                        <p class='best-sales-category-name'><%= @products[0].subcategory.name %></p>
+                      </div>
+                    </div>
+                  </div>
+                <% end %>
+              </div>
+            </div>
+            <div class="col-6 col-sm-6 col-md-6 col-lg-4 mx-auto">
+              <div class="best-sales">
+                <%= link_to product_path(@products[1]) do %>
+                  <div class="best-sale-card-red">
+                    <div class="row">
+                      <div class="col-12">
+                        <p class='availability'>
+                          <i class="fas fa-heart"></i>
+                        </p>
+                        <div class='best-sales-image'>
+                          <%= cl_image_tag @products[1].photo.key, height: 200, crop: :fill, class: 'img-fluid' %>
+                        </div>
+                        <p class='best-sales-name'><%= @products[1].name %></p>
+                        <p class='best-sales-category-name'><%= @products[1].subcategory.name %></p>
+                      </div>
+                    </div>
+                  </div>
+                <% end %>
+              </div>
+            </div>
+            <div class="col-6 col-sm-6 col-md-6 col-lg-4 mx-auto">
+              <div class="best-sales">
+                <%= link_to product_path(@products[2]) do %>
+                  <div class="best-sale-card-red">
+                    <div class="row">
+                      <div class="col-12">
+                        <p class='availability'>
+                          <i class="fas fa-heart"></i>
+                        </p>
+                        <div class='best-sales-image'>
+                          <%= cl_image_tag @products[2].photo.key, height: 200, crop: :fill, class: 'img-fluid' %>
+                        </div>
+                        <p class='best-sales-name'><%= @products[2].name %></p>
+                        <p class='best-sales-category-name'><%= @products[2].subcategory.name %></p>
+                      </div>
+                    </div>
+                  </div>
+                <% end %>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
-    <div class="col-6 col-sm-6 col-md-4 col-lg-2 mx-auto">
-      <div class="btn btn-blog" data-bs-toggle="modal" data-bs-target="#contactez-moi">Prenons contact <i class="fas fa-long-arrow-alt-right"></i></div>
-    </div>
+    <div class="white-book container">
+      <h4> Spécialistes de la remorque en Aquitaine</h4>
+      <div class="col-12 col-lg-8 mx-auto">
+        <p>Nous disposons de remorques porte-quads, porte-motos, porte-bateaux et porte-voitures. <br>Achetez ou louez vos remorques chez Soumat Remorques.<br>
 
+        Notre équipe vous assure ses conseils et répond à vos attentes et besoins spécifiques.<br> Grâce à notre atelier nous disposons de tout l'outillage nécessaire à la pose d'attelages, à l'entretien et la réparation.<br>
+        </p>
+        <p>Vous avez un projet ?</p>
+      </div>
+      <div class="col-6 col-sm-6 col-md-4 col-lg-2 mx-auto">
+        <div class="btn btn-blog" data-bs-toggle="modal" data-bs-target="#contactez-moi">Prenons contact <i class="fas fa-long-arrow-alt-right"></i></div>
+      </div>
+    </div>
   </div>
 </section>
 
@@ -309,7 +304,6 @@
             <h4>J'ai opté pour une location</h4>
             <p>J'ai des besoins ponctuels dans mon métier. Soumat a trouvé une solution pour moi. </p>
           </div>
-
         </div>
       </div>
       <div class="col-12 col-sm-9 col-md-6 col-lg-4 mx-auto">
@@ -323,7 +317,6 @@
             <h4>Un service au top</h4>
             <p>J'ai été très bien conseillé en fonction de mon permis et mes besoins, je recommande</p>
           </div>
-
         </div>
       </div>
     </div>
