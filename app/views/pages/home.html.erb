@@ -123,7 +123,7 @@
       <div class="col-12 col-lg-6 mx-auto news">
         <p>Le développement du parc automobile électrique est une bonne chose pour le climat. La puissance de ces nouveaux véhicules impose au secteur une toute nouvelle vision du remorquage, avec  notamment des produits motorisés, faits de matériaux durables, solides et légers</p>
         <div class="col-7 col-sm-6 col-md-7 col-lg-6 mx-auto">
-          <div class="btn btn-newsletter">Recevez notre newsletter <i class="fas fa-long-arrow-alt-right"></i></div>
+          <div class="btn btn-newsletter" data-bs-toggle="modal" data-bs-target="#newsletter">Recevez notre newsletter <i class="fas fa-long-arrow-alt-right"></i></div>
         </div>
       </div>
     </div>
@@ -323,7 +323,6 @@
   </div>
 </section>
 
-
 <div class="modal fade" id="contactez-moi" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content">
@@ -331,12 +330,28 @@
         <h5 class="modal-title" id="exampleModalLabel">Formulaire de contact</h5>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
-      <div class="modal-body">
+      <div class="modal-body lead">
         <%= simple_form_for @vip_lead do |f| %>
           <%= f.input :email, required: false %>
-          <%= f.button :submit,'valider', class: 'btn btn-flat' %>
+          <%= f.button :submit,'valider', class: 'btn btn-flat right' %>
         <% end %>
       </div>
     </div>
   </div>
 </div>
+
+<div class="modal fade" id="newsletter" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Recevez la newsletter</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body lead">
+        <%= simple_form_for @newsletter_lead do |f| %>
+          <%= f.input :email, required: false %>
+          <%= f.button :submit,'valider', class: 'btn btn-flat right' %>
+        <% end %>
+      </div>
+    </div>
+  </div>

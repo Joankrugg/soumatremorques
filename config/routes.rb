@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :newsletter_leads, only: [:index, :new, :create, :destroy]
   resources :criteria_leads, only: [:index, :new, :create, :destroy]
   resources :compatibility_leads, only: [:index, :new, :create, :destroy]
   resources :vip_leads, only: [:index, :new, :create, :destroy]

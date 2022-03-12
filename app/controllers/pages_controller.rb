@@ -4,6 +4,7 @@ class PagesController < ApplicationController
   def home
     @products = Product.all
     @vip_lead = VipLead.new
+    @newsletter_lead = NewsletterLead.new
   end
 
   def articles
