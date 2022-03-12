@@ -9,7 +9,7 @@
   position: fixed;
   width: 100%;
   z-index: 2;
-  height: 52px;
+  height: 46px;
 }
 
 .categories{
@@ -22,23 +22,32 @@
 }
 
 .subcategories-link{
-  margin-top: 4px;
   color: white;
   padding: 11px 0px;
   font-size: 16px;
   text-align: center;
+  font-weight: bold;
 }
 
 .subcategories-link:hover{
   color: #2f2c2d;
   background-color: white;
-  border-radius: 5px;
 }
 
 .subcategory{
-  margin-bottom: 10px;
+  margin-top: 5px;
+  margin-bottom: 5px;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
   border: 1px solid white;
+  padding: .7rem .7rem;
+  border-radius: 4px;
+  background-image: linear-gradient(to bottom right, white, white);
+  transition: all .4s ease-in-out;
+}
+
+.subcategory:hover{
+  background-image: linear-gradient(to bottom right, white, black);
+  transform: scale(1.1)
 }
 
 .subcategory-link{
@@ -49,7 +58,7 @@
 
 .subcategory-link:hover{
   cursor: pointer;
-  color: #2f2c2d;
+  color: white;
 }
 
 .fa-bars{

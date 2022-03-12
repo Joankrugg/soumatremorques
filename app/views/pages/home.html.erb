@@ -3,17 +3,27 @@
     <div class="carousel-item banner active" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://res.cloudinary.com/da2krghvd/image/upload/s--cIRuKiQ5--/q_jpegmini/v1643390045/Portfolio/IMG_9850.jpg);">
       <div class="container">
         <h1>Vente et location de remorques.</h1>
-        <%= link_to trailers_products_path do %>
-          <div class="btn btn-action" >En savoir plus <i class="fas fa-long-arrow-alt-right"></i></div>
-        <% end %>
+        <div class="buttons">
+          <%= link_to trailers_products_path do %>
+            <div class="btn btn-action" >Acheter</div>
+          <% end %>
+          <%= link_to rent_products_path do %>
+            <div class="btn btn-action" >Louer</i></div>
+          <% end %>
+        </div>
       </div>
     </div>
     <div class="carousel-item banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://res.cloudinary.com/da2krghvd/image/upload/v1646751949/development/nina-mercado-Y_t0n-T4H5M-unsplash.jpg);">
       <div class="container">
         <h1>Atelier d'entretien et installation d'accessoires.</h1>
-        <%= link_to maintenance_products_path do %>
-          <div class="btn btn-action">En savoir plus <i class="fas fa-long-arrow-alt-right"></i></div>
-        <% end %>
+        <div class="buttons">
+          <%= link_to maintenance_products_path do %>
+            <div class="btn btn-action" >Entretien</div>
+          <% end %>
+          <%= link_to accessories_products_path do %>
+            <div class="btn btn-action" >Accessoires</div>
+          <% end %>
+        </div>
       </div>
     </div>
   </div>
@@ -89,8 +99,8 @@
     <div class="container">
       <div class="row">
         <div class="titles">
-          <div class="title-back">Nos Activités</div>
-          <h1 class= 'title'>Nos Activités</h1>
+          <div class="title-back">Nos Nouveautés</div>
+          <h1 class= 'title'>Nos Nouveautés</h1>
         </div>
       </div>
       <div class="row">
@@ -111,6 +121,14 @@
           </div>
         </div>
       </div>
+      <div class="row">
+        <div class="col-12 col-lg-6 mx-auto news">
+          <p>Le développement du parc automobile électrique est une bonne chose pour le climat. La puissance de ces nouveaux véhicules impose au secteur une toute nouvelle vision du remorquage, avec  notamment des produits motorisés, faits de matériaux durables, solides et légers</p>
+          <div class="col-7 col-sm-6 col-md-7 col-lg-6 mx-auto">
+            <div class="btn btn-blog-2">Recevez notre newsletter <i class="fas fa-long-arrow-alt-right"></i></div>
+          </div>
+        </div>
+      </div>
     </div>
   </section>
 </div>
@@ -119,15 +137,15 @@
   <div class="container">
     <div class="row">
       <div class="titles">
-        <div class="title-back-inverted">Nos favorites</div>
-        <h1 class= 'title-inverted'>Nos favorites</h1>
+        <div class="title-back">Nos favorites</div>
+        <h1 class= 'title'>Nos favorites</h1>
       </div>
       <div class="col-12 col-sm-12 col-md-12 col-lg-10 mx-auto">
         <div class="row">
-          <div class="col-6 col-sm-6 col-md-6 col-lg-3 mx-auto">
+          <div class="col-6 col-sm-6 col-md-6 col-lg-4 mx-auto">
             <div class="best-sales">
               <%= link_to product_path(@products[0]) do %>
-                <div class="best-sale-card-grey">
+                <div class="best-sale-card-red">
                   <div class="row">
                     <div class="col-12">
                       <p class='availability'>
@@ -145,9 +163,9 @@
               <% end %>
             </div>
           </div>
-          <div class="col-6 col-sm-6 col-md-6 col-lg-3 mx-auto">
+          <div class="col-6 col-sm-6 col-md-6 col-lg-4 mx-auto">
             <div class="best-sales">
-              <%= link_to product_path(@products[3]) do %>
+              <%= link_to product_path(@products[1]) do %>
                 <div class="best-sale-card-red">
                   <div class="row">
                     <div class="col-12">
@@ -155,20 +173,20 @@
                         <i class="fas fa-heart"></i>
                       </p>
                       <div class='best-sales-image'>
-                        <%= cl_image_tag @products[3].photo.key, height: 200, crop: :fill, class: 'img-fluid' %>
+                        <%= cl_image_tag @products[1].photo.key, height: 200, crop: :fill, class: 'img-fluid' %>
                       </div>
-                      <p class='best-sales-name'><%= @products[3].name %></p>
-                      <p class='best-sales-category-name'><%= @products[3].subcategory.name %></p>
+                      <p class='best-sales-name'><%= @products[1].name %></p>
+                      <p class='best-sales-category-name'><%= @products[1].subcategory.name %></p>
                     </div>
                   </div>
                 </div>
               <% end %>
             </div>
           </div>
-          <div class="col-6 col-sm-6 col-md-6 col-lg-3 mx-auto">
+          <div class="col-6 col-sm-6 col-md-6 col-lg-4 mx-auto">
             <div class="best-sales">
               <%= link_to product_path(@products[2]) do %>
-                <div class="best-sale-card-grey">
+                <div class="best-sale-card-red">
                   <div class="row">
                     <div class="col-12">
                       <p class='availability'>
@@ -185,26 +203,6 @@
               <% end %>
             </div>
           </div>
-          <div class="col-6 col-sm-6 col-md-6 col-lg-3 mx-auto">
-            <div class="best-sales">
-              <%= link_to product_path(@products[3]) do %>
-                <div class="best-sale-card-red">
-                  <div class="row">
-                    <div class="col-12">
-                      <p class='availability'>
-                        <i class="fas fa-heart"></i>
-                      </p>
-                      <div class='best-sales-image'>
-                        <%= cl_image_tag @products[3].photo.key, height: 200, crop: :fill, class: 'img-fluid' %>
-                      </div>
-                      <p class='best-sales-name'><%= @products[3].name %></p>
-                      <p class='best-sales-category-name'><%= @products[3].subcategory.name %></p>
-                    </div>
-                  </div>
-                </div>
-              <% end %>
-            </div>
-          </div>
         </div>
       </div>
     </div>
@@ -215,11 +213,15 @@
       <p>Nous disposons de remorques porte-quads, porte-motos, porte-bateaux et porte-voitures. <br>Achetez ou louez vos remorques chez Soumat Remorques.<br>
 
       Notre équipe vous assure ses conseils et répond à vos attentes et besoins spécifiques.<br> Grâce à notre atelier nous disposons de tout l'outillage nécessaire à la pose d'attelages, à l'entretien et la réparation.<br>
-    </p>
-    </div>
-    <p>Vous avez un projet ?</p>
+      </p>
+      <p>Vous avez un projet ?</p>
 
-    <div class="btn btn-flat" data-bs-toggle="modal" data-bs-target="#contactez-moi">Contactez-moi <i class="fas fa-long-arrow-alt-right"></i></div>
+
+    </div>
+    <div class="col-6 col-sm-6 col-md-4 col-lg-2 mx-auto">
+      <div class="btn btn-blog" data-bs-toggle="modal" data-bs-target="#contactez-moi">Prenons contact <i class="fas fa-long-arrow-alt-right"></i></div>
+    </div>
+
   </div>
 </section>
 
@@ -233,7 +235,6 @@
       <div class="col-12 col-sm-12 col-md-12 col-lg-8 mx-auto">
         <div class="row top">
           <div class="col-6 col-sm-6 col-md-6 col-lg-6">
-            <div class="btn btn-blog">Guide de choix <i class="fas fa-long-arrow-alt-right"></i></div>
             <div id="second"><%= image_tag 'https://res.cloudinary.com/da2krghvd/image/upload/v1643830602/development/unsplash_iAkrGOkBaco.jpg', class: 'second' %>
               <div class="second-layer">
                 <p class='blog-title'>Vivre sa passion</p>
@@ -266,7 +267,8 @@
                 <p class='blog'>La cale sèche</p>
               </div>
             </div>
-            <div class="btn btn-blog-2">Inscrivez-vous à notre newsletter <i class="fas fa-long-arrow-alt-right"></i></div>
+              <div class="btn btn-blog-2">Découvrez notre guide de choix <i class="fas fa-long-arrow-alt-right"></i></div>
+            </div>
           </div>
         </div>
       </div>

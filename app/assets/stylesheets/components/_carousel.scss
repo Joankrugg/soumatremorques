@@ -1,5 +1,5 @@
 #carouselExampleControls{
-  margin-top: 52px;
+  margin-top: 46px;
 }
 .carousel-control-prev{
   height: 100px;
@@ -38,22 +38,28 @@
 }
 
 .banner .btn-action{
-  padding-top: 9px;
+  padding-top: 6px;
   border-radius: 4px;
   color: white;
-  opacity: 0.8;
-  background-image: linear-gradient(to bottom right, $red, black);
-  display: block;
-  width: 250px;
-  height: 48px;
-  margin-left: auto;
-  margin-right: auto;
+  background-image: linear-gradient(to bottom right, white, black);
+  margin-left: 9px;
+  margin-right: 9px;
+  width: 130px;
+  height: 40px;
+  font-weight: bold;
   transition: all .4s ease-in-out;
   border: 1px solid white;
 }
 
 .banner .btn-action:hover{
+  background-image: linear-gradient(to bottom right, white, white);
   transform: scale(1.1);
-  color: white;
+  color: #2f2c2d;
+  border: 1px solid #2f2c2d;
 }
-
+.buttons{
+  display: block;
+  width: 300px;
+  margin-left: auto;
+  margin-right: auto;
+}
