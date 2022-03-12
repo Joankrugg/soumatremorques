@@ -5,6 +5,7 @@ class PagesController < ApplicationController
     @products = Product.all
     @vip_lead = VipLead.new
     @newsletter_lead = NewsletterLead.new
+    @white_book_lead = WhiteBookLead.new
   end
 
   def articles
