@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_03_13_135635) do
+ActiveRecord::Schema.define(version: 2022_03_13_143442) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -135,6 +135,12 @@ ActiveRecord::Schema.define(version: 2022_03_13_135635) do
     t.index ["wheel_size_id"], name: "index_products_on_wheel_size_id"
   end
 
+  create_table "purposes", force: :cascade do |t|
+    t.string "name"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
   create_table "quotations", force: :cascade do |t|
     t.string "name"
     t.string "surname"
@@ -143,7 +149,9 @@ ActiveRecord::Schema.define(version: 2022_03_13_135635) do
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.bigint "title_id"
+    t.bigint "purpose_id"
     t.index ["product_id"], name: "index_quotations_on_product_id"
+    t.index ["purpose_id"], name: "index_quotations_on_purpose_id"
     t.index ["title_id"], name: "index_quotations_on_title_id"
   end
 
@@ -220,6 +228,7 @@ ActiveRecord::Schema.define(version: 2022_03_13_135635) do
   add_foreign_key "products", "wheel_axles"
   add_foreign_key "products", "wheel_sizes"
   add_foreign_key "quotations", "products"
+  add_foreign_key "quotations", "purposes"
   add_foreign_key "quotations", "titles"
   add_foreign_key "vip_leads", "titles"
 end

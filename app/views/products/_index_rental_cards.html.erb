@@ -246,7 +246,7 @@
             <div class="modal-dialog">
               <div class="modal-content">
                 <div class="modal-header">
-                  <h5 class="modal-title" id="exampleModalLabel">Obtenez votre devis</h5>
+                  <h5 class="modal-title" id="exampleModalLabel">Obtenez votre devis pour <span class= 'colored'><%= product.name %></span></h5>
                   <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
@@ -262,6 +262,7 @@
                         <%= f.input :surname, label:'Prénom', required: false %>
                       </div>
                     </div>
+                    <%= f.association :purpose, label: 'Objet', required: false %>
                     <%= f.input :email, required: false %>
                     <div class="row">
                       <div class="col-9 col-lg-10"></div>

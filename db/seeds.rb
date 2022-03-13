@@ -6,9 +6,12 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
+Purpose.create(name: 'Achat')
+Purpose.create(name: 'Location')
+Purpose.create(name: 'Installation')
 
-Title.create(name: 'Mr')
-Title.create(name: 'Mme')
+#Title.create(name: 'Mr')
+#Title.create(name: 'Mme')
 
 #Usage.create(name: 'Occasionnel')
 #Usage.create(name: 'Régulier')
