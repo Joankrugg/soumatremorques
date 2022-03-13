@@ -54,12 +54,19 @@
   position: absolute;
   right: 10px;
 }
-.user-area .login{
+.user-area .top-login{
+  text-decoration: none;
+  color: white;
+  position: absolute;
+  right: 2px;
+  top: 0px;
+}
+.user-area .low-login{
   text-decoration: none;
   color: white;
   position: absolute;
   right: 10px;
-  top: 10px;
+  top: 20px;
 }
 .modal-body h5{
   color: #d64043

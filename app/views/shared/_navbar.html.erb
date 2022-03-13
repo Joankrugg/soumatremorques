@@ -31,7 +31,10 @@
           <div class="user-area">
             <i class="fas fa-info-circle" data-bs-toggle="modal" data-bs-target="#conseil"></i>
             <i class="fas fa-heart"></i>
-            <%= link_to "Pro ?", new_user_session_path, class: "login" %>
+            <%= link_to new_user_session_path do %>
+              <p class= "top-login">Espace</p>
+              <p class= "low-login">Pro</p>
+            <% end %>
           </div>
         <% end %>
       </div>
