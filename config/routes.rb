@@ -24,7 +24,7 @@ Rails.application.routes.draw do
       get :close, path: '/remorques/fourgons'
       get :market, path: '/remorques/magasins'
 
-      get :trailers_rent, path: 'location/remorques'
+      get :rent, path: 'location/remorques'
       get :luggage_rent, path: 'location/remorques/bagageres/utilitaires'
       get :water_rent, path: 'location/remorques/nautiques'
       get :animals_rent, path: "location/remorques/transport-d-animaux/van"
