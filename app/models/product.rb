@@ -7,6 +7,7 @@ class Product < ApplicationRecord
   belongs_to :usage
   belongs_to :wheel_size
   belongs_to :wheel_axle
+  has_many :quotations, dependent: :destroy
   has_many :cart_products, dependent: :destroy
   has_many :carts, through: :cart_products
   has_many :product_best_uses, dependent: :destroy

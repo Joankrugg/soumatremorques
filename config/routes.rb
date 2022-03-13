@@ -66,6 +66,7 @@ Rails.application.routes.draw do
       get :trailers_permisb_casual_moto, path: '/remorques/porte-moto/usage-occasionnel/permisb'
       get :trailers_permisb_casual_close, path: '/remorques/fourgon/usage-occasionnel/permisb'
     end
+    resources :quotations, only: [:index, :new, :create ]
   end
   get '/sitemap.xml' => 'sitemaps#index', defaults: { format: 'xml' }
   match "/404", to: "errors#not_found", via: :all
