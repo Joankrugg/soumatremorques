@@ -22,6 +22,6 @@ class QuotationsController < ApplicationController
   private
 
   def quotation_params
-    params.require(:quotation).permit(:name, :surname, :email)
+    params.require(:quotation).permit(:name, :surname, :email, :title_id)
   end
 end

@@ -21,9 +21,9 @@
                 <%= cl_image_tag product.photo.key, class: 'img-fluid' %>
               </div>
               <div class="card-product-caracteristics">
-                <div class="btn btn-ghost" data-bs-toggle="modal" data-bs-target="#modal-<%= product.id %>">aperçu rapide</div>
+                <div class="btn btn-ghost" data-bs-toggle="modal" data-bs-target="#modal-<%= product.id %>">Détails produit</div>
                 <%= link_to 'https://eboutique.westfalia-automotive.com/fr-fr', target: '_blank' do %>
-                  <div class="btn btn-ghost">compatibilité véhicule</div>
+                  <div class="btn btn-ghost">Compatibilité véhicule</div>
                 <% end %>
 
                 <h1 class="card-product-title">
@@ -242,10 +242,24 @@
                 </div>
                 <div class="modal-body">
                   <%= simple_form_for [ product, @quotation ]  do |f| %>
-                    <%= f.input :name, required: false %>
-                    <%= f.input :surname, required: false %>
+                    <div class="row">
+                      <div class="col-4 col-lg-2">
+                        <%= f.association :title, label:'Titre', required: false %>
+                      </div>
+                      <div class="col-8 col-lg-5">
+                        <%= f.input :name, label:'Nom', required: false %>
+                      </div>
+                      <div class="col-12 col-lg-5">
+                        <%= f.input :surname, label:'Prénom', required: false %>
+                      </div>
+                    </div>
                     <%= f.input :email, required: false %>
-                    <%= f.button :submit,'valider', class: 'btn btn-flat right' %>
+                    <div class="row">
+                      <div class="col-9 col-lg-10"></div>
+                      <div class="col-3 col-lg-2">
+                        <%= f.button :submit,'valider', class: 'btn btn-flat' %>
+                      </div>
+                    </div>
                   <% end %>
                 </div>
               </div>
