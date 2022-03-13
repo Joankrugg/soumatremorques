@@ -2,12 +2,8 @@
 <div class="container product-index">
   <div class="row">
     <div class="col-lg-4 mx-auto">
-      <div class="btn btn-flat call-to-action" data-bs-toggle="modal" data-bs-target="#compatibility">Téléchargez le guide de compatibilité</div>
-    </div>
-  </div>
-  <div class="row">
-    <div class="col-lg-4 mx-auto">
-      <div class="btn btn-flat call-to-action" data-bs-toggle="modal" data-bs-target="#next-visit">Retrouvez cette page à votre prochaine visite</div>
+      <div class="btn btn-flat call-to-action" data-bs-toggle="modal" data-bs-target="#next-visit">Retrouvez cette page à votre prochaine visite
+      </div>
     </div>
   </div>
   <div class="row">
@@ -33,8 +29,10 @@
 
 
               <div class="card-product-caracteristics">
-                <div class="btn btn-ghost" data-bs-toggle="modal" data-bs-target="#modal-<%= product.id %>">aperçu rapide</div>
-
+                <div class="btn btn-ghost" data-bs-toggle="modal" data-bs-target="#modal-<%= product.id %>">Détails produit</div>
+                <%= link_to 'https://eboutique.westfalia-automotive.com/fr-fr', target: '_blank' do %>
+                  <div class="btn btn-ghost">Compatibilité véhicule</div>
+                <% end %>
                 <h1 class="card-product-title">
                   <%= product.name %>
                 </h1>
@@ -46,7 +44,9 @@
                 <% if product.rental_price.present? %>
                   <p class='caracteristic-price'><%= product.rental_price %> E/semaine</p>
                 <% else %>
-                  <div class="btn btn-flat">Obtenir un devis</div>
+                  <div class="btn btn-flat quotation" data-bs-toggle="modal" data-bs-target="#modal-<%= product.id %>-quotation">
+                    Demandez un devis
+                  </div>
                 <% end %>
                 <div class="btn btn-flat">Réservez <br><i class="fas fa-phone"></i> 05.56.36.01.01</div>
               </div>
@@ -104,7 +104,9 @@
                             <% end %>
                           </p>
                           <p class='modal-caracteristic-subcategory'><%= product.subcategory.name %></p>
-                          <p class='modal-caracteristic-price'><%= product.price %> E</p>
+                          <% if product.price.present? %>
+                            <p class='modal-caracteristic-price'>Prix de vente: <%= product.price %> E</p>
+                          <% end %>
                         </div>
                       </div>
                     </div>
@@ -231,7 +233,7 @@
                   </div>
                   <div class="row">
                     <div class="col-lg-4 mx-auto">
-                      <div class="btn btn-flat call-to-action">Réserver</div>
+                      <div class="btn btn-flat call-to-action">Réservez<br><i class="fas fa-phone"></i> 05.56.36.01.01</div>
                     </div>
                   </div>
 
@@ -239,22 +241,39 @@
               </div>
             </div>
           </div>
-        <% end %>
-      </div>
-    </div>
-  </div>
-</div>
-<div class="modal fade" id="compatibility" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Je verifie la compatibilité avec mon véhicule</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-      <div class="modal-body lead">
-        <%= simple_form_for @compatibility_lead do |f| %>
-          <%= f.input :email, required: false %>
-          <%= f.button :submit, 'valider', class: 'btn btn-flat right' %>
+          <!-- Modal -->
+          <div class="modal fade" id="modal-<%= product.id %>-quotation" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalLabel">Obtenez votre devis</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                  <%= simple_form_for [ product, @quotation ]  do |f| %>
+                    <div class="row">
+                      <div class="col-4 col-lg-2">
+                        <%= f.association :title, label:'Titre', required: false %>
+                      </div>
+                      <div class="col-8 col-lg-5">
+                        <%= f.input :name, label:'Nom', required: false %>
+                      </div>
+                      <div class="col-12 col-lg-5">
+                        <%= f.input :surname, label:'Prénom', required: false %>
+                      </div>
+                    </div>
+                    <%= f.input :email, required: false %>
+                    <div class="row">
+                      <div class="col-9 col-lg-10"></div>
+                      <div class="col-3 col-lg-2">
+                        <%= f.button :submit,'valider', class: 'btn btn-flat' %>
+                      </div>
+                    </div>
+                  <% end %>
+                </div>
+              </div>
+            </div>
+          </div>
         <% end %>
       </div>
     </div>

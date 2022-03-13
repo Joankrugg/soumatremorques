@@ -37,7 +37,9 @@
                 <% if product.price.present? %>
                   <p class='caracteristic-price'><%= product.price %> E</p>
                 <% else %>
-                  <div class="btn btn-flat quotation" data-bs-toggle="modal" data-bs-target="#modal-<%= product.id %>-quotation">Obtenir un devis</div>
+                  <div class="btn btn-flat quotation" data-bs-toggle="modal" data-bs-target="#modal-<%= product.id %>-quotation">
+                    Demandez un devis
+                  </div>
                 <% end %>
                 <div class="btn btn-flat">Réservez<br><i class="fas fa-phone"></i> 05.56.36.01.01</div>
               </div>
@@ -224,7 +226,7 @@
                   </div>
                   <div class="row">
                     <div class="col-lg-4 mx-auto">
-                      <div class="btn btn-flat call-to-action">Réserver</div>
+                      <div class="btn btn-flat call-to-action">Réservez<br><i class="fas fa-phone"></i> 05.56.36.01.01</div>
                     </div>
                   </div>
 
