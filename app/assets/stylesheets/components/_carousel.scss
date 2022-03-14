@@ -41,7 +41,7 @@
   padding-top: 6px;
   border-radius: 4px;
   color: white;
-  background-image: linear-gradient(to bottom right, white, black);
+  background: $red;
   margin-left: 9px;
   margin-right: 9px;
   width: 130px;
@@ -49,14 +49,14 @@
   font-weight: bold;
   transition: all .4s ease-in-out;
   border: 1px solid white;
+  opacity: 0.8;
 }
 
 .banner .btn-action:hover{
-  background-image: linear-gradient(to bottom right, white, white);
+  opacity: 1;
   transform: scale(1.1);
-  color: #2f2c2d;
-  border: 1px solid #2f2c2d;
 }
+
 .buttons{
   display: block;
   width: 300px;
