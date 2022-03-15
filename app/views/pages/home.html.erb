@@ -106,13 +106,13 @@
         <div class="carousel-inner">
           <div class="carousel-item active">
             <div class="activity d-block w-100">
-              <p class='proposition'><span class='colored'>Installer</span> un accessoire sur votre voiture</p>
+              <p class='proposition'><span class='colored-brand'>Installer</span> un accessoire sur votre voiture</p>
               <%= image_tag 'https://res.cloudinary.com/da2krghvd/image/upload/v1643834038/development/Rectangle_19.jpg', class: 'activity-img' %>
             </div>
           </div>
           <div class="carousel-item">
             <div class="activity d-block w-100">
-              <p class='proposition'><span class='colored'>Louer</span> une remorque</p>
+              <p class='proposition'><span class='colored-brand'>Louer</span> une remorque</p>
               <%= image_tag 'https://res.cloudinary.com/da2krghvd/image/upload/v1643834045/development/Rectangle_20.jpg', class: 'activity-img' %>
             </div>
           </div>
@@ -140,66 +140,33 @@
         </div>
         <div class="col-12 col-sm-12 col-md-12 col-lg-10 mx-auto">
           <div class="row">
-            <div class="col-6 col-sm-6 col-md-6 col-lg-4 mx-auto">
-              <div class="best-sales">
-                <%= link_to product_path(@products[0]) do %>
-                  <div class="best-sale-card-red">
-                    <div class="row">
-                      <div class="col-12">
-                        <p class='availability'>
-                          <i class="fas fa-heart"></i>
-                        </p>
-                        <div class='best-sales-image'>
-                          <%= cl_image_tag @products[0].photo.key, height: 200, crop: :fit, class: 'img-fluid' %>
+            <% @products[0..2].each do |p|%>
+              <div class="col-6 col-sm-6 col-md-6 col-lg-4 mx-auto">
+                <div class="best-sales">
+                  <%= link_to product_path(p) do %>
+                    <div class="best-sale-card-red">
+                      <div class="row">
+                        <div class="col-6">
+                          <%= image_tag 'https://res.cloudinary.com/da2krghvd/image/upload/c_crop,g_center,h_120,w_250/v1643388825/Portfolio/soumat_logo_blanc.png', class: 'left-logo' %>
                         </div>
-                        <p class='best-sales-name'><%= @products[0].name %></p>
-                        <p class='best-sales-category-name'><%= @products[0].subcategory.name %></p>
+                        <div class="col-6">
+                          <p class='availability'>
+                            <i class="fas fa-heart"></i>
+                          </p>
+                        </div>
+                        <div class="col-lg-12">
+                          <div class='best-sales-image'>
+                            <%= cl_image_tag p.photo.key, height: 200, crop: :fit, class: 'img-fluid' %>
+                          </div>
+                          <p class='best-sales-name'><%= p.name %></p>
+                          <p class='best-sales-category-name'><%= p.subcategory.name %></p>
+                        </div>
                       </div>
                     </div>
-                  </div>
-                <% end %>
+                  <% end %>
+                </div>
               </div>
-            </div>
-            <div class="col-6 col-sm-6 col-md-6 col-lg-4 mx-auto">
-              <div class="best-sales">
-                <%= link_to product_path(@products[1]) do %>
-                  <div class="best-sale-card-red">
-                    <div class="row">
-                      <div class="col-12">
-                        <p class='availability'>
-                          <i class="fas fa-heart"></i>
-                        </p>
-                        <div class='best-sales-image'>
-                          <%= cl_image_tag @products[1].photo.key, height: 200, crop: :fill, class: 'img-fluid' %>
-                        </div>
-                        <p class='best-sales-name'><%= @products[1].name %></p>
-                        <p class='best-sales-category-name'><%= @products[1].subcategory.name %></p>
-                      </div>
-                    </div>
-                  </div>
-                <% end %>
-              </div>
-            </div>
-            <div class="col-6 col-sm-6 col-md-6 col-lg-4 mx-auto">
-              <div class="best-sales">
-                <%= link_to product_path(@products[2]) do %>
-                  <div class="best-sale-card-red">
-                    <div class="row">
-                      <div class="col-12">
-                        <p class='availability'>
-                          <i class="fas fa-heart"></i>
-                        </p>
-                        <div class='best-sales-image'>
-                          <%= cl_image_tag @products[2].photo.key, height: 200, crop: :fill, class: 'img-fluid' %>
-                        </div>
-                        <p class='best-sales-name'><%= @products[2].name %></p>
-                        <p class='best-sales-category-name'><%= @products[2].subcategory.name %></p>
-                      </div>
-                    </div>
-                  </div>
-                <% end %>
-              </div>
-            </div>
+            <% end %>
           </div>
         </div>
       </div>
@@ -233,7 +200,7 @@
             <div id="second"><%= image_tag 'https://res.cloudinary.com/da2krghvd/image/upload/v1643830602/development/unsplash_iAkrGOkBaco.jpg', class: 'second' %>
               <div class="second-layer">
                 <p class='blog-title'>Vivre sa passion</p>
-                <p class='blog'>Concours hippiques</p>
+                <p class='blog colored-brand'>Concours hippiques</p>
               </div>
             </div>
           </div>
@@ -241,7 +208,7 @@
             <div id="first"><%= image_tag 'https://res.cloudinary.com/da2krghvd/image/upload/v1643830609/development/unsplash_rzTEsx2tcjQ.jpg', class: 'first' %>
               <div class="first-layer">
                 <p class='blog-title'>Loisirs</p>
-                <p class='blog'>Partir en vacances</p>
+                <p class='blog colored-brand'>Partir en vacances</p>
               </div>
             </div>
           </div>
@@ -251,7 +218,7 @@
             <div id="third"><%= image_tag 'https://res.cloudinary.com/da2krghvd/image/upload/v1643830589/development/unsplash_BnXGBpGy-bQ.png', class: 'third' %>
               <div class="third-layer">
                 <p class='blog-title'>Indispensable</p>
-                <p class='blog'>Entretenir son jardin</p>
+                <p class='blog colored-brand'>Entretenir son jardin</p>
               </div>
             </div>
           </div>
@@ -259,7 +226,7 @@
             <div id="fourth"><%= image_tag 'https://res.cloudinary.com/da2krghvd/image/upload/v1643830595/development/unsplash_CfhtS2nj95c.jpg', class: 'fourth' %>
               <div class="fourth-layer">
                 <p class='blog-title'>Pratique</p>
-                <p class='blog'>La cale sèche</p>
+                <p class='blog colored-brand'>La cale sèche</p>
               </div>
             </div>
               <div class="btn btn-blog-2" data-bs-toggle="modal" data-bs-target="#white-book">Recevez le guide de choix <i class="fas fa-long-arrow-alt-right"></i></div>

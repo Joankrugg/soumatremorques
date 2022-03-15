@@ -1,0 +1,81 @@
+.back{
+  padding: 40px 0px;
+}
+
+.favorites{
+  padding: 30px 0px;
+}
+
+.best-sales{
+  width: 100%;
+  height: 420px;
+  transition: all .4s ease-in-out;
+}
+
+.best-sales:hover{
+  transform: scale(1.1);
+}
+
+.best-sales-name{
+  text-align: center;
+  width: 100%;
+  color: #2f2c2d;
+  font-weight: bold;
+}
+
+.best-sales-category-name{
+  text-align: center;
+  width: 100%;
+  color: #2f2c2d;
+  font-weight: bold;
+}
+
+.best-sales-image{
+  display: block;
+  height: 200px;
+  width: 100%;
+  margin-top: -20px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.layer-2{
+  background-color: black;
+  width: 100%;
+  height: 320px;
+  opacity: 0.4;
+  margin-top: -340px;
+}
+
+.layer-2:hover{
+  opacity: 0;
+  cursor: pointer;
+}
+
+.availability{
+  font-size: 28px;
+  color: $red;
+  text-align: right;
+  margin-right: 6px;
+}
+
+.best-sale-card-red{
+  width: 95%;
+  background-image: linear-gradient(to bottom right, #c4c4c4, white);
+  height: 360px;
+  margin-bottom: 20px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  transition: all 0.4 ease-in-out;
+}
+
+.best-sale-card-red:hover{
+  opacity: 1;
+}
+
+.best-sales .btn-brand{
+  width: 100%;
+}
+
+.left-logo{
+  width: 100px;
+}

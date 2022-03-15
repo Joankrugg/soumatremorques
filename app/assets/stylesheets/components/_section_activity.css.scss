@@ -1,0 +1,38 @@
+.activity{
+  height: 250px;
+  background-image: linear-gradient(to bottom right, #4c474a, #000000);
+  position: relative;
+}
+.activity p {
+  font-size: 22px;
+}
+
+.activity-img{
+  height: 230px;
+  position: absolute;
+  left: 39%;
+  top: 10px;
+}
+.news{
+  margin-top: 40px;
+}
+.news p {
+  text-align: center;
+}
+.btn-newsletter{
+  padding-top: 10px;
+  background: $blue;
+  color: white;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  width: 100%;
+  height: 50px;
+  border-radius: 5px;
+  border: 1px solid white;
+  transition: all .4s ease-in-out;
+  margin-top: 50px;
+}
+
+.btn-newsletter:hover{
+  transform: scale(1.1);
+  color: white;
+}
