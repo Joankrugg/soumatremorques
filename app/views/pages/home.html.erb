@@ -207,12 +207,14 @@
             <% end %>
           </div>
           <div class="col-6 col-sm-6 col-md-5 col-lg-5">
-            <div id="first"><%= image_tag 'https://res.cloudinary.com/da2krghvd/image/upload/v1643830609/development/unsplash_rzTEsx2tcjQ.jpg', class: 'first' %>
-              <div class="first-layer">
-                <p class='blog-title'>Loisirs</p>
-                <p class='blog colored-brand'>Partir en vacances</p>
+            <%= link_to pages_holidays_path do %>
+              <div id="first"><%= image_tag 'https://res.cloudinary.com/da2krghvd/image/upload/v1643830609/development/unsplash_rzTEsx2tcjQ.jpg', class: 'first' %>
+                <div class="first-layer">
+                  <p class='blog-title'>Loisirs</p>
+                  <p class='blog colored-brand'>Partir en vacances</p>
+                </div>
               </div>
-            </div>
+            <% end %>
           </div>
         </div>
         <div class="row">

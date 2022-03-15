@@ -12,7 +12,7 @@ class PagesController < ApplicationController
 
   end
 
-  def holydays
+  def holidays
 
   end
 
