@@ -34,7 +34,7 @@
                   <p class='best-caracteristic'>Idéal pour: <%= product.best_uses.first.name%></p>
                 <% end %>
                 <% if product.price.present? %>
-                  <p class='caracteristic-price'><%= product.price %> E</p>
+                  <p class='caracteristic-price'> à partir de <%= product.price %> €</p>
                 <% else %>
                   <div class="btn btn-flat quotation" data-bs-toggle="modal" data-bs-target="#modal-<%= product.id %>-quotation">
                     Demandez un devis
@@ -97,7 +97,7 @@
                           </p>
                           <p class='modal-caracteristic-subcategory'><%= product.subcategory.name %></p>
                           <% if product.price.present? %>
-                            <p class='modal-caracteristic-price'><%= product.price %> E</p>
+                            <p class='modal-caracteristic-price'>à partir de <%= product.price %> €</p>
                           <% end %>
                         </div>
                       </div>
