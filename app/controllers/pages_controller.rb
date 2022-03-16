@@ -22,7 +22,7 @@ class PagesController < ApplicationController
   end
 
   def smart
-
+    @vip_lead = VipLead.new
   end
 
   def constant_gardener
