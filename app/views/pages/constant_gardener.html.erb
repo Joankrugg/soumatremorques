@@ -1,18 +1,69 @@
 <section class='constant_gardener-page'>
   <div class="container">
     <div class="row">
-      <h1>QUELLE REMORQUE CHOISIR POUR JARDINER ?</h1>
-    </div>
-    <div class="row">
-      <p>Vous souhaitez entretenir ou aménager votre jardin ? Qu’il s’agisse de gazon coupé, de feuilles mortes, de terre, de bois, de sable … Vous aurez besoin d’une remorque à de multiples occasions ! De plus, votre remorque pourra aussi vous servir pour partir en vacances, bricoler, transporter un objet encombrant comme un motoculteur …</p>
-      <p>En bref, une remorque de bonne capacité alliée à des accessoires ultra pratiques pour jardiner en toute tranquilité.</p>
-    </div>
-    <div class="row">
-      <h2>UNE REMORQUE POUR LE JARDINAGE : L'IDÉAL POUR TOUS VOS ENTRETIENS</h2>
-    </div>
-    <div class="row">
-      <p>Découvrez par exemple en vidéo la remorque Erdé 193 équipée de quelques accessoires très utiles pour jardiner (ridelles grillagées, béquilles stabilisatrices …)</p>
+      <div class="col-lg-10 mx-auto">
+        <div class="row">
+          <h1 class= 'content-title'>QUELLE REMORQUE CHOISIR POUR JARDINER ?</h1>
+          <div class="col-lg-6">
+            <iframe width='600' height="600" class='img-fluid' src="https://www.youtube.com/embed/XfUgksQSwcc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          </div>
+          <div class="col-lg-6">
+            <p>Vous souhaitez entretenir ou aménager votre jardin ? Qu’il s’agisse de gazon coupé, de feuilles mortes, de terre, de bois, de sable … Vous aurez besoin d’une remorque à de multiples occasions ! De plus, votre remorque pourra aussi vous servir pour partir en vacances, bricoler, transporter un objet encombrant comme un motoculteur …</p>
+            <p>En bref, une remorque de bonne capacité alliée à des accessoires ultra pratiques pour jardiner en toute tranquilité.</p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-6 col-sm-6 col-md-4 col-lg-2 mx-auto">
+            <div class="btn btn-blog" data-bs-toggle="modal" data-bs-target="#contactez-moi">Prenons contact <i class="fas fa-long-arrow-alt-right"></i></div>
+          </div>
+        </div>
+        <div class="row">
+          <h2 class='content-subtitle'>UNE REMORQUE POUR LE JARDINAGE : L'IDÉAL POUR TOUS VOS ENTRETIENS</h2>
+        </div>
+        <div class="row">
+          <p>Découvrez par exemple en vidéo la remorque Erdé 193 équipée de quelques accessoires très utiles pour jardiner (ridelles grillagées, béquilles stabilisatrices …)</p>
+        </div>
+        <div class="row">
+          <div class="col-6 col-sm-6 col-md-4 col-lg-3 mx-auto">
+            <%= link_to garden_products_path do  %>
+              <div class="btn btn-blog last">Voir nos remorques <i class="fas fa-long-arrow-alt-right"></i></div>
+            <% end %>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </section>
 
+<div class="modal fade" id="contactez-moi" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Formulaire de contact</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body vip_lead">
+        <%= simple_form_for @vip_lead do |f| %>
+          <div class="row">
+            <div class="col-4 col-lg-2">
+              <%= f.association :title, label: 'Titre', required: false, class: 'vip_title' %>
+            </div>
+            <div class="col-8 col-lg-5">
+              <%= f.input :name, label: 'Nom', required: false %>
+            </div>
+            <div class="col-12 col-lg-5">
+              <%= f.input :surname, label: 'Prénom', required: false %>
+            </div>
+            <%= f.input :email, required: false %>
+          </div>
+          <div class="row">
+            <div class="col-9 col-lg-10"></div>
+            <div class="col-3 col-lg-2">
+              <%= f.button :submit,'valider', class: 'btn btn-flat' %>
+            </div>
+          </div>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>

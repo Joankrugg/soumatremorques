@@ -13,11 +13,12 @@ class PagesController < ApplicationController
   end
 
   def holidays
-
+    @vip_lead = VipLead.new
   end
 
   def horses
-
+    @white_book_lead = WhiteBookLead.new
+    @vip_lead = VipLead.new
   end
 
   def smart
@@ -25,6 +26,6 @@ class PagesController < ApplicationController
   end
 
   def constant_gardener
-
+    @vip_lead = VipLead.new
   end
 end
