@@ -40,7 +40,7 @@
                     Demandez un devis
                   </div>
                 <% end %>
-                <div class="btn btn-flat">Réservez</div>
+                <div class="btn btn-flat" data-bs-toggle="modal" data-bs-target="#modal-<%= product.id %>-reservation">Réservez</div>
                 <a href='tel:0619934616'>
                   <div class="btn btn-flat"><i class="fas fa-phone"></i> 05.56.36.01.01</div>
                 </a>
@@ -270,11 +270,46 @@
               </div>
             </div>
           </div>
+          <div class="modal fade" id="modal-<%= product.id %>-reservation" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalLabel">reservation</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                  <%= simple_form_for [ product, @reservation ] do |f|%>
+                    <div class="row">
+                      <div class="col-6">
+                        <%= f.input :name %>
+                      </div>
+                      <div class="col-6">
+                        <%= f.input :surname %>
+                      </div>
+                    </div>
+                    <div class="col-12">
+                      <%= f.input :siret %>
+                    </div>
+                    <div class="col-12">
+                      <%= f.input :account %>
+                    </div>
+                    <div class="col-12">
+                      <%= f.input :mail %>
+                    </div>
+                    <div class="col-3 col-lg-2">
+                      <%= f.button :submit,'valider', class: 'btn btn-flat' %>
+                    </div>
+                  <% end %>
+                </div>
+              </div>
+            </div>
+          </div>
         <% end %>
       </div>
     </div>
   </div>
 </div>
+
 
 
 
