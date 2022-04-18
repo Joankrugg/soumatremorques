@@ -47,7 +47,23 @@
                     Demandez un devis
                   </div>
                 <% end %>
-                <div class="btn btn-flat">Réservez <br><i class="fas fa-phone"></i> 05.56.36.01.01</div>
+                <div class="btn btn-flat" data-bs-toggle="modal" data-bs-target="#modal-<%= product.id %>-reservation">Réservez</div>
+                <a href='tel:0619934616'>
+                  <div class="btn btn-flat"><i class="fas fa-phone"></i> 05.56.36.01.01</div>
+                </a>
+                <div class="row">
+                  <div class="col-4 mx-auto">
+                    <%= link_to "https://www.facebook.com/share.php?u=https://soumatremorques.herokuapp.com/produits/#{product.id}", target: '_blank' do %>
+                    　　<div class="btn btn-ghost"><i class="fab fa-facebook-square"></i></div>
+                    <% end %>
+                  </div>
+                  <div class="col-4 mx-auto">
+
+                    <%= link_to "https://www.pinterest.fr/pin-builder/?url=https://soumatremorques.herokuapp.com/produits/#{product.id}", target: '_blank' do %>
+                    　　<div class="btn btn-ghost"><i class="fab fa-pinterest-square"></i></div>
+                    <% end %>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
