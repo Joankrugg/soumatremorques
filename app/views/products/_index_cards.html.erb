@@ -236,15 +236,21 @@
                         </p>
                       </div>
                     </div>
-
-
                   </div>
                   <div class="row">
                     <div class="col-lg-4 mx-auto">
-                      <div class="btn btn-flat call-to-action">Réservez<br><i class="fas fa-phone"></i> 05.56.36.01.01</div>
+                      <%= link_to new_product_reservation_path(product, @reservation) do %>
+                        <div class="btn btn-flat call-to-action">Réservez</div>
+                      <% end %>
                     </div>
                   </div>
-
+                  <div class="row">
+                    <div class="col-lg-4 mx-auto">
+                      <a href='tel:0619934616'>
+                        <div class="btn btn-flat call-to-action"><i class="fas fa-phone"></i> 05.56.36.01.01</div>
+                      </a>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
@@ -294,23 +300,23 @@
                   <%= simple_form_for [ product, @reservation ] do |f|%>
                     <div class="row">
                       <div class="col-6">
-                        <%= f.input :name %>
+                        <%= f.input :name, label: 'Nom' %>
                       </div>
                       <div class="col-6">
-                        <%= f.input :surname %>
+                        <%= f.input :surname, label: 'Prénom' %>
                       </div>
                     </div>
                     <div class="col-12">
                       <%= f.input :siret %>
                     </div>
                     <div class="col-12">
-                      <%= f.input :account %>
+                      <%= f.input :account, label: "Montant de l'accompte" %>
                     </div>
                     <div class="col-12">
-                      <%= f.input :mail %>
+                      <%= f.input :mail, label: 'Email' %>
                     </div>
                     <div class="col-3 col-lg-2">
-                      <%= f.button :submit,'valider', class: 'btn btn-flat' %>
+                      <%= f.button :submit, 'valider', class: 'btn btn-flat' %>
                     </div>
                   <% end %>
                 </div>

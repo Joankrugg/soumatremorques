@@ -1,1 +1,29 @@
+<div class="offnav"></div>
+<div class="row">
+  <div class= "col-12 col-lg-8 mx-auto">
+    <div class="card reservation">
+      <%= simple_form_for [ @product, @reservation ], url: product_reservations_path, method: :post do |f| %>
+        <div class="row">
+          <div class="col-6">
+            <%= f.input :name, label: 'Nom', required: false %>
+          </div>
+          <div class="col-6">
+            <%= f.input :surname, label: 'Prénom', required: false %>
+          </div>
+        </div>
+        <div class="col-12">
+          <%= f.input :siret, required: false %>
+        </div>
+        <div class="col-12">
+          <%= f.input :account, label: "Montant de l'accompte", required: false %>
+        </div>
+        <div class="col-12">
+          <%= f.input :mail, label: "Email", required: false %>
+        <div class="col-12 col-lg-4 mx-auto">
+          <%= f.button :submit, 'valider', class: 'btn btn-flat call-to-action' %>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>
 

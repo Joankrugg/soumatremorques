@@ -248,7 +248,16 @@
                   </div>
                   <div class="row">
                     <div class="col-lg-4 mx-auto">
-                      <div class="btn btn-flat call-to-action">Réservez<br><i class="fas fa-phone"></i> 05.56.36.01.01</div>
+                      <%= link_to new_product_reservation_path(product, @reservation) do %>
+                        <div class="btn btn-flat call-to-action">Réservez</div>
+                      <% end %>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-lg-4 mx-auto">
+                      <a href='tel:0619934616'>
+                        <div class="btn btn-flat call-to-action"><i class="fas fa-phone"></i> 05.56.36.01.01</div>
+                      </a>
                     </div>
                   </div>
 
