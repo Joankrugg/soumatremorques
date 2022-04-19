@@ -28,24 +28,24 @@
           <div class="btn-filter-section">
             Vous cherchez plutot un type
           </div>
-          <div class="btn-filter">
-            <%= link_to 'Utilitaire', trailers_permisb_casual_luggage_products_path , class: 'filter-link' %>
-          </div>
-          <div class="btn-filter">
-            <%= link_to 'Nautique', trailers_permisb_casual_water_products_path , class: 'filter-link' %>
-          </div>
-          <div class="btn-filter">
-            <%= link_to "Transport d'animaux", trailers_permisb_casual_animal_products_path , class: 'filter-link' %>
-          </div>
-          <div class="btn-filter">
-            <%= link_to "Porte-moto/quad", trailers_permisb_casual_moto_products_path , class: 'filter-link' %>
-          </div>
-          <div class="btn-filter">
-            <%= link_to "Bennes", trailers_permisb_casual_close_products_path , class: 'filter-link' %>
-          </div>
-          <div class="btn-filter">
-            <%= link_to "Espaces verts", trailers_permisb_casual_garden_products_path , class: 'filter-link' %>
-          </div>
+          <%= link_to trailers_permisb_casual_luggage_products_path , class: 'filter-link' do %>
+            <div class="btn-filter">Utilitaire</div>
+          <% end %>
+          <%= link_to trailers_permisb_casual_water_products_path , class: 'filter-link' do %>
+            <div class="btn-filter">Nautique</div>
+          <% end %>
+          <%= link_to trailers_permisb_casual_animal_products_path , class: 'filter-link' do %>
+            <div class="btn-filter">Transport d'animaux</div>
+          <% end %>
+          <%= link_to trailers_permisb_casual_moto_products_path  , class: 'filter-link' do %>
+            <div class="btn-filter">Porte-moto/quad</div>
+          <% end %>
+          <%= link_to trailers_permisb_casual_close_products_path , class: 'filter-link' do %>
+            <div class="btn-filter">Bennes</div>
+          <% end %>
+          <%= link_to trailers_permisb_casual_garden_products_path, class: 'filter-link' do %>
+            <div class="btn-filter">Espaces-verts</div>
+          <% end %>
         </div>
 
         <div class="btn-filter" id='b-regular-trigger'>
