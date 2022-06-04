@@ -7,6 +7,6 @@ class WhiteBookLeadMailer < ApplicationMailer
   #
   def creation(white_book_lead)
     @white_book_lead = white_book_lead  # Instance variable => available in view
-    mail(to: @white_book_lead.email, subject: "Voici le guide de choix que vous avez demandé")
+    mail(to: @white_book_lead.email, subject: "Vous souhaitiez recevoir notre livre blanc")
   end
 end
